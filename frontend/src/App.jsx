@@ -6,7 +6,7 @@ import HomePage from './pages/HomePage';
 import Footer from './ui/Footer';
 import ContactPage from './pages/ContactPage';
 import BlogsPage from './pages/BlogsPage';
-
+import CoursesPage from './pages/CoursesPage';
 
 const SessionsPage = () => <h1>Speaker Sessions</h1>;
 const NotFound = () => <h1>404 - Page Not Found</h1>;
