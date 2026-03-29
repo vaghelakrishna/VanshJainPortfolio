@@ -7,7 +7,6 @@ import Footer from './ui/Footer';
 import ContactPage from './pages/ContactPage';
 // Placeholder components for the ones you haven't imported yet
 const SessionsPage = () => <h1>Speaker Sessions</h1>;
-const BlogPage = () => <h1>Latest Blog Posts</h1>;
 const NotFound = () => <h1>404 - Page Not Found</h1>;
 const CoursesPage = () => <h1>404 - Page Not Found</h1>;
 
