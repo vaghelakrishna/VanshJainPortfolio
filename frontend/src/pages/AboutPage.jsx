@@ -8,7 +8,7 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="relative min-h-screen bg-[#0A0A0A] text-[#888] selection:bg-white/10 overflow-x-hidden font-sans antialiased">
+    <div className="relative min-h-screen bg-[#0A0A0A] text-[#888] selection:bg-white/10 overflow-x-hidden font-sans antialiased pt-32">
 
       {/* 1. THE GRID SYSTEM - Use percentage for consistency across zooms */}
       <div className="fixed inset-0 flex justify-between px-[10%] md:px-[15%] pointer-events-none z-0">
