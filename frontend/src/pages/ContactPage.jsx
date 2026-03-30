@@ -63,7 +63,7 @@ const ContactPage = () => {
       </style>
 
       <div className="bg-[#0a0a0a] text-white min-h-screen font-sans selection:bg-white selection:text-black overflow-x-hidden">
-        <div className="max-w-[1600px] mx-auto w-full border-x border-dashed border-white/5">
+        <div className="max-w-400 mx-auto w-full border-x border-dashed border-white/5">
 
           {/* Animated Header */}
           <header className="pt-24 md:pt-40 pb-12 md:pb-20 px-6 md:px-12 border-b border-dashed border-white/10 overflow-hidden">
