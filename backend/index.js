@@ -4,6 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const Contact = require('./Models/Contact'); // Aapka model
+const Subscriber = require('./Models/Subscriber');
 
 const app = express();
 
@@ -42,6 +43,19 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
+app.post('/api/subscribe', async (req, res) => {
+  try {
+    const { email } = req.body;
+    const newSub = new Subscriber({ email });
+    await newSub.save();
+    res.status(201).json({ success: true, message: "Subscribed successfully!" });
+  } catch (error) {
+    if (error.code === 11000) {
+      return res.status(400).json({ success: false, message: "Already subscribed!" });
+    }
+    res.status(500).json({ success: false, message: "Server error" });
+  }
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
