@@ -41,8 +41,8 @@ const HeroSection = () => {
           </h1>
 
           {/* Status Capsule: Adaptive Width */}
-          <div className="group flex items-center gap-3 bg-white/[0.03] border border-white/5 rounded-full pl-2 pr-4 sm:pr-6 py-1.5 text-[11px] sm:text-xs text-neutral-400 mb-10 transition-all hover:bg-white/[0.06] max-w-full">
-            <div className="relative flex-shrink-0">
+          <div className="group flex items-center gap-3 bg-white/3 border border-white/5 rounded-full pl-2 pr-4 sm:pr-6 py-1.5 text-[11px] sm:text-xs text-neutral-400 mb-10 transition-all hover:bg-white/6 max-w-full">
+            <div className="relative shrink-0">
               <span className="w-2 h-2 bg-green-500 rounded-full block"></span>
               <span className="absolute inset-0 w-2 h-2 bg-green-500 rounded-full animate-ping opacity-75"></span>
             </div>
@@ -68,13 +68,13 @@ const HeroSection = () => {
 
         {/* RIGHT IMAGE: Adaptive Sizing */}
         <div className="lg:col-span-5 relative flex justify-center lg:justify-end order-1 lg:order-2">
-          <div className="relative group w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[380px]">
+          <div className="relative group w-full max-w-70 sm:max-w-[320px] lg:max-w-95">
 
             {/* Decorative Offset Border (Hidden on very small screens for cleanliness) */}
             <div className="absolute -inset-2 border border-red-500/20 rounded-2xl translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-700 hidden sm:block"></div>
 
             {/* Portrait Container */}
-            <div className="aspect-[4.5/5] rounded-2xl overflow-hidden border border-white/10 relative z-10 bg-neutral-900 shadow-2xl">
+            <div className="aspect-4.5/5 rounded-2xl overflow-hidden border border-white/10 relative z-10 bg-neutral-900 shadow-2xl">
               <img
                 src="/your-photo.jpg"
                 alt="Portrait"

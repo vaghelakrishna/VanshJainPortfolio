@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Eye, ArrowRight } from 'lucide-react';
-
+import { Link } from 'react-router-dom';
 const AboutSection = () => {
   return (
     <section className="relative bg-[#0a0a0a] min-h-screen py-24 px-6 flex flex-col items-center overflow-hidden font-sans text-white">
@@ -52,7 +52,7 @@ const AboutSection = () => {
           dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
           initial={{ rotate: 6, x: 140, y: -40 }}
           whileDrag={{ zIndex: 50, scale: 1.05 }}
-          className="sm:hidden absolute right-0 top-1/4 w-64 h-80  xl:block cursor-grab active:cursor-grabbing"
+          className="absolute right-0 top-1/4 w-64 h-80 hidden xl:block cursor-grab active:cursor-grabbing"
         >
           <div className="relative w-full h-full p-2 bg-white/5 backdrop-blur-xl rounded-md shadow-2xl border border-white/10 overflow-hidden">
             <img
@@ -94,37 +94,55 @@ const AboutSection = () => {
         {/* 6. Bio Text with Hover Blur Effect */}
         <div className="max-w-xl space-y-8 leading-relaxed text-lg font-light text-center md:text-left">
           <p className="text-white/30 hover:blur-0 hover:text-neutral-300 transition-all duration-700 cursor-default">
-            Hey, I'm <span className="text-white font-medium">Vansh</span>, a full-stack Product Designer with 3+ years of experience creating user-focused digital products across <span className="text-white/80">Web3, fintech, and gaming industries.</span>
+            Hey, I'm <span className="text-white font-medium">Vansh Jain</span>, 22-year-old founder and builder navigating the world through multi-venture execution. <span className="text-white/80"> I'm
+              not just a startup enthusiast; I'm someone who experiments, builds, breaks, learns, and rebuilds. </span>
           </p>
 
           <p className="text-neutral-400">
-            My journey into design didn't start in a classroom—it started at a
-            <span className="italic text-white"> hackathon</span>. While everyone around me was busy coding, I noticed something missing: nobody was thinking about the <span className="italic text-white">user experience</span>.
+            Experience beats theory. Real execution beats perfect planning. I believe in solving actual problems through
+            speed and iteration.
+            From education gaps to founder struggles to student skill-building—I thrive on turning
+            broken systems into impactful, scalable solutions. 
           </p>
 
           <p className="text-white/30 blur-xs hover:blur-0 hover:text-neutral-300 transition-all duration-700 cursor-default">
-            Fast forward a few years, I’ve worked with fast-moving startups to turn ambiguous ideas into products that find market fit, fast. Whether it's building from scratch or shaping MVPs, I've thrived in mess.
+            Throughout my B.Tech journey in Computer Science at ABES Institute of Technology (graduating 2026), I
+            pursued execution-focused leadership:
+            Pitched at Techstars Startup Weekend, gaining direct investor feedback
+            Organized multiple college-level events with full team and vendor coordination
+            Led 1-month execution of GenAI-Startup Mixer at Microsoft Office, Gurugram
+            Built a reputation as the founder who ships, not just talks
           </p>
         </div>
 
         {/* 7. CTA Button (Frosted Glass Effect) */}
         <div className="relative mt-15 group">
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="flex items-center gap-6 bg-white/5 backdrop-blur-lg text-white border border-white/10 px-4 py-2 rounded-full font-bold text-[11px] uppercase tracking-[0.3em] transition-all hover:bg-white hover:text-black hover:border-white overflow-hidden shadow-2xl"
-          >
-            Read more about me
-            <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-black/10 transition-colors">
-              <ArrowRight size={16} />
-            </div>
-          </motion.button>
+            <Link
+              to="/about"
+              className="absolute inset-0 z-20 cursor-pointer"
+              aria-label="Read more about me"
+            />
+
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="relative z-10 flex items-center gap-6 bg-white/5 backdrop-blur-lg text-white border border-white/10 px-6 py-3 rounded-full font-bold text-[11px] uppercase tracking-[0.3em] transition-all group-hover:bg-white group-hover:text-black group-hover:border-white overflow-hidden shadow-2xl"
+            >
+              Read more about me
+              <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-black/10 transition-colors">
+                <ArrowRight size={16} />
+              </div>
+            </motion.button>
+
+            {/* Subtle Glow behind button */}
+            <div className="absolute inset-0 bg-white/20 blur-3xl opacity-0 group-hover:opacity-30 transition-opacity -z-10" />
+          </div>
 
           {/* Subtle Glow behind button */}
           <div className="absolute inset-0 bg-white/20 blur-3xl opacity-0 group-hover:opacity-30 transition-opacity -z-10" />
         </div>
 
-      </div>
+
 
       {/* Footer Hint */}
       <p className="mt-auto pt-20 text-neutral-600 text-[9px] tracking-[0.5em] uppercase font-medium opacity-50">

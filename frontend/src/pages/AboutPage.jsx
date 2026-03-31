@@ -181,7 +181,6 @@ const AboutPage = () => {
         <div className="space-y-20 mb-40 px-6 md:px-20">
           <div className="max-w-7xl mx-auto">
 
-            {/* Section Header - More Compact */}
             <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-4 border-b border-white/5 pb-8">
               <div className="space-y-1">
                 <span className="text-red-500 text-[9px] uppercase tracking-[0.5em] font-bold">Chronology</span>
@@ -189,7 +188,7 @@ const AboutPage = () => {
                   Speaking Engagements
                 </h3>
               </div>
-              <p className="text-neutral-500 text-[10px] uppercase tracking-widest max-w-[150px] text-right leading-relaxed hidden md:block">
+              <p className="text-neutral-500 text-[10px] uppercase tracking-widest max-w-37.5 text-right leading-relaxed hidden md:block">
                 Across India's Elite campuses.
               </p>
             </div>
@@ -211,7 +210,7 @@ const AboutPage = () => {
                         src={item.image}
                         className="w-full h-full object-cover grayscale brightness-50 transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110 group-hover:brightness-100"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-60" />
+                      <div className="absolute inset-0 bg-linear-to-t from-[#0A0A0A] via-transparent to-transparent opacity-60" />
 
                       {/* Year Badge */}
                       <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md border border-white/10 px-2 py-1 rounded-lg">
@@ -239,7 +238,7 @@ const AboutPage = () => {
                     </div>
 
                     {/* Micro ID Stamp */}
-                    <div className="absolute bottom-2 right-4 text-3xl font-serif text-white/[0.01] group-hover:text-red-500/[0.05] italic pointer-events-none">
+                    <div className="absolute bottom-2 right-4 text-3xl font-serif text-white/1 group-hover:text-red-500/5 italic pointer-events-none">
                       {item.id}
                     </div>
                   </div>
@@ -264,7 +263,7 @@ const AboutPage = () => {
 
           {/* Modern Subtle Label */}
           <div className="px-8 md:px-20 mb-20 flex items-center gap-4">
-            <span className="text-[20px] uppercase tracking-[0.5em] text-red-500 font-bold">Expertise</span>
+            <span className="text-[20px] uppercase tracking-[0.5em] text-red-500 font-bold">What I'm good at</span>
             <div className="h-px w-12 bg-white/10"></div>
           </div>
 
@@ -272,14 +271,19 @@ const AboutPage = () => {
           <div className="relative flex flex-col gap-6">
 
             {/* Masking Gradients for a 'Smooth' Fade on edges */}
-            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#050505] to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#050505] to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-[#050505] to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-[#050505] to-transparent z-10 pointer-events-none"></div>
 
             {/* Row 1: Sliding Left */}
             <div className="flex animate-marquee-slow whitespace-nowrap items-center gap-6 group cursor-default">
               {[1, 2, 3].map((_, idx) => (
                 <div key={idx} className="flex items-center gap-6">
-                  {["Public Speaking", "Entrepreneurship", "Leadership", "Content Creation"].map((skill, i) => (
+                  {[
+                    "Multi-Venture Building",
+                    "Product Strategy",
+                    "Full-Stack Design",
+                    "Web & App Development"
+                  ].map((skill, i) => (
                     <div
                       key={skill}
                       className={`px-6 py-3 rounded-full border border-white/5 transition-all duration-500 flex items-center gap-4
@@ -297,7 +301,13 @@ const AboutPage = () => {
             <div className="flex animate-marquee-reverse-slow whitespace-nowrap items-center gap-6 group cursor-default">
               {[1, 2, 3].map((_, idx) => (
                 <div key={idx} className="flex items-center gap-6">
-                  {["Digital Marketing", "Community Building", "Personal Branding", "UX Strategy"].map((skill, i) => (
+                  {[
+                    "Digital Marketing",
+                    "Team Leadership",
+                    "Content Creation",
+                    "Investor Relations",
+                    "Mentorship"
+                  ].map((skill, i) => (
                     <div
                       key={skill}
                       className={`px-8 py-4 rounded-full border border-white/5 transition-all duration-500 flex items-center gap-4
@@ -312,7 +322,7 @@ const AboutPage = () => {
             </div>
           </div>
 
-          {/* CSS for the Ribbon Animation */}
+          {/* CSS remains the same as provided in your original code */}
           <style jsx>{`
     @keyframes marquee {
       0% { transform: translateX(0); }
@@ -334,6 +344,88 @@ const AboutPage = () => {
   `}</style>
         </div>
 
+
+
+        <section className="py-32 px-6 md:px-20 bg-[#050505] relative overflow-hidden">
+          {/* Subtle Background Radial Glow */}
+          <div className="absolute top-1/2 right-0 w-125 h-125 bg-red-600/5 blur-[150px] rounded-full pointer-events-none" />
+
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-12 lg:gap-24">
+
+            {/* LEFT SIDE: Vertical Title */}
+            <div className="lg:w-1/4 flex flex-col items-start lg:sticky lg:top-40">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="flex items-center gap-3 mb-6"
+              >
+                <span className="text-red-500 text-[10px] uppercase tracking-[0.5em] font-bold">Awards</span>
+                <div className="h-px w-12 bg-white/10"></div>
+              </motion.div>
+
+              <h2
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                className="text-7xl md:text-8xl text-white italic leading-[0.8] tracking-tighter opacity-10 lg:-rotate-90 lg:origin-top-left lg:translate-y-50 whitespace-nowrap"
+              >
+                RECOGNITION
+              </h2>
+            </div>
+
+            {/* RIGHT SIDE: The Award Card */}
+            <div className="lg:w-3/4 w-full">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="relative group flex flex-col md:flex-row gap-8 p-8 md:p-12 bg-neutral-900/30 border border-white/5 rounded-[2.5rem] backdrop-blur-sm hover:border-red-500/30 transition-all duration-700"
+              >
+                {/* Visual Icon / Badge */}
+                <div className="shrink-0 w-20 h-20 rounded-2xl 
+                 from-red-600 to-red-900 flex items-center justify-center shadow-[0_0_30px_rgba(220,38,38,0.3)] group-hover:scale-110 transition-transform duration-500">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
+                    <path d="M12 15L15 18L22 11" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M2 11L9 18L12 15" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M12 12L12 2" strokeLinecap="round" strokeLinejoin="round" />
+                    <circle cx="12" cy="12" r="10" stroke="white" strokeOpacity="0.2" />
+                  </svg>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="space-y-2">
+                    <p className="text-red-500 font-mono text-[10px] uppercase tracking-[0.3em]">Institutional Milestone</p>
+                    <h3
+                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                      className="text-4xl md:text-5xl text-white italic leading-tight"
+                    >
+                      KITE Institution <br />
+                      <span className="not-italic text-white/40 group-hover:text-white transition-colors duration-700">Event Speaking Award</span>
+                    </h3>
+                  </div>
+
+                  <p className="text-neutral-400 text-sm md:text-base font-light leading-relaxed max-w-2xl border-l border-white/10 pl-6 italic">
+                    "Recognized for impactful speaking and engagement at KITE Institution events,
+                    inspiring students with practical entrepreneurship and personal development insights."
+                  </p>
+
+                  <div className="flex items-center gap-4 pt-4">
+                    <div className="h-px grow bg-white/5"></div>
+                    <span className="text-[9px] uppercase tracking-widest text-neutral-600 font-bold whitespace-nowrap">Verified Recognition // 2024</span>
+                  </div>
+                </div>
+
+                {/* Pinterest-style floating "Seal" on hover */}
+                <div className="absolute top-6 right-8 opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-4 group-hover:translate-y-0">
+                  <div className="px-4 py-1 rounded-full border border-red-500/50 text-red-500 text-[8px] uppercase tracking-tighter font-bold">
+                    Distinguished Speaker
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+          </div>
+        </section>
         {/* SECTION 6: STARTUP JOURNEY */}
         <div className="mb-40 px-6 md:px-20">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
@@ -348,7 +440,7 @@ const AboutPage = () => {
                 <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-6xl text-white italic leading-none">
                   The Startup <br /> Journey
                 </h3>
-                <p className="text-neutral-500 text-sm font-light leading-relaxed max-w-[280px]">
+                <p className="text-neutral-500 text-sm font-light leading-relaxed max-w-70">
                   From a raw idea in a dorm room to a scaled venture. A timeline of failures, pivots, and growth.
                 </p>
               </div>
@@ -358,7 +450,7 @@ const AboutPage = () => {
             <div className="lg:col-span-8 space-y-24 relative">
 
               {/* The Animated Vertical Thread */}
-              <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-red-600/50 via-white/5 to-transparent"></div>
+              <div className="absolute left-0 top-0 bottom-0 w-px bg-linear-to-b from-red-600/50 via-white/5 to-transparent"></div>
 
               {[
                 { year: "2021", title: "Founded [Startup Name]", desc: "Started the journey by solving X problem with a team of two.", tags: ["Ideation", "Seed"] },
@@ -368,7 +460,7 @@ const AboutPage = () => {
                 <div key={idx} className="relative pl-12 group">
 
                   {/* Timeline Node - Minimalist Dot */}
-                  <div className="absolute left-[-4px] top-2 flex items-center justify-center">
+                  <div className="absolute -left-1 top-2 flex items-center justify-center">
                     <div className="w-2 h-2 bg-[#050505] border border-red-500 rounded-full z-10 group-hover:scale-150 group-hover:bg-red-500 transition-all duration-500"></div>
                     <div className="absolute w-6 h-6 bg-red-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </div>
@@ -464,7 +556,7 @@ const AboutPage = () => {
             ].map((item, i) => (
               <div
                 key={i}
-                className={`break-inside-avoid relative overflow-hidden rounded-[2rem] bg-neutral-900 border border-white/5 group cursor-none
+                className={`break-inside-avoid relative overflow-hidden rounded-4xl bg-neutral-900 border border-white/5 group cursor-none
           opacity-0 translate-y-16 animate-[floatUp_1s_cubic-bezier(0.2,0.8,0.2,1)_forwards]`}
                 style={{ animationDelay: `${i * 0.15}s` }}
               >

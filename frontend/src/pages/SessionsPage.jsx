@@ -91,8 +91,8 @@ const SessionsPage = () => {
       </section>
 
       {/* SECTION 2 & 3: INSTITUTION TABLES */}
-      <section className="p-8 md:p-16 space-y-32">
-        {/* Schools Section */}
+      {/* <section className="p-8 md:p-16 space-y-32">
+
         <div>
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl italic">Schools I've Visited</h2>
@@ -120,7 +120,7 @@ const SessionsPage = () => {
               <tbody className="text-sm">
                 {[1, 2, 3].map((_, i) => (
                   <tr key={i} className="relative border-b border-white/5 group overflow-hidden">
-                    {/* The Animated Bar */}
+  
                     <div className="absolute left-0 top-0 bottom-0 w-0 bg-blue-600 transition-all duration-500 ease-in-out group-hover:w-1 " />
 
                     <td className="py-6 font-medium transition-transform duration-500 group-hover:translate-x-4 over">
@@ -145,7 +145,7 @@ const SessionsPage = () => {
           </div>
         </div>
 
-        {/* Colleges Section */}
+
         <div>
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl italic">Colleges & Universities</h2>
@@ -155,10 +155,225 @@ const SessionsPage = () => {
               </button>
             </div>
           </div>
-          {/* Same table structure as above */}
           <div className="bg-white/5 p-8 rounded-sm border border-dashed border-white/10 text-center text-neutral-500 text-sm">
             Colleges list and filtering logic mirrors Schools section...
           </div>
+        </div>
+      </section> */}
+
+
+
+
+      <section className="py-32 bg-[#050505] text-white font-sans overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-20">
+
+          {/* Section Header & Total Impact */}
+          <div className="flex flex-col lg:flex-row justify-between items-end gap-12 mb-24 border-b border-white/5 pb-16">
+            <div className="space-y-4">
+              <span className="text-red-500 font-mono text-[10px] uppercase tracking-[0.6em] font-bold block">
+                Speaker Portfolio
+              </span>
+              <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-7xl md:text-9xl italic leading-none tracking-tighter">
+                Speaking <span className="text-neutral-800 not-italic">& Events</span>
+              </h2>
+            </div>
+
+            <div className="flex gap-10 md:gap-16">
+              {[
+                { label: 'Total Events', val: '20+' },
+                { label: 'Students Reached', val: '10K+' },
+                { label: 'Schools', val: '12+' }
+              ].map((stat, i) => (
+                <div key={i} className="flex flex-col items-end">
+                  <span className="text-3xl md:text-5xl font-serif italic text-white">{stat.val}</span>
+                  <span className="text-[9px] uppercase tracking-widest text-neutral-600 font-bold">{stat.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Event Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            {/* Event Card Template - Map this for your events */}
+            {[
+              {
+                title: "AI & LinkedIn Masterclass",
+                school: "Growell Girls School, Baraut",
+                date: "July 14, 2025",
+                audience: "150 Students",
+                rating: "9.5",
+                tag: "AI & Branding"
+              },
+              {
+                title: "AI & LinkedIn for Faculty",
+                school: "Growell CoEd School, Baraut",
+                date: "July 16, 2025",
+                audience: "50 Faculty Members",
+                rating: "9.6",
+                tag: "Faculty Training"
+              },
+              {
+                title: "Startup & Business Conference",
+                school: "Growell CoEd School, Baraut",
+                date: "August 6, 2025",
+                audience: "90+ Students",
+                rating: "9.6",
+                tag: "Entrepreneurship"
+              },
+              {
+                title: "Unlocking Human OS",
+                school: "Doon School, Baraut",
+                date: "August 12, 2025",
+                audience: "150 Students",
+                rating: "9.1",
+                tag: "Self-Mastery"
+              },
+              {
+                title: "The DeCode",
+                school: "Growell Girls School, Baraut",
+                date: "August 13, 2025",
+                audience: "300 Students",
+                rating: "9.2",
+                tag: "Cyber Ethics"
+              },
+              {
+                title: "The Human Toolkit",
+                school: "Global Kids (Kidzee), Baraut",
+                date: "August 18, 2025",
+                audience: "70+ Students",
+                rating: "9.5",
+                tag: "Life Skills"
+              },
+              {
+                title: "HackProof - Hack the Hackers",
+                school: "Growell Co-ed School, Baraut",
+                date: "August 20, 2025",
+                audience: "150+ Students",
+                rating: "9.5",
+                tag: "Cybersecurity"
+              },
+              {
+                title: "The Cadet Code",
+                school: "Saifia Institute, Baraut",
+                date: "August 21, 2025",
+                audience: "15 Students",
+                rating: "9.5",
+                tag: "Confidence"
+              },
+              {
+                title: "Personality Development Demo",
+                school: "Godwin School, Kirthal",
+                date: "August 22, 2025",
+                audience: "250+ Students",
+                rating: "9.4",
+                tag: "Soft Skills"
+              },
+              {
+                title: "Project UTurn",
+                school: "Takshashila World School",
+                date: "August 25, 2025",
+                audience: "290 Students",
+                rating: "9.1",
+                tag: "Purpose Discovery"
+              },
+              {
+                title: "Persona X - Unmute",
+                school: "Cambridge Public School",
+                date: "September 1, 2025",
+                audience: "70 Students",
+                rating: "9.8",
+                tag: "Public Speaking"
+              },
+              {
+                title: "Cyber Shield",
+                school: "PM Shri KV, Baoli",
+                date: "September 11, 2025",
+                audience: "42 Students",
+                rating: "9.2",
+                tag: "Digital Safety"
+              },
+              {
+                title: "Evarire - Empowerment",
+                school: "PM Shri KV, Baoli",
+                date: "September 16, 2025",
+                audience: "50 Students",
+                rating: "9.3",
+                tag: "Women Health"
+              },
+              {
+                title: "AIgnition",
+                school: "PM Shri KV, Baoli",
+                date: "September 24, 2025",
+                audience: "60 Faculty Members",
+                rating: "9.2",
+                tag: "AI in Education"
+              },
+              {
+                title: "AI Bootcamp",
+                school: "KIET Group of Institutions",
+                date: "September 27, 2025",
+                audience: "60 College Students",
+                rating: "9.3",
+                tag: "Vertex AI"
+              },
+              {
+                title: "Founder Fiesta",
+                school: "Lakshya Public School",
+                date: "November 17, 2025",
+                audience: "180+ Students",
+                rating: "9.8",
+                tag: "Startup Growth"
+              },
+              {
+                title: "Dream Direction Drive",
+                school: "Maharaja Agrasen Public School",
+                date: "December 2, 2025",
+                audience: "60+ Students",
+                rating: "9.7",
+                tag: "Career Clarity"
+              }
+            ].map((event, idx) => (
+              <div key={idx} className="group relative bg-neutral-900/20 border border-white/5 p-8 rounded-4xl hover:bg-neutral-900/40 hover:border-red-500/30 transition-all duration-500">
+                <div className="flex justify-between items-start mb-6">
+                  <span className="text-[9px] font-mono text-red-500 uppercase tracking-widest font-bold px-3 py-1 bg-red-500/10 rounded-full">
+                    {event.tag}
+                  </span>
+                  <div className="text-right">
+                    <p className="text-[18px] font-serif italic text-white">{event.rating}/10</p>
+                    <p className="text-[7px] uppercase tracking-tighter text-neutral-600 font-bold">Audience Score</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-3xl italic leading-tight group-hover:text-red-500 transition-colors">
+                    {event.title}
+                  </h3>
+
+                  <div className="space-y-1">
+                    <p className="text-xs text-white/80 font-medium">{event.school}</p>
+                    <div className="flex items-center gap-3 text-[10px] text-neutral-600 font-mono">
+                      <span>{event.date}</span>
+                      <span className="w-1 h-1 bg-neutral-800 rounded-full"></span>
+                      <span>{event.audience}</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Subtle decoration */}
+                <div className="absolute bottom-6 right-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
+                    <span className="text-xs">→</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+
+
+          </div>
+
+
         </div>
       </section>
 
@@ -274,7 +489,7 @@ const SessionsPage = () => {
               Moments on Stage
             </h2>
             <div className="flex items-center gap-4 mt-6">
-              <span className="h-[1px] w-12 bg-neutral-900"></span>
+              <span className="h-px w-12 bg-neutral-900"></span>
               <p className="text-neutral-500 text-xs uppercase tracking-[0.4em]">
                 The Live Experience
               </p>
@@ -294,11 +509,11 @@ const SessionsPage = () => {
             {[1, 2, 3, 4, 1, 2, 3, 4].map((item, i) => (
               <div
                 key={i}
-                className="flex-none w-[350px] md:w-[500px] px-4 group"
+                className="flex-none w-87.5 md:w-125 px-4 group"
               >
                 {/* Pinterest-style Multi-Image Card */}
                 <div className="relative space-y-4">
-                  <div className="grid grid-cols-10 gap-3 h-[400px]">
+                  <div className="grid grid-cols-10 gap-3 h-100">
                     {/* Main Large Image */}
                     <div className="col-span-6 rounded-3xl overflow-hidden shadow-sm group-hover:shadow-2xl transition-all duration-700">
                       <img
@@ -373,7 +588,7 @@ const SessionsPage = () => {
                   Audience
                 </span>
               </h2>
-              <div className="h-[1px] w-20 bg-red-900/50 mt-8"></div>
+              <div className="h-px w-20 bg-red-900/50 mt-8"></div>
               <p className="mt-8 text-neutral-500 text-sm max-w-xs leading-relaxed tracking-wide italic">
                 "The most profound impact is the echo left in the room after the speaker departs."
               </p>
@@ -394,7 +609,7 @@ const SessionsPage = () => {
                 </p>
 
                 <div className="flex items-center gap-4">
-                  <div className="h-11 w-11 rounded-full bg-gradient-to-tr from-neutral-800 to-neutral-700 border border-white/10 flex items-center justify-center text-white font-serif italic text-sm">
+                  <div className="h-11 w-11 rounded-full bg-linear-to-tr from-neutral-800 to-neutral-700 border border-white/10 flex items-center justify-center text-white font-serif italic text-sm">
                     SJ
                   </div>
                   <div>

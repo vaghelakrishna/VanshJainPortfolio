@@ -119,7 +119,7 @@ const Navigation = () => {
       </div>
 
       {/* --- MOBILE HAMBURGER --- */}
-      <div className="md:hidden fixed top-6 right-6 z-[80]">
+      <div className="md:hidden fixed top-6 right-6 z-80">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={`w-12 h-12 flex flex-col items-center justify-center gap-1.5 rounded-full shadow-2xl transition-all duration-500 ${isOpen ? 'bg-red-600' : 'bg-white'}`}
@@ -133,7 +133,7 @@ const Navigation = () => {
       {/* --- MOBILE MENU OVERLAY --- */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[70] bg-[#050505] backdrop-blur-2xl flex flex-col pt-32 px-10 pb-10 overflow-y-auto">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-70 bg-[#050505] backdrop-blur-2xl flex flex-col pt-32 px-10 pb-10 overflow-y-auto">
             <nav className="flex flex-col gap-6 relative z-10">
               {tabs.map((tab, i) => (
                 <motion.div key={tab.name} initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: i * 0.1 }}>
@@ -162,7 +162,7 @@ const Navigation = () => {
       {/* --- SUBSCRIBE MODAL --- */}
       <AnimatePresence>
         {isModalOpen && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-6">
+          <div className="fixed inset-0 z-100 flex items-center justify-center p-6">
             <motion.div
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
               onClick={() => setIsModalOpen(false)}

@@ -1,61 +1,56 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const cors = require('cors');
-require('dotenv').config();
-
-const Contact = require('./Models/Contact'); // Aapka model
-const Subscriber = require('./Models/Subscriber');
+const connectDB = require('./config/db');
+const Enrollment = require('./Models/Enrollment');
+const Subscriber = require('./Models/Subscriber');  
 
 const app = express();
 
 // Middleware
-app.use(express.json()); // JSON data handle karne ke liye
-app.use(cors());         // Frontend se connection allow karne ke liye
+app.use(cors());
+app.use(express.json());
 
-// MongoDB Connection
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("✅ MongoDB Connected Successfully"))
-  .catch(err => console.error("❌ MongoDB Connection Error:", err));
+// Connect Database
+connectDB();
 
-// --- CONTACT FORM ROUTE ---
-app.post('/api/contact', async (req, res) => {
+// --- ROUTES ---
+
+// 1. Course Enrollment Route
+app.post('/api/enroll', async (req, res) => {
   try {
-    const { name, email, message, category } = req.body;
+    const { name, phone, email, courseName } = req.body;
 
-    // Basic Validation
-    if (!name || !email || !message || !category) {
-      return res.status(400).json({ error: "Please fill all fields, including the dropdown!" });
+    if (!name || !phone || !email || !courseName) {
+      return res.status(400).json({ success: false, message: "Please fill all fields" });
     }
 
-    const newContact = new Contact({
-      name,
-      email,
-      message,
-      category
-    });
+    const newEnrollment = new Enrollment({ name, phone, email, courseName });
+    await newEnrollment.save();
 
-    await newContact.save();
-    res.status(201).json({ message: "Data saved to MongoDB successfully!" });
-
+    res.status(201).json({ success: true, message: "Enrollment Successful!" });
   } catch (error) {
-    console.error("Error saving contact:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).json({ success: false, message: "Server Error" });
   }
 });
 
+// 2. Newsletter Subscription Route
 app.post('/api/subscribe', async (req, res) => {
   try {
     const { email } = req.body;
-    const newSub = new Subscriber({ email });
-    await newSub.save();
-    res.status(201).json({ success: true, message: "Subscribed successfully!" });
-  } catch (error) {
-    if (error.code === 11000) {
-      return res.status(400).json({ success: false, message: "Already subscribed!" });
+
+    const existing = await Subscriber.findOne({ email });
+    if (existing) {
+      return res.status(400).json({ success: false, message: "Already Subscribed!" });
     }
-    res.status(500).json({ success: false, message: "Server error" });
+
+    const newSubscriber = new Subscriber({ email });
+    await newSubscriber.save();
+
+    res.status(201).json({ success: true, message: "Subscribed Successfully!" });
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Server Error" });
   }
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
