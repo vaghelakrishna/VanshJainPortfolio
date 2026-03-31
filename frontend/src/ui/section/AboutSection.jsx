@@ -52,7 +52,7 @@ const AboutSection = () => {
           dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
           initial={{ rotate: 6, x: 140, y: -40 }}
           whileDrag={{ zIndex: 50, scale: 1.05 }}
-          className="absolute right-0 top-1/4 w-64 h-80 hidden xl:block cursor-grab active:cursor-grabbing"
+          className="sm:hidden absolute right-0 top-1/4 w-64 h-80  xl:block cursor-grab active:cursor-grabbing"
         >
           <div className="relative w-full h-full p-2 bg-white/5 backdrop-blur-xl rounded-md shadow-2xl border border-white/10 overflow-hidden">
             <img
