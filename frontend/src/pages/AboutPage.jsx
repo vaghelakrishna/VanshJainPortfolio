@@ -6,6 +6,88 @@ const AboutPage = () => {
     { id: 2, url: '/photo2.jpg', rot: 3, x: 20, y: -10 },
     { id: 3, url: '/photo3.jpg', rot: -8, x: 0, y: 40 },
   ];
+  const milestones = [
+    {
+      year: "2021",
+      phase: "01",
+      title: "The Genesis",
+      desc: "Launched the first prototype from a dorm room. Focused on solving core UX friction for 500+ initial beta users.",
+      tags: ["MVP", "Validation"],
+      img: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=600"
+    },
+    {
+      year: "2022",
+      phase: "02",
+      title: "Scaling Pulse",
+      desc: "Secured seed funding and scaled the engineering team. Reached a milestone of 50k active monthly users.",
+      tags: ["Growth", "Series A"],
+      img: "https://images.unsplash.com/photo-1522071823991-b9671f9d7f1f?q=80&w=600"
+    },
+    {
+      year: "2024",
+      phase: "03",
+      title: "Global Impact",
+      desc: "Currently integrating AI-driven insights to personalize the user journey for a global audience.",
+      tags: ["Expansion", "AI"],
+      img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600"
+    }
+  ];
+  const institutions = [
+    {
+      id: "01",
+      year: "2024",
+      city: "Mumbai",
+      name: "IIT Bombay",
+      topic: "The Future of AI in Design",
+      image: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=800",
+      aspect: "aspect-[4/5]", // Tall image
+    },
+    {
+      id: "02",
+      year: "2024",
+      city: "Delhi",
+      name: "IIT Delhi",
+      topic: "Building Scalable Tech",
+      image: "https://images.unsplash.com/photo-1523050853063-bd8012fec21b?q=80&w=800",
+      aspect: "aspect-square", // Square image
+    },
+    {
+      id: "03",
+      year: "2023",
+      city: "Bangalore",
+      name: "BITS Pilani",
+      topic: "Entrepreneurial Mindset",
+      image: "https://images.unsplash.com/photo-1541339907198-e08756ebafe3?q=80&w=800",
+      aspect: "aspect-[4/3]", // Wide image
+    },
+    {
+      id: "04",
+      year: "2023",
+      city: "Ahmedabad",
+      name: "NID",
+      topic: "Human-Centric UX",
+      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800",
+      aspect: "aspect-[4/5]",
+    },
+    {
+      id: "05",
+      year: "2022",
+      city: "Pune",
+      name: "Symbiosis",
+      topic: "Personal Branding",
+      image: "https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?q=80&w=800",
+      aspect: "aspect-square",
+    },
+    {
+      id: "06",
+      year: "2022",
+      city: "Jaipur",
+      name: "MNIT",
+      topic: "Startup Ideation",
+      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800",
+      aspect: "aspect-[4/3]",
+    }
+  ];
 
   return (
     <div className="relative min-h-screen bg-[#0A0A0A] text-[#888] selection:bg-white/10 overflow-x-hidden font-sans antialiased pt-32">
@@ -94,53 +176,248 @@ const AboutPage = () => {
           </div>
         </div>
 
+                {/* Institutions I Have Spoken At */}
         {/* SECTION 3 & 4: SCHOOLS & COLLEGES */}
-        <div className="space-y-32 mb-40">
-          <div>
-            <h3 className="text-[10px] uppercase tracking-[0.3em] text-neutral-600 mb-10">Institutions I Have Spoken At</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <div key={i} className="bg-[#0A0A0A] p-8 hover:bg-neutral-900/50 transition-colors">
-                  <span className="text-[10px] text-neutral-600 font-mono">2024 / City Name</span>
-                  <h4 className="text-white font-serif text-lg mt-2 mb-1">Institution Name {i}</h4>
-                  <p className="text-[12px] opacity-60 italic">Topic: Building Scalable Startups</p>
+        <div className="space-y-20 mb-40 px-6 md:px-20">
+          <div className="max-w-7xl mx-auto">
+
+            {/* Section Header - More Compact */}
+            <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-4 border-b border-white/5 pb-8">
+              <div className="space-y-1">
+                <span className="text-red-500 text-[9px] uppercase tracking-[0.5em] font-bold">Chronology</span>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl md:text-5xl text-white italic">
+                  Speaking Engagements
+                </h3>
+              </div>
+              <p className="text-neutral-500 text-[10px] uppercase tracking-widest max-w-[150px] text-right leading-relaxed hidden md:block">
+                Across India's Elite campuses.
+              </p>
+            </div>
+
+            {/* Responsive Horizontal Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {institutions.map((item, index) => (
+                <div
+                  key={item.id}
+                  // Scroll Reveal Animation (Opacity + Slide Up)
+                  className="opacity-0 translate-y-8 animate-[fade-in-up_0.8s_ease-out_forwards]"
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  <div className="group relative flex flex-col overflow-hidden rounded-3xl bg-neutral-900/40 border border-white/5 transition-all duration-500 hover:bg-neutral-900 hover:border-red-500/20">
+
+                    {/* Short Height Image (aspect-video) */}
+                    <div className={`relative w-full ${item.aspect} overflow-hidden`}>
+                      <img
+                        src={item.image}
+                        className="w-full h-full object-cover grayscale brightness-50 transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110 group-hover:brightness-100"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-60" />
+
+                      {/* Year Badge */}
+                      <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md border border-white/10 px-2 py-1 rounded-lg">
+                        <span className="text-[8px] text-white font-mono tracking-widest">{item.year}</span>
+                      </div>
+                    </div>
+
+                    {/* Compact Content Area */}
+                    <div className="p-6 relative">
+                      <div className="flex justify-between items-center mb-3">
+                        <span className="text-[8px] text-red-500 font-bold uppercase tracking-widest">{item.city}</span>
+                        <div className="h-px w-8 bg-white/10 group-hover:w-12 group-hover:bg-red-500 transition-all"></div>
+                      </div>
+
+                      <h4
+                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                        className="text-2xl text-white mb-2 leading-tight font-light"
+                      >
+                        {item.name}
+                      </h4>
+
+                      <p className="text-[11px] text-neutral-500 font-serif italic border-l border-red-500/30 pl-3 py-1 group-hover:text-neutral-300 transition-colors">
+                        "{item.topic}"
+                      </p>
+                    </div>
+
+                    {/* Micro ID Stamp */}
+                    <div className="absolute bottom-2 right-4 text-3xl font-serif text-white/[0.01] group-hover:text-red-500/[0.05] italic pointer-events-none">
+                      {item.id}
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
+
+          {/* CSS Keyframes for the Slide Animation */}
+          <style jsx>{`
+    @keyframes fade-in-up {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  `}</style>
         </div>
 
         {/* SECTION 5: SKILLS */}
-        <div className="mb-40">
-           <h3 className="text-[10px] uppercase tracking-[0.3em] text-neutral-600 mb-10">Expertise</h3>
-           <div className="flex flex-wrap gap-3">
-             {["Public Speaking", "Entrepreneurship", "Leadership", "Content Creation", "Digital Marketing", "Community Building"].map((skill) => (
-               <span key={skill} className="px-6 py-3 border border-white/5 rounded-full text-[12px] text-white hover:border-white/20 transition-all cursor-default">
-                 {skill}
-               </span>
-             ))}
-           </div>
+        <div className="mb-40 overflow-hidden relative py-10 bg-[#050505]">
+
+          {/* Modern Subtle Label */}
+          <div className="px-8 md:px-20 mb-20 flex items-center gap-4">
+            <span className="text-[20px] uppercase tracking-[0.5em] text-red-500 font-bold">Expertise</span>
+            <div className="h-px w-12 bg-white/10"></div>
+          </div>
+
+          {/* The Unique Sliding Ribbon */}
+          <div className="relative flex flex-col gap-6">
+
+            {/* Masking Gradients for a 'Smooth' Fade on edges */}
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#050505] to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#050505] to-transparent z-10 pointer-events-none"></div>
+
+            {/* Row 1: Sliding Left */}
+            <div className="flex animate-marquee-slow whitespace-nowrap items-center gap-6 group cursor-default">
+              {[1, 2, 3].map((_, idx) => (
+                <div key={idx} className="flex items-center gap-6">
+                  {["Public Speaking", "Entrepreneurship", "Leadership", "Content Creation"].map((skill, i) => (
+                    <div
+                      key={skill}
+                      className={`px-6 py-3 rounded-full border border-white/5 transition-all duration-500 flex items-center gap-4
+                ${i % 2 === 0 ? 'bg-white text-black font-bold' : 'bg-transparent text-white/40 italic font-serif text-xl md:text-2xl hover:text-red-500'}`}
+                    >
+                      <span className="text-[10px] opacity-30">{i + 1 < 10 ? `0${i + 1}` : i + 1}</span>
+                      <span className="tracking-tighter">{skill}</span>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+
+            {/* Row 2: Sliding Right (Opposite Direction) */}
+            <div className="flex animate-marquee-reverse-slow whitespace-nowrap items-center gap-6 group cursor-default">
+              {[1, 2, 3].map((_, idx) => (
+                <div key={idx} className="flex items-center gap-6">
+                  {["Digital Marketing", "Community Building", "Personal Branding", "UX Strategy"].map((skill, i) => (
+                    <div
+                      key={skill}
+                      className={`px-8 py-4 rounded-full border border-white/5 transition-all duration-500 flex items-center gap-4
+                ${i % 2 !== 0 ? 'bg-neutral-900 text-white' : 'bg-transparent text-white/40 italic font-serif text-xl md:text-2xl hover:text-red-500'}`}
+                    >
+                      <span className="h-1 w-1 rounded-full bg-red-500"></span>
+                      <span className="tracking-tighter">{skill}</span>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CSS for the Ribbon Animation */}
+          <style jsx>{`
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-33.3%); }
+    }
+    @keyframes marquee-reverse {
+      0% { transform: translateX(-33.3%); }
+      100% { transform: translateX(0); }
+    }
+    .animate-marquee-slow {
+      animation: marquee 40s linear infinite;
+    }
+    .animate-marquee-reverse-slow {
+      animation: marquee-reverse 35s linear infinite;
+    }
+    .animate-marquee-slow:hover, .animate-marquee-reverse-slow:hover {
+      animation-play-state: paused;
+    }
+  `}</style>
         </div>
 
         {/* SECTION 6: STARTUP JOURNEY */}
-        <div className="mb-40 grid grid-cols-12 gap-8">
-           <div className="col-span-12 md:col-span-4">
-              <h3 className="text-[10px] uppercase tracking-[0.3em] text-neutral-600">Startup Journey</h3>
-           </div>
-           <div className="col-span-12 md:col-span-8 space-y-12">
-             {[
-               { year: "2021", title: "Founded [Startup Name]", desc: "Started the journey by solving X problem." },
-               { year: "2022", title: "Scaling Product", desc: "Reached first 1000 users and secured seed funding." },
-               { year: "2024", title: "Expansion", desc: "Currently building the future of Y industry." }
-             ].map((milestone, idx) => (
-               <div key={idx} className="relative pl-8 border-l border-white/10 group">
-                 <div className="absolute w-1.5 h-1.5 bg-white rounded-full -left-[3.5px] top-1.5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                 <span className="text-[11px] font-mono text-neutral-600">{milestone.year}</span>
-                 <h4 className="text-white text-xl font-serif mt-1">{milestone.title}</h4>
-                 <p className="text-sm mt-2 max-w-md">{milestone.desc}</p>
-               </div>
-             ))}
-           </div>
+        <div className="mb-40 px-6 md:px-20">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+
+            {/* Left Sticky Header */}
+            <div className="lg:col-span-4 lg:sticky lg:top-32 h-fit">
+              <div className="space-y-6">
+                <div className="flex items-center gap-3">
+                  <span className="text-red-500 text-[10px] uppercase tracking-[0.5em] font-bold">Chronicles</span>
+                  <div className="h-px w-8 bg-white/10"></div>
+                </div>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-6xl text-white italic leading-none">
+                  The Startup <br /> Journey
+                </h3>
+                <p className="text-neutral-500 text-sm font-light leading-relaxed max-w-[280px]">
+                  From a raw idea in a dorm room to a scaled venture. A timeline of failures, pivots, and growth.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Timeline: Modern Staggered Cards */}
+            <div className="lg:col-span-8 space-y-24 relative">
+
+              {/* The Animated Vertical Thread */}
+              <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-red-600/50 via-white/5 to-transparent"></div>
+
+              {[
+                { year: "2021", title: "Founded [Startup Name]", desc: "Started the journey by solving X problem with a team of two.", tags: ["Ideation", "Seed"] },
+                { year: "2022", title: "Scaling Product", desc: "Reached first 1000 users and secured seed funding to expand tech.", tags: ["Growth", "Scale"] },
+                { year: "2024", title: "Global Expansion", desc: "Currently building the future of Y industry across 3 continents.", tags: ["Current", "Impact"] }
+              ].map((milestone, idx) => (
+                <div key={idx} className="relative pl-12 group">
+
+                  {/* Timeline Node - Minimalist Dot */}
+                  <div className="absolute left-[-4px] top-2 flex items-center justify-center">
+                    <div className="w-2 h-2 bg-[#050505] border border-red-500 rounded-full z-10 group-hover:scale-150 group-hover:bg-red-500 transition-all duration-500"></div>
+                    <div className="absolute w-6 h-6 bg-red-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  </div>
+
+                  {/* The Content Card */}
+                  <div className="flex flex-col md:flex-row gap-8 items-start">
+                    <div className="flex-1 space-y-4">
+                      <div className="flex items-center gap-4">
+                        <span className="text-[11px] font-mono text-neutral-600 bg-white/5 px-2 py-0.5 rounded uppercase tracking-tighter">
+                          Phase 0{idx + 1}
+                        </span>
+                        <span className="h-px w-4 bg-white/10"></span>
+                        <span className="text-[11px] font-mono text-red-500 uppercase tracking-widest">{milestone.year}</span>
+                      </div>
+
+                      <h4
+                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                        className="text-3xl md:text-4xl text-white group-hover:text-red-100 transition-colors italic leading-tight"
+                      >
+                        {milestone.title}
+                      </h4>
+
+                      <p className="text-neutral-400 text-sm md:text-base leading-relaxed max-w-lg font-light">
+                        {milestone.desc}
+                      </p>
+
+                      {/* Skill/Tag Pills inside Timeline */}
+                      <div className="flex gap-2 pt-2">
+                        {milestone.tags.map(tag => (
+                          <span key={tag} className="text-[8px] uppercase tracking-[0.2em] px-3 py-1 border border-white/5 text-neutral-600 rounded-full group-hover:border-red-500/20 group-hover:text-neutral-400 transition-all">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Aesthetic Visual Side-Detail (Pinterest Feel) */}
+                    <div className="hidden md:block w-32 h-32 rounded-2xl overflow-hidden grayscale opacity-20 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700 bg-neutral-900 border border-white/5 rotate-3 group-hover:rotate-0">
+                      <img
+                        src={`https://images.unsplash.com/photo-${1500000000000 + idx}?q=80&w=200`}
+                        className="w-full h-full object-cover"
+                        alt="Milestone"
+                      />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* SECTION 9: STATS / NUMBERS */}
@@ -161,15 +438,83 @@ const AboutPage = () => {
         </div>
 
         {/* SECTION 8: GALLERY */}
-        <div className="mb-40">
-           <h3 className="text-[10px] uppercase tracking-[0.3em] text-neutral-600 mb-10">Session Gallery</h3>
-           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[1,2,3,4,5,6,7,8].map((i) => (
-                <div key={i} className="aspect-square bg-neutral-900 border border-white/5 overflow-hidden group grayscale hover:grayscale-0 transition-all duration-500">
-                  <img src={`/api/placeholder/400/400`} alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        <div className="mb-40 px-6 md:px-20">
+          {/* Section Header with Reveal Animation */}
+          <div className="flex items-end justify-between mb-16 border-b border-white/5 pb-8 overflow-hidden">
+            <div className="space-y-2 animate-[slideUp_1s_ease-out]">
+              <h3 className="text-[10px] uppercase tracking-[0.6em] text-red-500 font-bold">Session Gallery</h3>
+              <p style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl text-white italic leading-none">Behind the Scenes</p>
+            </div>
+            <span className="text-[9px] text-neutral-600 uppercase tracking-[0.3em] font-mono hidden md:block animate-[fadeIn_2s_ease-out]">
+              Archive / 2024-25
+            </span>
+          </div>
+
+          {/* Pinterest Mosaic Grid with Framer-like Entrance */}
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
+            {[
+              { id: 1, aspect: "aspect-[3/4]", label: "IIT Delhi Keynote" },
+              { id: 2, aspect: "aspect-square", label: "Workshop Phase" },
+              { id: 3, aspect: "aspect-[4/5]", label: "Interactive Session" },
+              { id: 4, aspect: "aspect-video", label: "Main Stage" },
+              { id: 5, aspect: "aspect-[2/3]", label: "Team Strategy" },
+              { id: 6, aspect: "aspect-square", label: "Mumbai Seminar" },
+              { id: 7, aspect: "aspect-video", label: "Closing Remarks" },
+              { id: 8, aspect: "aspect-[3/4]", label: "Backstage Prep" },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className={`break-inside-avoid relative overflow-hidden rounded-[2rem] bg-neutral-900 border border-white/5 group cursor-none
+          opacity-0 translate-y-16 animate-[floatUp_1s_cubic-bezier(0.2,0.8,0.2,1)_forwards]`}
+                style={{ animationDelay: `${i * 0.15}s` }}
+              >
+                {/* The Image Layer */}
+                <div className={`${item.aspect} w-full overflow-hidden relative`}>
+                  <img
+                    src={`https://images.unsplash.com/photo-${1500000000000 + item.id * 100}?q=80&w=600`}
+                    alt={item.label}
+                    className="w-full h-full object-cover grayscale brightness-50 contrast-[1.2] group-hover:grayscale-0 group-hover:scale-110 group-hover:brightness-100 transition-all duration-[1.5s] ease-out"
+                  />
+
+                  {/* Soft Red Vignette on Hover */}
+                  <div className="absolute inset-0 bg-red-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
                 </div>
-              ))}
-           </div>
+
+                {/* Floating Metadata (Pinterest Detail) */}
+                <div className="absolute inset-0 flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-4 group-hover:translate-y-0">
+                  <div className="bg-black/40 backdrop-blur-xl border border-white/10 p-4 rounded-2xl">
+                    <p className="text-[10px] text-red-500 font-bold uppercase tracking-widest mb-1">{item.label}</p>
+                    <div className="flex justify-between items-center">
+                      <span className="text-[8px] text-white/40 uppercase font-mono">Capture // 0{item.id}</span>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><path d="M7 17L17 7M17 7H7M17 7V17" /></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Global CSS Animations */}
+          <style jsx>{`
+    @keyframes floatUp {
+      from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  `}</style>
         </div>
 
       </div>
