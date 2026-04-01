@@ -4,9 +4,9 @@ import Testimonials from '../ui/section/Testimonials';
 
 const AboutPage = () => {
   const photos = [
-    { id: 1, url: './src/assets/events/Event3.jpg', rot: -8, x: 0, y: 40 },
-    { id: 2, url: './src/assets/events/Event2.jpg', rot: 3, x: 20, y: -10 },
-    { id: 3, url: './src/assets/events/Event1.jpg', rot: -5, x: -20, y: 10 },
+    { id: 1, url: './src/assets/events/Event3.webp', rot: -8, x: 0, y: 40 },
+    { id: 2, url: './src/assets/events/Event2.webp', rot: 3, x: 20, y: -10 },
+    { id: 3, url: './src/assets/events/Event1.webp', rot: -5, x: -20, y: 10 },
   ];
   const milestones = [
     {
