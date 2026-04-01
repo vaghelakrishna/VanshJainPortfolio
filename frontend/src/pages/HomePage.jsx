@@ -182,28 +182,58 @@ const HomePage = ({ setPage }) => {
 
 
       {/* --- SECTION 4: SHOWREEL TEASER (Engagement) --- */}
-      <section className="py-24 bg-white text-black px-8 md:px-16 flex flex-col md:flex-row items-center gap-16">
-        <div className="md:w-1/2 relative group cursor-pointer">
-          <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=800" className="w-full aspect-video object-cover" alt="Session" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <PlayCircle size={80} className="text-white opacity-90 group-hover:scale-110 transition-transform" />
+      <section className="py-24 bg-white text-black px-8 md:px-16 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+
+          {/* Heading: Always on Top */}
+          <div className="mb-16">
+            <h2
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              className="text-5xl md:text-7xl leading-tight tracking-tighter"
+            >
+              Energy that <br /> <span className="italic text-neutral-500">Inspires.</span>
+            </h2>
           </div>
-        </div>
-        <div className="md:w-1/2 space-y-6">
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-7xl leading-tight tracking-tighter">Energy that <br /> <span className="italic">Inspires.</span></h2>
-          <p className="text-neutral-600 leading-relaxed">Watch a glimpse of the high-impact sessions conducted across various states. From ideation workshops to keynote speeches.</p>
-          <div className="grid grid-cols-2 gap-8 pt-6">
-            {stats.map((s, i) => (
-              <div key={i}>
-                <p className="text-3xl font-bold">{s.value}</p>
-                <p className="text-[9px] uppercase tracking-widest text-neutral-400 font-bold">{s.label}</p>
+
+          {/* Content Wrapper: Image and Stats Side by Side */}
+          <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+
+            {/* LEFT: Image Container */}
+            <div className="w-full md:w-1/2 relative group cursor-pointer">
+              <div className="overflow-hidden rounded-2xl border border-black/5 shadow-2xl">
+                <img
+                  src="./src/assets/events/Event2.webp"
+                  className="w-full aspect-video object-cover  transition-all duration-700 scale-105 group-hover:scale-100"
+                  alt="Session"
+                />
+
               </div>
-            ))}
+            </div>
+
+            {/* RIGHT: Text & Stats */}
+            <div className="w-full md:w-1/2 space-y-8">
+              <p className="text-neutral-600 text-lg leading-relaxed max-w-md">
+                Watch a glimpse of the high-impact sessions conducted across various states.
+                From ideation workshops to keynote speeches, we bring execution to the forefront.
+              </p>
+
+              <div className="grid grid-cols-2 gap-10 pt-6 border-t border-neutral-100">
+                {stats.map((s, i) => (
+                  <div key={i} className="space-y-1">
+                    <p className="text-4xl font-bold tracking-tighter">{s.value}</p>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-bold">
+                      {s.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* --- SECTION 5: LATEST ARTICLES (Teaser) --- */}
+      {/* --- SECTION 5: LATEST Blog (Teaser) --- */}
       <section className="py-20 px-8 md:px-20 bg-[#0a0a0a]">
         {/* Header: Compact Editorial Style */}
         <div className="flex flex-col md:flex-row justify-between items-baseline mb-12 gap-4 border-b border-white/5 pb-6">
@@ -219,46 +249,86 @@ const HomePage = ({ setPage }) => {
           </button>
         </div>
 
-        {/* Pinterest-style Grid: Reduced Height & Spacing */}
+
+        {/* blog */}
+        {/* Pinterest-style Grid: Static Implementation */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
 
-          {/* Article 1: Cinematic & Clean */}
+          {/* ARTICLE 1: Startup Strategy (Left - High) */}
           <article className="group cursor-pointer">
-            <div className="relative aspect-16/10 overflow-hidden rounded-2xl mb-6 bg-neutral-900 border border-white/5">
+            {/* Image Container */}
+            <div className="relative aspect-16/10 overflow-hidden rounded-2xl mb-6 bg-neutral-900 border border-white/5 shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800"
-                className="w-full h-full object-cover  group-hover:scale-105 transition-all duration-700 ease-in-out"
+                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1000"
+                alt="Startup Strategy"
+                className="w-full h-full object-cover  group-hover:scale-105 transition-all duration-1000 ease-in-out"
               />
-              <div className="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
-                <p className="text-[8px] text-white uppercase tracking-widest font-sans">March 2026</p>
+              <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
+                <p className="text-[8px] text-white uppercase tracking-widest font-sans font-bold">March 24, 2026</p>
               </div>
             </div>
 
+            {/* Content Section */}
             <div className="space-y-3">
-              <span className="text-red-500 text-[8px] uppercase font-bold font-sans tracking-widest">Entrepreneurship</span>
-              <h3 className="text-xl md:text-2xl text-white leading-tight font-light group-hover:text-red-100 transition-colors">
-                How to Validate your Startup Idea with <span className="italic font-serif text-red-500/80">Zero Budget.</span>
+              <div className="flex items-center gap-3">
+                <span className="text-red-500 text-[8px] uppercase font-bold font-sans tracking-[0.3em]">Startup Strategy</span>
+                <div className="h-px w-8 bg-white/10"></div>
+              </div>
+
+              <h3
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                className="text-2xl md:text-3xl text-white leading-tight font-light group-hover:text-red-100 transition-colors"
+              >
+                Why Most Founders Fail at Execution <br />
+                <span className="italic text-neutral-500 text-lg md:text-xl font-serif">(And How to Avoid It)</span>
               </h3>
+
+              <p className="text-neutral-500 text-sm line-clamp-2 font-sans font-light leading-relaxed">
+                A breakdown of why perfect planning kills startups, and why speed and iteration beat perfection every time.
+              </p>
+
+              <div className="pt-2 flex items-center gap-2 text-[10px] uppercase tracking-widest text-white/40 group-hover:text-red-500 transition-colors font-bold">
+                Read Story <span>→</span>
+              </div>
             </div>
           </article>
 
-          {/* Article 2: Slightly Offset (But not too much) */}
-          <article className="group cursor-pointer md:mt-16">
-            <div className="relative aspect-16/10 overflow-hidden rounded-2xl mb-6 bg-neutral-900 border border-white/5">
+          {/* ARTICLE 2: Education (Right - Offset/Lower) */}
+          <article className="group cursor-pointer md:mt-24">
+            {/* Image Container */}
+            <div className="relative aspect-16/10 overflow-hidden rounded-2xl mb-6 bg-neutral-900 border border-white/5 shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1551818255-e6e10975bc17?q=80&w=800"
-                className="w-full h-full object-cover  group-hover:scale-105 transition-all duration-700 ease-in-out"
+                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1000"
+                alt="Education"
+                className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 ease-in-out"
               />
-              <div className="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
-                <p className="text-[8px] text-white uppercase tracking-widest font-sans">Feb 2026</p>
+              <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
+                <p className="text-[8px] text-white uppercase tracking-widest font-sans font-bold">March 18, 2026</p>
               </div>
             </div>
 
+            {/* Content Section */}
             <div className="space-y-3">
-              <span className="text-red-500 text-[8px] uppercase tracking-[0.3em] font-bold font-sans">Public Speaking</span>
-              <h3 className="text-xl md:text-2xl text-white leading-tight font-light group-hover:text-red-100 transition-colors">
-                The 3-Second Rule: Overcoming <span className="italic font-serif text-red-500/80">Stage Fright.</span>
+              <div className="flex items-center gap-3">
+                <span className="text-red-500 text-[8px] uppercase font-bold font-sans tracking-[0.3em]">Education</span>
+                <div className="h-px w-8 bg-white/10"></div>
+              </div>
+
+              <h3
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                className="text-2xl md:text-3xl text-white leading-tight font-light group-hover:text-red-100 transition-colors"
+              >
+                The Education System is Broken <br />
+                <span className="italic text-neutral-500 text-lg md:text-xl font-serif">— Here's What We're Building</span>
               </h3>
+
+              <p className="text-neutral-500 text-sm line-clamp-2 font-sans font-light leading-relaxed">
+                Why traditional schooling doesn't prepare students for real life. A deep dive into the Kattalyx Labs approach.
+              </p>
+
+              <div className="pt-2 flex items-center gap-2 text-[10px] uppercase tracking-widest text-white/40 group-hover:text-red-500 transition-colors font-bold">
+                Read Story <span>→</span>
+              </div>
             </div>
           </article>
 
