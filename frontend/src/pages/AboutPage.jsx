@@ -214,7 +214,7 @@ const AboutPage = () => {
                   city: "Ghaziabad",
                   topic: "AI Bootcamp: Vertex AI & Google Agent Kit",
                   year: "SEPT 2025",
-                  image: "./src/assets/events/Event15.jpg",
+                  image: "./src/assets/events/Event15.webp",
                   aspect: "aspect-video"
                 },
                 {
@@ -223,7 +223,7 @@ const AboutPage = () => {
                   city: "Baghpat",
                   topic: "Unlocking Human OS: Habits to Higher Self",
                   year: "AUG 2025",
-                  image: "./src/assets/events/Event4.jpg",
+                  image: "./src/assets/events/Event4.webp",
                   aspect: "aspect-video"
                 },
                 {
@@ -232,7 +232,7 @@ const AboutPage = () => {
                   city: "Baoli",
                   topic: "Cyber Shield: Scams & Live Hacking Demos",
                   year: "SEPT 2025",
-                  image: "./src/assets/events/Event12.jpg",
+                  image: "./src/assets/events/Event12.webp",
                   aspect: "aspect-video"
                 },
                 {
@@ -241,7 +241,7 @@ const AboutPage = () => {
                   city: "Noida",
                   topic: "Dream Direction Drive: Future Job Trends",
                   year: "DEC 2025",
-                  image: "./src/assets/events/Event17.jpg",
+                  image: "./src/assets/events/Event16.webp",
                   aspect: "aspect-video"
                 },
                 {
@@ -250,7 +250,7 @@ const AboutPage = () => {
                   city: "Baraut",
                   topic: "The DeCode: Cyber Awareness & Ethics",
                   year: "AUG 2025",
-                  image: "./src/assets/events/Event5.jpg",
+                  image: "./src/assets/events/Event5.webp",
                   aspect: "aspect-video"
                 },
                 {
@@ -259,7 +259,7 @@ const AboutPage = () => {
                   city: "Baghpat",
                   topic: "Founder Fiesta: Startup Fundamentals",
                   year: "NOV 2025",
-                  image: "./src/assets/events/Event16.jpg",
+                  image: "./src/assets/events/Event16.webp",
                   aspect: "aspect-video"
                 }
               ].map((item, index) => (
@@ -274,7 +274,7 @@ const AboutPage = () => {
                     <div className={`relative w-full ${item.aspect} overflow-hidden`}>
                       <img
                         src={item.image}
-                        className="w-full h-full object-cover grayscale brightness-50 transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110 group-hover:brightness-100"
+                        className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 "
                         alt={item.name}
                       />
                       <div className="absolute inset-0 bg-linear-to-t from-[#0A0A0A] via-transparent to-transparent opacity-60" />
