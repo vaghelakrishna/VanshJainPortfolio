@@ -111,7 +111,7 @@ const ContactPage = () => {
               {/* Socials Grid */}
               <motion.div variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5 border border-white/10">
                 {[
-                  { name: 'Instagram', icon: <FaInstagram size={16} />, link: "https://www.instagram.com/vanshjain26" },
+                  { name: 'Instagram', icon: <FaInstagram size={16} />, link: "https://www.instagram.com/vansh_jain_26" },
                   { name: 'LinkedIn', icon: <FaLinkedin size={16} />, link: "https://www.linkedin.com/in/vansh-jain26" },
                   { name: 'YouTube', icon: <FaYoutube size={16} />, link: "https://www.youtube.com/@vanshjain26" }
                 ].map((social) => (
