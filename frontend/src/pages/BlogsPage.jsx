@@ -1,20 +1,18 @@
 import React, { useState } from 'react';
+// Switched to React Icons - io5 for clean UI icons, fa6 for social brands
 import {
-  Calendar,
-  ArrowUpRight,
-  ArrowLeft,
-  Search,
-  MessageCircle,
-  // Twitter,
-  // Linkedin
-} from 'lucide-react';
+  IoArrowBackOutline,
+  IoSearchOutline,
+  IoArrowRedoOutline,
+  IoChatbubbleEllipsesOutline
+} from "react-icons/io5";
+import { FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
 
 const BlogPage = () => {
   const [selectedPost, setSelectedPost] = useState(null);
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
 
-  
   const categories = ['All', 'Startup Strategy', 'Education', 'Mindset', 'Growth', 'Leadership'];
 
   const posts = [
@@ -126,17 +124,13 @@ const BlogPage = () => {
     }
   ];
 
-  // const filteredPosts = activeCategory === 'All'
-  //   ? posts
-  //   : posts.filter(post => post.category === activeCategory);
-
-
   const filteredPosts = posts.filter(post => {
     const matchesCategory = activeCategory === 'All' || post.category === activeCategory;
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
   // --- SINGLE POST VIEW ---
   if (selectedPost) {
     return (
@@ -148,7 +142,7 @@ const BlogPage = () => {
             onClick={() => { setSelectedPost(null); window.scrollTo(0, 0); }}
             className="absolute top-10 left-6 md:left-12 flex items-center gap-2 text-white bg-black/20 backdrop-blur-xl border border-white/10 px-6 py-3 rounded-full hover:bg-white hover:text-black transition-all uppercase text-[10px] tracking-widest"
           >
-            <ArrowLeft size={16} /> Back to Journal
+            <IoArrowBackOutline size={16} /> Back to Blog
           </button>
         </div>
 
@@ -164,9 +158,9 @@ const BlogPage = () => {
           <div className="flex items-center gap-4 mb-12 border-y border-white/10 py-6">
             <span className="text-xs text-neutral-400">Written by <span className="text-white font-medium">{selectedPost.author}</span></span>
             <div className="ml-auto flex gap-4 text-neutral-400">
-              <Twitter size={18} className="hover:text-white cursor-pointer transition-colors" />
-              <Linkedin size={18} className="hover:text-white cursor-pointer transition-colors" />
-              <MessageCircle size={18} className="hover:text-white cursor-pointer transition-colors" />
+              <FaXTwitter size={18} className="hover:text-white cursor-pointer transition-colors" />
+              <FaLinkedinIn size={18} className="hover:text-white cursor-pointer transition-colors" />
+              <IoChatbubbleEllipsesOutline size={18} className="hover:text-white cursor-pointer transition-colors" />
             </div>
           </div>
 
@@ -219,7 +213,7 @@ const BlogPage = () => {
         </div>
 
         <div className="relative w-full md:w-72 border-b border-white/10 focus-within:border-white transition-colors">
-          <Search className="absolute left-0 top-1/2 -translate-y-1/2 text-neutral-600" size={14} />
+          <IoSearchOutline className="absolute left-0 top-1/2 -translate-y-1/2 text-neutral-600" size={14} />
           <input
             type="text"
             placeholder="SEARCH THE ARCHIVE..."
@@ -242,7 +236,7 @@ const BlogPage = () => {
               <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
               <div className="absolute top-6 right-6">
                 <div className="w-12 h-12 bg-black/60 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0">
-                  <ArrowUpRight size={20} />
+                  <IoArrowRedoOutline size={20} />
                 </div>
               </div>
             </div>
