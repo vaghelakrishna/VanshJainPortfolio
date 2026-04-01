@@ -2,12 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const images = [
-  { url: "./src/assets/events/Event1.jpg", text: "Mixing aesthetics with the landscape.", aspect: "aspect-[3/4.2]", mt: "mt-0" },
-  { url: "./src/assets/events/Event16.jpeg", text: "My mom says I'm extra...", aspect: "aspect-[4/5]", mt: "mt-16" },
-  { url: "./src/assets/events/Event11.jpg", text: "Starbucks goal", aspect: "aspect-square", mt: "mt-4" },
-  { url: "./src/assets/events/Event12.jpeg", text: "I followed a trend", aspect: "aspect-[2/3]", mt: "mt-24" },
-  { url: "./src/assets/events/Event12.jpeg", text: "Graduated 2022", aspect: "aspect-[3/4]", mt: "mt-8" },
-  { url: "./src/assets/events/Event15.jpeg", text: "Hobbies after USA", aspect: "aspect-[4/5]", mt: "mt-20" },
+  { url: "./src/assets/events/Event1.webp", text: "Mixing aesthetics with the landscape.", aspect: "aspect-[3/4.2]", mt: "mt-0" },
+  { url: "./src/assets/events/Event16.webp", text: "My mom says I'm extra...", aspect: "aspect-[4/5]", mt: "mt-16" },
+  { url: "./src/assets/events/Event11.webp", text: "Starbucks goal", aspect: "aspect-square", mt: "mt-4" },
+  { url: "./src/assets/events/Event12.webp", text: "I followed a trend", aspect: "aspect-[2/3]", mt: "mt-24" },
+  { url: "./src/assets/events/Event12.webp", text: "Graduated 2022", aspect: "aspect-[3/4]", mt: "mt-8" },
+  { url: "./src/assets/events/Event15.webp", text: "Hobbies after USA", aspect: "aspect-[4/5]", mt: "mt-20" },
 ];
 
 const duplicatedImages = [...images, ...images];
