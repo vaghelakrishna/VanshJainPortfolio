@@ -56,9 +56,9 @@ const AboutSection = () => {
         >
           <div className="relative w-full h-full p-2 bg-white/5 backdrop-blur-xl rounded-md shadow-2xl border border-white/10 overflow-hidden">
             <img
-              src="/path-to-your-workspace.jpg"
+              src="./src/assets/events/Event1.webp"
               alt="Workspace"
-              className="w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 hover:brightness-100 transition-all duration-700 rounded-sm"
+              className="w-full h-full object-cover hover:brightness-100 transition-all duration-700 rounded-sm"
               draggable="false"
             />
             {/* Hidden reveal message behind image */}
@@ -80,9 +80,9 @@ const AboutSection = () => {
         >
           <div className="relative w-full h-full p-2 bg-white/5 backdrop-blur-xl rounded-md shadow-2xl border border-white/10 overflow-hidden">
             <img
-              src="/path-to-your-event.jpg"
+              src="./src/assets/events/Event16.webp"
               alt="Vansh"
-              className="w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 hover:brightness-100 transition-all duration-700 rounded-sm"
+              className="w-full h-full object-cover transition-all duration-700 rounded-sm"
               draggable="false"
             />
             <div className="absolute inset-0 -z-10 flex items-center justify-center text-neutral-500 italic text-sm text-center px-6">
