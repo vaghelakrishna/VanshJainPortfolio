@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
+import TestimonialSection from '../ui/section/TestimonialStack';
+import Testimonials from '../ui/section/Testimonials';
 
 const AboutPage = () => {
   const photos = [
-    { id: 1, url: '/photo1.jpg', rot: -5, x: -20, y: 10 },
-    { id: 2, url: '/photo2.jpg', rot: 3, x: 20, y: -10 },
-    { id: 3, url: '/photo3.jpg', rot: -8, x: 0, y: 40 },
+    { id: 1, url: './src/assets/events/Event3.jpg', rot: -8, x: 0, y: 40 },
+    { id: 2, url: './src/assets/events/Event2.jpg', rot: 3, x: 20, y: -10 },
+    { id: 3, url: './src/assets/events/Event1.jpg', rot: -5, x: -20, y: 10 },
   ];
   const milestones = [
     {
@@ -110,17 +112,27 @@ const AboutPage = () => {
               </div>
               <h2 className="text-[#333] text-[20px] font-serif italic mb-4 text-left">About me.</h2>
               <h1 className="text-3xl md:text-[42px] lg:text-[48px] leading-[1.1] text-[#E5E5E5] font-serif font-medium tracking-tight text-left">
-                I design digital products that connect users, business, and technology.
+                Scaling <span className="italic text-zinc-500">ideas</span> into high-impact systems that solve <span className="italic text-zinc-500">real-world</span> problems.
               </h1>
             </div>
 
             <div className="space-y-6 text-[14px] md:text-[15px] leading-relaxed max-w-120 text-left">
-              <p>
-                Hey, I'm <span className="text-white">Vansh jain</span>, a full-stack Product Designer with 3+ years of experience...
+              <p className="text-neutral-400">
+                Hey, I'm <span className="text-white font-medium tracking-tight">Vansh Jain</span> — a multi-venture builder and strategist. I focus on building education ecosystems and helping founders scale through
+                <span className="text-white"> execution-first systems</span>.
               </p>
-              <div className="flex gap-4 mt-8">
-                <button className="text-xs uppercase tracking-widest text-white border border-white/10 px-6 py-3 hover:bg-white hover:text-black transition-all">Invite Me to Speak</button>
-                <button className="text-xs uppercase tracking-widest text-neutral-500 hover:text-white transition-all">View My Work ↓</button>
+
+              <p className="text-neutral-500 italic font-serif">
+                Currently leading <span className="text-zinc-300 not-italic font-sans font-medium">Kattalyx Labs</span> & <span className="text-zinc-300 not-italic font-sans font-medium">Elite Verse Solutions</span>, while documenting the raw journey of building through my newsletter.
+              </p>
+
+              <div className="flex flex-wrap gap-4 mt-8">
+                <button className="text-[10px] uppercase tracking-[0.2em] font-bold text-black bg-white border border-white px-8 py-4 hover:bg-transparent hover:text-white transition-all duration-500 shadow-xl shadow-white/5">
+                  Invite Me to Speak
+                </button>
+                <button className="text-[10px] uppercase tracking-[0.2em] font-bold text-neutral-500 hover:text-white transition-all flex items-center gap-2 group">
+                  Explore My Ventures <span className="group-hover:translate-y-1 transition-transform">↓</span>
+                </button>
               </div>
             </div>
           </div>
@@ -346,7 +358,7 @@ const AboutPage = () => {
 
 
 
-        <section className="py-32 px-6 md:px-20 bg-[#050505] relative overflow-hidden">
+        <section className="py-32 px-6 md:px-20  relative overflow-hidden">
           {/* Subtle Background Radial Glow */}
           <div className="absolute top-1/2 right-0 w-125 h-125 bg-red-600/5 blur-[150px] rounded-full pointer-events-none" />
 
@@ -427,7 +439,7 @@ const AboutPage = () => {
           </div>
         </section>
         {/* SECTION 6: STARTUP JOURNEY */}
-        <div className="mb-40 px-6 md:px-20">
+        <div className="mb-40 px-6 md:px-20 pt-20">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
 
             {/* Left Sticky Header */}
@@ -529,56 +541,97 @@ const AboutPage = () => {
             ))}
         </div>
 
-        {/* SECTION 8: GALLERY */}
+        {/* SECTION 8: GALLERY - Manual Image Paths */}
         <div className="mb-40 px-6 md:px-20">
-          {/* Section Header with Reveal Animation */}
+          {/* Section Header */}
           <div className="flex items-end justify-between mb-16 border-b border-white/5 pb-8 overflow-hidden">
             <div className="space-y-2 animate-[slideUp_1s_ease-out]">
               <h3 className="text-[10px] uppercase tracking-[0.6em] text-red-500 font-bold">Session Gallery</h3>
               <p style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl text-white italic leading-none">Behind the Scenes</p>
             </div>
             <span className="text-[9px] text-neutral-600 uppercase tracking-[0.3em] font-mono hidden md:block animate-[fadeIn_2s_ease-out]">
-              Archive / 2024-25
+              Archive / 2025
             </span>
           </div>
 
-          {/* Pinterest Mosaic Grid with Framer-like Entrance */}
+          {/* Pinterest Mosaic Grid */}
           <div className="columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
             {[
-              { id: 1, aspect: "aspect-[3/4]", label: "IIT Delhi Keynote" },
-              { id: 2, aspect: "aspect-square", label: "Workshop Phase" },
-              { id: 3, aspect: "aspect-[4/5]", label: "Interactive Session" },
-              { id: 4, aspect: "aspect-video", label: "Main Stage" },
-              { id: 5, aspect: "aspect-[2/3]", label: "Team Strategy" },
-              { id: 6, aspect: "aspect-square", label: "Mumbai Seminar" },
-              { id: 7, aspect: "aspect-video", label: "Closing Remarks" },
-              { id: 8, aspect: "aspect-[3/4]", label: "Backstage Prep" },
+              {
+                img: "Event1.jpg", // Yahan apna exact filename daalein
+                aspect: "aspect-[3/4]",
+                label: "AI & LinkedIn Masterclass",
+                venue: "Growell Girls School"
+              },
+              {
+                img: "Event2.jpg",
+                aspect: "aspect-square",
+                label: "Faculty AI Training",
+                venue: "Growell CoEd"
+              },
+              {
+                img: "Event3.jpg",
+                aspect: "aspect-[4/5]",
+                label: "Startup Conference",
+                venue: "Growell CoEd"
+              },
+              {
+                img: "Event11.jpg",
+                aspect: "aspect-video",
+                label: "Unlocking Human OS",
+                venue: "Doon School"
+              },
+              {
+                img: "Event12.jpeg",
+                aspect: "aspect-[2/3]",
+                label: "The DeCode: Cyber Awareness",
+                venue: "Growell Girls School"
+              },
+              {
+                img: "Event15.jpeg",
+                aspect: "aspect-square",
+                label: "The Human Toolkit",
+                venue: "Kidzee School"
+              },
+              {
+                img: "Event16.jpeg",
+                aspect: "aspect-video",
+                label: "HackProof: Live Simulation",
+                venue: "Growell Co-ed"
+              },
+              {
+                img: "Event12.jpeg",
+                aspect: "aspect-[3/4]",
+                label: "The Cadet Code",
+                venue: "Saifia Institute"
+              }
             ].map((item, i) => (
               <div
                 key={i}
-                className={`break-inside-avoid relative overflow-hidden rounded-4xl bg-neutral-900 border border-white/5 group cursor-none
+                className={`break-inside-avoid relative overflow-hidden rounded-3xl bg-neutral-900 border border-white/5 group cursor-pointer
           opacity-0 translate-y-16 animate-[floatUp_1s_cubic-bezier(0.2,0.8,0.2,1)_forwards]`}
                 style={{ animationDelay: `${i * 0.15}s` }}
               >
-                {/* The Image Layer */}
                 <div className={`${item.aspect} w-full overflow-hidden relative`}>
                   <img
-                    src={`https://images.unsplash.com/photo-${1500000000000 + item.id * 100}?q=80&w=600`}
+                    // MANUAL PATH: Ab ye direct 'item.img' se filename uthayega
+                    src={`./src/assets/events/${item.img}`}
                     alt={item.label}
-                    className="w-full h-full object-cover grayscale brightness-50 contrast-[1.2] group-hover:grayscale-0 group-hover:scale-110 group-hover:brightness-100 transition-all duration-[1.5s] ease-out"
+                    className="w-full h-full object-cover contrast-[1.1] group-hover:scale-110 group-hover:brightness-100 transition-all duration-1000 ease-out"
+                    onError={(e) => { e.target.style.display = 'none'; }}
                   />
-
-                  {/* Soft Red Vignette on Hover */}
-                  <div className="absolute inset-0 bg-red-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
+                  <div className="absolute inset-0 bg-red-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
                 </div>
 
-                {/* Floating Metadata (Pinterest Detail) */}
-                <div className="absolute inset-0 flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-4 group-hover:translate-y-0">
-                  <div className="bg-black/40 backdrop-blur-xl border border-white/10 p-4 rounded-2xl">
-                    <p className="text-[10px] text-red-500 font-bold uppercase tracking-widest mb-1">{item.label}</p>
+                {/* Hover Info */}
+                <div className="absolute inset-0 flex flex-col justify-end p-5 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                  <div className="bg-black/60 backdrop-blur-md border border-white/10 p-3 rounded-xl">
+                    <p className="text-[9px] text-red-500 font-bold uppercase tracking-widest mb-0.5">{item.label}</p>
                     <div className="flex justify-between items-center">
-                      <span className="text-[8px] text-white/40 uppercase font-mono">Capture // 0{item.id}</span>
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><path d="M7 17L17 7M17 7H7M17 7V17" /></svg>
+                      <span className="text-[7px] text-white/50 uppercase font-mono">{item.venue}</span>
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                      </svg>
                     </div>
                   </div>
                 </div>
@@ -586,17 +639,10 @@ const AboutPage = () => {
             ))}
           </div>
 
-          {/* Global CSS Animations */}
           <style jsx>{`
     @keyframes floatUp {
-      from {
-        opacity: 0;
-        transform: translateY(60px) scale(0.95);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
+      from { opacity: 0; transform: translateY(60px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
     }
     @keyframes slideUp {
       from { transform: translateY(100%); }
@@ -609,6 +655,8 @@ const AboutPage = () => {
   `}</style>
         </div>
 
+
+<Testimonials/>
       </div>
     </div>
   );
