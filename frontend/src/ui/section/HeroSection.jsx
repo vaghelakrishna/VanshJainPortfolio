@@ -1,4 +1,5 @@
 import React from 'react';
+import vanshImage from '../../assets/vanshjain.webp';
 
 const HeroSection = () => {
   return (
@@ -30,8 +31,8 @@ const HeroSection = () => {
             {/* Portrait Container */}
             <div className="aspect-4/5 rounded-2xl overflow-hidden border border-white/5 relative z-10 bg-neutral-900 shadow-2xl">
               <img
-                src="./src/assets/vanshjain.webp"
-                alt="Vansh"
+                src={vanshImage}
+                alt="Vansh Jain"
                 className="w-full h-full object-cover  contrast-110 brightness-90 scale-110 transition-all duration-1000 ease-out"
               />
             </div>
