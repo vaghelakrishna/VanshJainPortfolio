@@ -1,12 +1,26 @@
 import { motion } from 'framer-motion';
 import TestimonialSection from '../ui/section/TestimonialStack';
 import Testimonials from '../ui/section/Testimonials';
+import Event1 from '../assets/events/Event1.webp';
+import Event2 from '../assets/events/Event2.webp';
+import Event3 from '../assets/events/Event3.webp';
+import Event4 from '../assets/events/Event4.webp';
+import Event5 from '../assets/events/Event5.webp';
+import Event6 from '../assets/events/Event6.webp';
+import Event7 from '../assets/events/Event7.webp';
+import Event8 from '../assets/events/Event8.webp';
+import Event10 from '../assets/events/Event10.webp';
+import Event11 from '../assets/events/Event11.webp';
+import Event12 from '../assets/events/Event12.webp';
+import Event15 from '../assets/events/Event15.webp';
+import Event16 from '../assets/events/Event16.webp';
+
 
 const AboutPage = () => {
   const photos = [
-    { id: 1, url: './src/assets/events/Event3.webp', rot: -8, x: 0, y: 40 },
-    { id: 2, url: './src/assets/events/Event2.webp', rot: 3, x: 20, y: -10 },
-    { id: 3, url: './src/assets/events/Event1.webp', rot: -5, x: -20, y: 10 },
+    { id: 1, url: Event3, rot: -8, x: 0, y: 40 },
+    { id: 2, url: Event2, rot: 3, x: 20, y: -10 },
+    { id: 3, url: Event1, rot: -5, x: -20, y: 10 },
   ];
   const milestones = [
     {
@@ -214,7 +228,7 @@ const AboutPage = () => {
                   city: "Ghaziabad",
                   topic: "AI Bootcamp: Vertex AI & Google Agent Kit",
                   year: "SEPT 2025",
-                  image: "./src/assets/events/Event15.webp",
+                  image: Event15,
                   aspect: "aspect-video"
                 },
                 {
@@ -223,7 +237,7 @@ const AboutPage = () => {
                   city: "Baghpat",
                   topic: "Unlocking Human OS: Habits to Higher Self",
                   year: "AUG 2025",
-                  image: "./src/assets/events/Event4.webp",
+                  image: Event4,
                   aspect: "aspect-video"
                 },
                 {
@@ -232,7 +246,7 @@ const AboutPage = () => {
                   city: "Baoli",
                   topic: "Cyber Shield: Scams & Live Hacking Demos",
                   year: "SEPT 2025",
-                  image: "./src/assets/events/Event12.webp",
+                  image: Event12,
                   aspect: "aspect-video"
                 },
                 {
@@ -241,7 +255,7 @@ const AboutPage = () => {
                   city: "Noida",
                   topic: "Dream Direction Drive: Future Job Trends",
                   year: "DEC 2025",
-                  image: "./src/assets/events/Event16.webp",
+                  image: Event16,
                   aspect: "aspect-video"
                 },
                 {
@@ -250,7 +264,7 @@ const AboutPage = () => {
                   city: "Baraut",
                   topic: "The DeCode: Cyber Awareness & Ethics",
                   year: "AUG 2025",
-                  image: "./src/assets/events/Event5.webp",
+                  image: Event5,
                   aspect: "aspect-video"
                 },
                 {
@@ -259,7 +273,7 @@ const AboutPage = () => {
                   city: "Baghpat",
                   topic: "Founder Fiesta: Startup Fundamentals",
                   year: "NOV 2025",
-                  image: "./src/assets/events/Event16.webp",
+                  image: Event16,
                   aspect: "aspect-video"
                 }
               ].map((item, index) => (
@@ -612,49 +626,49 @@ const AboutPage = () => {
           <div className="columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
             {[
               {
-                img: "Event1.webp", // Yahan apna exact filename daalein
+                img:Event1, // Yahan apna exact filename daalein
                 aspect: "aspect-[3/4]",
                 label: "AI & LinkedIn Masterclass",
                 venue: "Growell Girls School"
               },
               {
-                img: "Event2.webp",
+                img: Event2,
                 aspect: "aspect-square",
                 label: "Faculty AI Training",
                 venue: "Growell CoEd"
               },
               {
-                img: "Event3.webp",
+                img: Event3,
                 aspect: "aspect-[4/5]",
                 label: "Startup Conference",
                 venue: "Growell CoEd"
               },
               {
-                img: "Event11.webp",
+                img: Event11,
                 aspect: "aspect-video",
                 label: "Unlocking Human OS",
                 venue: "Doon School"
               },
               {
-                img: "Event12.webp",
+                img: Event12,
                 aspect: "aspect-[2/3]",
                 label: "The DeCode: Cyber Awareness",
                 venue: "Growell Girls School"
               },
               {
-                img: "Event15.webp",
+                img: Event15,
                 aspect: "aspect-square",
                 label: "The Human Toolkit",
                 venue: "Kidzee School"
               },
               {
-                img: "Event16.webp",
+                img: Event16,
                 aspect: "aspect-video",
                 label: "HackProof: Live Simulation",
                 venue: "Growell Co-ed"
               },
               {
-                img: "Event12.webp",
+                img: Event12,
                 aspect: "aspect-[3/4]",
                 label: "The Cadet Code",
                 venue: "Saifia Institute"
