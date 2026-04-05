@@ -236,6 +236,90 @@ const HomePage = ({ setPage }) => {
         </div>
       </section>
 
+      {/* --- NEW SECTION: DELHI UNIVERSITY SEMINAR SPOTLIGHT --- */}
+      <section className="py-32 bg-[#050505] border-t border-white/5 relative overflow-hidden">
+        {/* Background Decoration */}
+        <div className="absolute top-0 right-0 w-130 h-125 bg-red-900/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+
+        <div className="max-w-7xl mx-auto px-6 md:px-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+
+            {/* Left Column: Content */}
+            <div className="lg:col-span-5 space-y-8 relative z-10">
+              <div className="space-y-4">
+                <span className="text-red-500 font-mono text-[10px] uppercase tracking-[0.6em] font-bold block">
+                  Featured Engagement
+                </span>
+                <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-6xl md:text-7xl italic leading-none tracking-tighter text-white">
+                  The North Campus <br />
+                  <span className="text-neutral-800 not-italic">Seminar</span>
+                </h2>
+              </div>
+
+              <div className="space-y-6">
+                <p className="text-neutral-400 font-light leading-relaxed italic text-lg border-l-2 border-red-600 pl-6">
+                  "An intense deep-dive into the 'Execution-First' mindset with the brightest minds of Delhi University."
+                </p>
+                <p className="text-neutral-500 text-sm font-sans font-light leading-relaxed">
+                  Conducted at the heart of India's academic hub, this seminar focused on bridging the gap between theoretical excellence and raw startup execution. Over 500+ students from Hansraj, SRCC, and Hindu College joined to discuss the future of the Indian creator economy.
+                </p>
+              </div>
+
+              {/* Quick Stats for DU */}
+              <div className="flex gap-10 pt-4">
+                <div>
+                  <p className="text-2xl font-serif italic text-white">500+</p>
+                  <p className="text-[9px] uppercase tracking-widest text-neutral-600 mt-1">Attendees</p>
+                </div>
+                <div className="w-px h-10 bg-white/10"></div>
+                <div>
+                  <p className="text-2xl font-serif italic text-white">2.5 Hrs</p>
+                  <p className="text-[9px] uppercase tracking-widest text-neutral-600 mt-1">Of Raw Dialogue</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Visual Showcase */}
+            <div className="lg:col-span-7 relative group">
+              <div className="relative aspect-4/5 md:aspect-7/5 overflow-hidden rounded-[3rem] border border-white/10 bg-neutral-900 shadow-2xl">
+                {/* Main Image - Yahan aap Event1 ya DU ki photo laga sakte hain */}
+                <img
+                  src={Event1}
+                  alt="Delhi University Seminar"
+                  className="w-full h-full object-cover  transition-all duration-700 group-hover:scale-105"
+                />
+
+                {/* Overlay Tag */}
+                <div className="absolute bottom-8 left-8 right-8 p-6 bg-black/60 backdrop-blur-xl border border-white/10 rounded-3xl translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <p className="text-[10px] font-mono text-red-500 uppercase tracking-widest font-bold">Venue</p>
+                      <p className="text-xl font-serif italic text-white">Conference Centre, North Campus</p>
+                    </div>
+                    <div className="h-10 w-10 rounded-full border border-white/20 flex items-center justify-center">
+                      <ArrowUpRight className="w-4 h-4 text-white" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Decorative Badge */}
+              <div className="absolute -top-6 -right-6 w-32 h-32 bg-red-600 rounded-full flex items-center justify-center rotate-12 shadow-2xl border-4 border-[#050505] z-20">
+                <div className="text-center">
+                  <p className="text-[8px] font-bold uppercase tracking-tighter text-white">DU</p>
+                  <p className="text-xl font-serif italic text-white">Impact</p>
+                </div>
+              </div>
+
+              {/* Ghost Text */}
+              <div className="absolute -bottom-10 -left-10 text-[10rem] font-serif italic text-white/2 pointer-events-none select-none z-0">
+                DELHI
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
       {/* --- SECTION 5: LATEST Blog (Teaser) --- */}
       <section className="py-20 px-8 md:px-20 bg-[#0a0a0a]">
         {/* Header: Compact Editorial Style */}
