@@ -857,7 +857,7 @@ const HomePage = ({ setPage }) => {
                   </div>
 
                   {/* Ghost Background Text */}
-                  <div className="absolute -bottom-8 -right-4 text-[8rem] md:text-[10rem] font-serif italic text-white/[0.02] pointer-events-none select-none">
+                  <div className="absolute -bottom-8 -right-4 text-[8rem] md:text-[10rem] font-serif italic text-white/2 pointer-events-none select-none">
                     Nirvana
                   </div>
                 </div>
