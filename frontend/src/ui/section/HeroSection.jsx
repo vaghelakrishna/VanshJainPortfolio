@@ -1,5 +1,6 @@
 import React from 'react';
 import vanshImage from '../../assets/vanshjain.webp';
+import { HashLink } from 'react-router-hash-link';
 
 const HeroSection = () => {
   return (
@@ -98,9 +99,15 @@ const HeroSection = () => {
             <button className="w-full sm:w-auto bg-white text-black px-6 py-3 rounded-full font-bold text-[10px] uppercase tracking-widest hover:invert transition-all">
               Let's Build Together
             </button>
-            <button className="w-full sm:w-auto bg-transparent border border-white/10 px-6 py-3 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-white/5 transition-all text-neutral-400">
-              View Events
-            </button>
+            <HashLink
+              smooth
+              to="/#venture"
+              className="w-full sm:w-auto"
+            >
+              <button className="w-full sm:w-auto bg-transparent border border-white/10 px-6 py-3 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-white/5 transition-all text-neutral-400">
+                View Ventures
+              </button>
+            </HashLink>
           </div>
 
         </div>
