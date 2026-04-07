@@ -14,8 +14,7 @@ import Event11 from '../assets/events/Event11.webp';
 import Event12 from '../assets/events/Event12.webp';
 import Event15 from '../assets/events/Event15.webp';
 import Event16 from '../assets/events/Event16.webp';
-
-
+import { Link } from 'react-router-dom';
 const AboutPage = () => {
   const photos = [
     { id: 1, url: Event3, rot: -8, x: 0, y: 40 },
@@ -141,12 +140,14 @@ const AboutPage = () => {
               </p>
 
               <div className="flex flex-wrap gap-4 mt-8">
-                <button className="text-[10px] uppercase tracking-[0.2em] font-bold text-black bg-white border border-white px-8 py-4 hover:bg-transparent hover:text-white transition-all duration-500 shadow-xl shadow-white/5">
-                  Invite Me to Speak
-                </button>
-                <button className="text-[10px] uppercase tracking-[0.2em] font-bold text-neutral-500 hover:text-white transition-all flex items-center gap-2 group">
-                  Explore My Ventures <span className="group-hover:translate-y-1 transition-transform">↓</span>
-                </button>
+                <Link to="/contact">
+                  <button className="text-[10px] uppercase tracking-[0.2em] font-bold text-black bg-white border border-white px-8 py-4 hover:bg-transparent hover:text-white transition-all duration-500 shadow-xl shadow-white/5">
+                    Invite Me to Speak
+                  </button>
+                </Link>
+                <a href="#event" className="scroll-smooth text-[10px] uppercase tracking-[0.2em] font-bold text-white  border border-white  hover:bg-white px-8 py-4  hover:text-black transition-all duration-500 shadow-xl shadow-white/5" >
+                  Explore Events <span className="group-hover:translate-y-1 transition-transform">↓</span>
+                </a>
               </div>
             </div>
           </div>
@@ -204,7 +205,7 @@ const AboutPage = () => {
 
                 {/* Institutions I Have Spoken At */}
         {/* SECTION 3 & 4: SCHOOLS & COLLEGES */}
-        <div className="space-y-20 mb-40 px-6 md:px-20">
+        <div className="space-y-20 mb-40 px-6 md:px-20" id="event">
           <div className="max-w-7xl mx-auto">
 
             <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-4 border-b border-white/5 pb-8">
