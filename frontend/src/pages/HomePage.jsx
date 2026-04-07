@@ -16,7 +16,7 @@ import Event1 from '../assets/events/Event1.webp';
 import Event2 from '../assets/events/Event2.webp';
 import { FiArrowUpRight, FiInstagram, FiLinkedin, FiFacebook, FiMail, FiPhone, FiExternalLink } from 'react-icons/fi';
 import { SiReactos } from 'react-icons/si';
-
+import { Link } from 'react-router-dom';
 const HomePage = ({ setPage }) => {
   // Mock Data for Teasers
   const stats = [
@@ -341,6 +341,7 @@ const HomePage = ({ setPage }) => {
   `}</style>
       </section>
 
+
       {/* --- SECTION 5: LATEST Blog (Teaser) --- */}
       <section className="py-20 px-8 md:px-20 bg-[#0a0a0a]">
         {/* Header: Compact Editorial Style */}
@@ -351,94 +352,98 @@ const HomePage = ({ setPage }) => {
               From the Blog
             </h2>
           </div>
-          <button className="group flex items-center gap-3 text-[9px] uppercase tracking-[0.3em] text-neutral-500 hover:text-white transition-all">
+
+          {/* 1. "View Blogs" button ko Link banaya */}
+          <Link to="/blog" className="group flex items-center gap-3 text-[9px] uppercase tracking-[0.3em] text-neutral-500 hover:text-white transition-all">
             View Blogs
             <span className="w-6 h-px bg-neutral-800 group-hover:w-10 group-hover:bg-red-500 transition-all"></span>
-          </button>
+          </Link>
         </div>
 
-
         {/* blog */}
-        {/* Pinterest-style Grid: Static Implementation */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
 
-          {/* ARTICLE 1: Startup Strategy (Left - High) */}
-          <article className="group cursor-pointer">
-            {/* Image Container */}
-            <div className="relative aspect-16/10 overflow-hidden rounded-2xl mb-6 bg-neutral-900 border border-white/5 shadow-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1000"
-                alt="Startup Strategy"
-                className="w-full h-full object-cover  group-hover:scale-105 transition-all duration-1000 ease-in-out"
-              />
-              <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
-                <p className="text-[8px] text-white uppercase tracking-widest font-sans font-bold">March 24, 2026</p>
-              </div>
-            </div>
-
-            {/* Content Section */}
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <span className="text-red-500 text-[8px] uppercase font-bold font-sans tracking-[0.3em]">Startup Strategy</span>
-                <div className="h-px w-8 bg-white/10"></div>
+          {/* ARTICLE 1: ID 1 ke liye Link */}
+          <Link to="/blog/1" className="group cursor-pointer">
+            <article>
+              {/* Image Container */}
+              <div className="relative aspect-16/10 overflow-hidden rounded-2xl mb-6 bg-neutral-900 border border-white/5 shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1000"
+                  alt="Startup Strategy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 ease-in-out"
+                />
+                <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
+                  <p className="text-[8px] text-white uppercase tracking-widest font-sans font-bold">March 24, 2026</p>
+                </div>
               </div>
 
-              <h3
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                className="text-2xl md:text-3xl text-white leading-tight font-light group-hover:text-red-100 transition-colors"
-              >
-                Why Most Founders Fail at Execution <br />
-                <span className="italic text-neutral-500 text-lg md:text-xl font-serif">(And How to Avoid It)</span>
-              </h3>
+              {/* Content Section */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-red-500 text-[8px] uppercase font-bold font-sans tracking-[0.3em]">Startup Strategy</span>
+                  <div className="h-px w-8 bg-white/10"></div>
+                </div>
 
-              <p className="text-neutral-500 text-sm line-clamp-2 font-sans font-light leading-relaxed">
-                A breakdown of why perfect planning kills startups, and why speed and iteration beat perfection every time.
-              </p>
+                <h3
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                  className="text-2xl md:text-3xl text-white leading-tight font-light group-hover:text-red-100 transition-colors"
+                >
+                  Why Most Founders Fail at Execution <br />
+                  <span className="italic text-neutral-500 text-lg md:text-xl font-serif">(And How to Avoid It)</span>
+                </h3>
 
-              <div className="pt-2 flex items-center gap-2 text-[10px] uppercase tracking-widest text-white/40 group-hover:text-red-500 transition-colors font-bold">
-                Read Story <span>→</span>
+                <p className="text-neutral-500 text-sm line-clamp-2 font-sans font-light leading-relaxed">
+                  A breakdown of why perfect planning kills startups, and why speed and iteration beat perfection every time.
+                </p>
+
+                <div className="pt-2 flex items-center gap-2 text-[10px] uppercase tracking-widest text-white/40 group-hover:text-red-500 transition-colors font-bold">
+                  Read Story <span>→</span>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </Link>
 
-          {/* ARTICLE 2: Education (Right - Offset/Lower) */}
-          <article className="group cursor-pointer md:mt-24">
-            {/* Image Container */}
-            <div className="relative aspect-16/10 overflow-hidden rounded-2xl mb-6 bg-neutral-900 border border-white/5 shadow-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1000"
-                alt="Education"
-                className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 ease-in-out"
-              />
-              <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
-                <p className="text-[8px] text-white uppercase tracking-widest font-sans font-bold">March 18, 2026</p>
-              </div>
-            </div>
-
-            {/* Content Section */}
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <span className="text-red-500 text-[8px] uppercase font-bold font-sans tracking-[0.3em]">Education</span>
-                <div className="h-px w-8 bg-white/10"></div>
+          {/* ARTICLE 2: ID 2 ke liye Link */}
+          <Link to="/blog/2" className="group cursor-pointer md:mt-24">
+            <article>
+              {/* Image Container */}
+              <div className="relative aspect-16/10 overflow-hidden rounded-2xl mb-6 bg-neutral-900 border border-white/5 shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1000"
+                  alt="Education"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 ease-in-out"
+                />
+                <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
+                  <p className="text-[8px] text-white uppercase tracking-widest font-sans font-bold">March 18, 2026</p>
+                </div>
               </div>
 
-              <h3
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                className="text-2xl md:text-3xl text-white leading-tight font-light group-hover:text-red-100 transition-colors"
-              >
-                The Education System is Broken <br />
-                <span className="italic text-neutral-500 text-lg md:text-xl font-serif">— Here's What We're Building</span>
-              </h3>
+              {/* Content Section */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-red-500 text-[8px] uppercase font-bold font-sans tracking-[0.3em]">Education</span>
+                  <div className="h-px w-8 bg-white/10"></div>
+                </div>
 
-              <p className="text-neutral-500 text-sm line-clamp-2 font-sans font-light leading-relaxed">
-                Why traditional schooling doesn't prepare students for real life. A deep dive into the Kattalyx Labs approach.
-              </p>
+                <h3
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                  className="text-2xl md:text-3xl text-white leading-tight font-light group-hover:text-red-100 transition-colors"
+                >
+                  The Education System is Broken <br />
+                  <span className="italic text-neutral-500 text-lg md:text-xl font-serif">— Here's What We're Building</span>
+                </h3>
 
-              <div className="pt-2 flex items-center gap-2 text-[10px] uppercase tracking-widest text-white/40 group-hover:text-red-500 transition-colors font-bold">
-                Read Story <span>→</span>
+                <p className="text-neutral-500 text-sm line-clamp-2 font-sans font-light leading-relaxed">
+                  Why traditional schooling doesn't prepare students for real life. A deep dive into the Kattalyx Labs approach.
+                </p>
+
+                <div className="pt-2 flex items-center gap-2 text-[10px] uppercase tracking-widest text-white/40 group-hover:text-red-500 transition-colors font-bold">
+                  Read Story <span>→</span>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </Link>
 
         </div>
       </section>
