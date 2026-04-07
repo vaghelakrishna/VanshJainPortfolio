@@ -382,14 +382,21 @@ const CoursesPage = () => {
           </div>
 
           {/* Social / Contact Secondary Links */}
-          <div className="pt-12 flex gap-10 justify-center items-center">
-            {['Email', 'LinkedIn', 'Instagram'].map((platform) => (
+          {/* Social / Contact Secondary Links */}
+          <div className="pt-12 flex gap-6 md:gap-10 justify-center items-center">
+            {[
+              { name: 'Email', url: 'mailto:connect@vanshjain.in' },
+              { name: 'LinkedIn', url: 'https://www.linkedin.com/in/vansh-jain26/' },
+              { name: 'Instagram', url: 'https://www.instagram.com/vansh_jain_26/' }
+            ].map((platform) => (
               <a
-                key={platform}
-                href="#"
+                key={platform.name}
+                href={platform.url}
+                target={platform.name === 'Email' ? '_self' : '_blank'}
+                rel="noopener noreferrer"
                 className="text-[9px] uppercase tracking-[0.4em] text-neutral-600 hover:text-red-400 transition-colors duration-300 relative group/link"
               >
-                {platform}
+                {platform.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-red-400 group-hover/link:w-full transition-all duration-500"></span>
               </a>
             ))}
