@@ -702,7 +702,7 @@ const AboutPage = () => {
                 <div className={`${item.aspect} w-full overflow-hidden relative`}>
                   <img
                     // MANUAL PATH: Ab ye direct 'item.img' se filename uthayega
-                    src={`./src/assets/events/${item.img}`}
+                    src={item.img}
                     alt={item.label}
                     className="w-full h-full object-cover contrast-[1.1] group-hover:scale-110 group-hover:brightness-100 transition-all duration-1000 ease-out"
                     onError={(e) => { e.target.style.display = 'none'; }}
@@ -716,9 +716,6 @@ const AboutPage = () => {
                     <p className="text-[9px] text-red-500 font-bold uppercase tracking-widest mb-0.5">{item.label}</p>
                     <div className="flex justify-between items-center">
                       <span className="text-[7px] text-white/50 uppercase font-mono">{item.venue}</span>
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" />
-                      </svg>
                     </div>
                   </div>
                 </div>
