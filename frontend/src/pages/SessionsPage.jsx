@@ -26,7 +26,6 @@ import {
 } from 'lucide-react';
 import CountUp from 'react-countup';
 import Events from '../ui/section/Events';
-import LiveArchive from './LiveArchive';
 import { Link } from 'react-router-dom';
 
 const SessionsPage = () => {
@@ -182,7 +181,7 @@ const SessionsPage = () => {
 <Events/>
 
       {/* SECTION 4: UPCOMING EVENTS */}
-      <section className="p-8 md:p-16 bg-white text-black">
+      {/* <section className="p-8 md:p-16 bg-white text-black">
         <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-7xl mb-16 tracking-tighter">Upcoming Engagements</h2>
         <div className="space-y-6">
           {upcomingEvents.map((event, i) => (
@@ -193,33 +192,29 @@ const SessionsPage = () => {
                  bg-size-[100%_200%] bg-position-[0_0] hover:bg-position-[0_100%]"
             >
               <div className="relative z-10 space-y-2">
-                {/* Badge: Inverts on hover */}
                 <span className="bg-black text-white group-hover:bg-white group-hover:text-black text-[9px] px-2 py-1 uppercase tracking-tighter font-bold transition-all duration-500">
                   Upcoming
                 </span>
 
-                {/* Title: Transitions to white */}
                 <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter transition-colors duration-500 group-hover:text-white">
                   {event.name}
                 </h3>
 
-                {/* Meta Info */}
                 <div className="flex flex-wrap gap-6 text-sm text-neutral-600 uppercase tracking-widest transition-colors duration-500 group-hover:text-neutral-400">
                   <span className="flex items-center gap-2"><Calendar size={14} /> {event.date}</span>
                   <span className="flex items-center gap-2"><MapPin size={14} /> {event.venue}, {event.city}</span>
                 </div>
               </div>
 
-              {/* Button: Inverts on hover */}
               <button className="relative z-10 bg-black text-white px-8 py-4 text-[10px] uppercase tracking-[0.2em] transition-all duration-500 flex items-center gap-3 group-hover:bg-white group-hover:text-black border border-transparent group-hover:border-white">
                 Register Now <ArrowRight size={14} />
               </button>
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
-<LiveArchive/>
+
 
       {/* SECTION 6: EVENT PORTFOLIO */}
       <section className="py-24 bg-white overflow-hidden">
@@ -248,39 +243,42 @@ const SessionsPage = () => {
         <div className="relative flex">
           <div className="flex animate-infinite-scroll hover:[animation-play-state:paused] cursor-pointer">
             {[
-              { id: 1, title: "AI & LinkedIn Masterclass", context: "July 2025 • Growell Girls", img: Event1 },
-              { id: 4, title: "Unlocking Human OS", context: "Aug 2025 • Doon School", img: Event4 },
-              { id: 12, title: "Cyber Shield Masterclass", context: "Sept 2025 • KV Baoli", img: Event12 },
-              { id: 15, title: "Vertex AI Bootcamp", context: "Sept 2025 • KIET Group", img: Event15 },
-              // Duplicating for seamless loop
-              { id: 1, title: "AI & LinkedIn Masterclass", context: "July 2025 • Growell Girls", img: Event1 },
-              { id: 4, title: "Unlocking Human OS", context: "Aug 2025 • Doon School", img: Event4 },
-              { id: 12, title: "Cyber Shield Masterclass", context: "Sept 2025 • KV Baoli", img: Event12 },
-              { id: 15, title: "Vertex AI Bootcamp", context: "Sept 2025 • KIET Group", img: Event15 },
+              { id: 1, title: "AI & LinkedIn Masterclass", context: "July 2025 • Growell Girls", img: Event1, sideImg: Event2 },
+              { id: 4, title: "Unlocking Human OS", context: "Aug 2025 • Doon School", img: Event4, sideImg: Event3 },
+              { id: 12, title: "Cyber Shield Masterclass", context: "Sept 2025 • KV Baoli", img: Event12, sideImg: Event11 },
+              { id: 15, title: "Vertex AI Bootcamp", context: "Sept 2025 • KIET Group", img: Event15, sideImg: Event16 },
+              { id: 6, title: "Next-Gen Tech Summit", context: "Oct 2025 • Tech Hub", img: Event6, sideImg: Event5 },
+              { id: 8, title: "Digital Branding Workshop", context: "Oct 2025 • Innovate", img: Event8, sideImg: Event7 },
+              { id: 10, title: "Future of AI", context: "Nov 2025 • Global Edu", img: Event10, sideImg: Event11 },
+
+              // Duplicating for infinite loop effect
+              { id: 1, title: "AI & LinkedIn Masterclass", context: "July 2025 • Growell Girls", img: Event1, sideImg: Event2 },
+              { id: 4, title: "Unlocking Human OS", context: "Aug 2025 • Doon School", img: Event4, sideImg: Event3 },
+              { id: 12, title: "Cyber Shield Masterclass", context: "Sept 2025 • KV Baoli", img: Event12, sideImg: Event11 },
+              { id: 15, title: "Vertex AI Bootcamp", context: "Sept 2025 • KIET Group", img: Event15, sideImg: Event16 },
             ].map((item, i) => (
               <div
                 key={i}
-                className="flex-none w-87.5 md:w-125 px-4 group"
+                className="flex-none w-[350px] md:w-[500px] px-4 group"
               >
                 {/* Pinterest-style Multi-Image Card */}
                 <div className="relative space-y-4">
-                  <div className="grid grid-cols-10 gap-3 h-100">
+                  <div className="grid grid-cols-10 gap-3 h-[400px]">
                     {/* Main Large Image */}
                     <div className="col-span-6 rounded-3xl overflow-hidden shadow-sm group-hover:shadow-2xl transition-all duration-700 bg-neutral-100">
                       <img
-                        src={`./src/assets/events/${item.img}`}
+                        src={item.img}
                         className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000 ease-in-out"
                         alt={item.title}
-                        onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600'; }}
                       />
                     </div>
                     {/* Side Stack */}
                     <div className="col-span-4 flex flex-col gap-3">
                       <div className="h-3/5 rounded-3xl overflow-hidden bg-neutral-100">
                         <img
-                          // Small supporting image (using same source or different if you have them)
-                          src={`./src/assets/events/${item.img}`}
-                          className="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0"
+                          src={item.sideImg}
+                          className="w-full h-full object-cover transition-all duration-700"
+                          alt="Supporting visual"
                         />
                       </div>
                       <div className="h-2/5 bg-neutral-50 rounded-3xl flex items-end p-4 group-hover:bg-red-50 transition-colors">
@@ -310,7 +308,7 @@ const SessionsPage = () => {
       to { transform: translateX(-50%); }
     }
     .animate-infinite-scroll {
-      animation: infinite-scroll 40s linear infinite;
+      animation: infinite-scroll 60s linear infinite;
       display: flex;
       width: max-content;
     }
