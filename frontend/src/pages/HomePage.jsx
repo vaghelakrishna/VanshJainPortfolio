@@ -17,9 +17,12 @@ import Event2 from '../assets/events/Event2.webp';
 const HomePage = ({ setPage }) => {
   // Mock Data for Teasers
   const stats = [
-    { label: "Students Impacted", value: "50,000+" },
-    { label: "Institutions", value: "150+" },
-    { label: "Cities", value: "40+" }
+    { label: "Students Impacted", value: "10K+" },
+    { label: "Institutions", value: "20+" },
+    { label: "Cities", value: "10+" },
+    { label: "Events Delivered", value: "25+" },
+    {
+      label: "Live Hours:", value: "100+" }
   ];
 
 
@@ -133,7 +136,7 @@ const HomePage = ({ setPage }) => {
       </section>
 
       {/* --- SECTION 2: THE LOGO WALL (Authority) --- */}
-      <section className="py-20 border-y border-white/5 bg-[#050505] overflow-hidden relative group">
+      <section className="py-20 border-y border-white/5 bg-white overflow-hidden relative group">
         {/* Modern Label */}
         <div className="flex flex-col items-center mb-12">
           <p className="text-[10px] uppercase tracking-[0.6em] text-neutral-600 font-bold">
@@ -143,26 +146,37 @@ const HomePage = ({ setPage }) => {
         </div>
 
         {/* The Infinite Slider Container */}
-        <div className="relative flex overflow-hidden">
+        <div className="relative flex  flex-col overflow-hidden">
           {/* Gradient Fades for Depth */}
-          <div className="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-[#050505] to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-[#050505] to-transparent z-10 pointer-events-none"></div>
+          {/* <div className="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-[#050505] to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-[#050505] to-transparent z-10 pointer-events-none"></div> */}
 
           {/* The Sliding Track */}
           <div className="flex animate-marquee whitespace-nowrap items-center gap-24 px-12 hover:[animation-play-state:paused] cursor-default">
             {[1, 2].map((_, idx) => (
               <div key={idx} className="flex items-center gap-24">
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-white transition-all duration-500">DELHI UNIVERSITY</span>
 
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-white transition-all duration-500">KIET GHAZIABAD</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-white transition-all duration-500">DOON SCHOOL</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-white transition-all duration-500">KV BAOLI</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-white transition-all duration-500">GROWELL SCHOOLS</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-white transition-all duration-500">TAKSHASHILA WORLD</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-white transition-all duration-500">CAMBRIDGE PUBLIC</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-white transition-all duration-500">MAHARAJA AGRASEN</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-white transition-all duration-500">LAKSHYA PUBLIC</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-white transition-all duration-500">SAIFIA INSTITUTE</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KIET GHAZIABAD</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">DOON SCHOOL</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KV BAOLI</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">GROWELL SCHOOLS</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">TAKSHASHILA WORLD</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">CAMBRIDGE PUBLIC</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">MAHARAJA AGRASEN</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">LAKSHYA PUBLIC</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">SAIFIA INSTITUTE</span>
+              </div>
+            ))}
+          </div>
+
+
+          {/* The Sliding Track */}
+          <div className="flex animate-marquee whitespace-nowrap items-center gap-24 px-12 hover:[animation-play-state:paused] cursor-default pt-10">
+            {[1, 2].map((_, idx) => (
+              <div key={idx} className="flex items-center gap-24">
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">DELHI UNIVERSITY</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KITE Institution</span>
+
               </div>
             ))}
           </div>
