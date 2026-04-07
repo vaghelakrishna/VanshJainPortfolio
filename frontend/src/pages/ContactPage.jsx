@@ -91,10 +91,11 @@ const ContactPage = () => {
               {/* Direct Info */}
               <div className="space-y-10">
                 {[
-                  { label: 'Direct Email', value: 'connect@vansh.me', icon: <Mail size={18} /> },
+                  { label: 'Direct Email', value: 'connect@vanshjain.in', icon: <Mail size={18} /> },
                   { label: 'For Kattalyx Labs', value: 'official@kattalyxlab.com', icon: <Globe size={18} /> },
                   { label: 'For Elite Verse', value: 'official@eliteversesolutions.com', icon: <Globe size={18} /> },
-                  { label: 'Base', value: 'Bangalore, India', icon: <MapPin size={18} /> }
+                  {
+                    label: 'Base', value: ' Ghaziabad, Uttar Pradesh ', icon: <MapPin size={18} /> }
                 ].map((item, idx) => (
                   <motion.div variants={fadeInUp} key={idx} className="group cursor-pointer">
                     <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-500 mb-3">{item.label}</p>
@@ -109,11 +110,10 @@ const ContactPage = () => {
               </div>
 
               {/* Socials Grid */}
-              <motion.div variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5 border border-white/10">
+              <motion.div variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5 border border-white/10">
                 {[
                   { name: 'Instagram', icon: <FaInstagram size={16} />, link: "https://www.instagram.com/vansh_jain_26" },
-                  { name: 'LinkedIn', icon: <FaLinkedin size={16} />, link: "https://www.linkedin.com/in/vansh-jain26" },
-                  { name: 'YouTube', icon: <FaYoutube size={16} />, link: "https://www.youtube.com/@vanshjain26" }
+                  { name: 'LinkedIn', icon: <FaLinkedin size={16} />, link: "https://www.linkedin.com/in/vansh-jain26" }
                 ].map((social) => (
                   <motion.a
                     href={social.link}
