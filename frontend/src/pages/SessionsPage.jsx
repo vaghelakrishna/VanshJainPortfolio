@@ -259,11 +259,11 @@ const SessionsPage = () => {
             ].map((item, i) => (
               <div
                 key={i}
-                className="flex-none w-[350px] md:w-[500px] px-4 group"
+                className="flex-none w-87.5 md:w-125 px-4 group"
               >
                 {/* Pinterest-style Multi-Image Card */}
                 <div className="relative space-y-4">
-                  <div className="grid grid-cols-10 gap-3 h-[400px]">
+                  <div className="grid grid-cols-10 gap-3 h-100">
                     {/* Main Large Image */}
                     <div className="col-span-6 rounded-3xl overflow-hidden shadow-sm group-hover:shadow-2xl transition-all duration-700 bg-neutral-100">
                       <img
