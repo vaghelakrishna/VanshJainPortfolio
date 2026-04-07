@@ -838,7 +838,7 @@ const HomePage = ({ setPage }) => {
                     </div>
 
                     <div className="pt-6 border-t border-white/5 grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5">
+                      <div className="p-5 rounded-2xl bg-white/2 border border-white/5">
                         <p className="text-white/30 text-[8px] uppercase tracking-tighter mb-2 font-bold italic">The Shift</p>
                         <p className="text-xs text-neutral-500 italic leading-relaxed">
                           While the MVP proved the unit economics, operations were paused to apply these marketplace learnings to the education sector with Kattalyx Labs.
