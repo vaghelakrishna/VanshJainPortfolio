@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="p-8 md:p-12 border-b md:border-b-0 md:border-r border-white/10 text-left">
           <div className="mb-6">
             <h3 className="font-bold text-2xl tracking-tight text-white">
-              Vansh Jain Pvt Ltd
+              Vansh Jain
             </h3>
             <div className="flex gap-1 mt-2 text-[10px] uppercase tracking-[0.3em] font-bold text-red-500/80">
               <span>Content Creator | </span>
