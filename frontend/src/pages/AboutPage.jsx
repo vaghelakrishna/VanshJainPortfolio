@@ -20,6 +20,7 @@ import DU3 from '../assets/events/DU3.webp';
 import DU4 from '../assets/events/DU4.webp';
 import DU5 from '../assets/events/DU5.webp';
 import { Link } from 'react-router-dom';
+
 const AboutPage = () => {
   const photos = [
     { id: 1, url: Event3, rot: -8, x: 0, y: 40 },
@@ -164,7 +165,7 @@ const AboutPage = () => {
                 <div className="h-px w-12 bg-neutral-800" />
                 <span className="text-[10px] uppercase tracking-[0.2em] text-neutral-600 font-mono">Entrepreneur | Speaker | Educator</span>
               </div>
-              <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-600 font-mono mt-1">Bangalore, India 🤘</p>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-600 font-mono mt-1">Ghaziabad, Uttar Pradesh 🤘</p>
             </div>
 
             <div className="relative flex justify-center h-100 w-full">
@@ -189,7 +190,6 @@ const AboutPage = () => {
           </div>
         </div>
 
-        {/* --- NEW SECTIONS START HERE --- */}
 
         {/* SECTION 2: PUBLIC SPEAKER INTRODUCTION */}
         <div className="grid grid-cols-12 gap-8 mb-40 border-t border-white/5 pt-20">
@@ -230,9 +230,6 @@ const AboutPage = () => {
                   Speaking Engagements
                 </h3>
               </div>
-              <p className="text-neutral-500 text-[10px] uppercase tracking-widest max-w-37.5 text-right leading-relaxed hidden md:block">
-                Empowering 2,000+ minds across North India.
-              </p>
             </div>
 
             {/* Responsive Horizontal Grid */}
