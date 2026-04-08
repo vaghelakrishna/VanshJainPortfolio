@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Eye, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
+import Event1 from '../../assets/events/Event1.webp';
+import Event16 from '../../assets/events/Event16.webp';
 
 const AboutSection = () => {
   return (
@@ -58,7 +59,7 @@ const AboutSection = () => {
         >
           <div className="relative w-full h-full p-2 bg-white/5 backdrop-blur-xl rounded-md shadow-2xl border border-white/10 overflow-hidden">
             <img
-              src="./src/assets/events/Event1.webp"
+              src={Event1}
               alt="Workspace"
               className="w-full h-full object-cover hover:brightness-100 transition-all duration-700 rounded-sm"
               draggable="false"
@@ -82,7 +83,7 @@ const AboutSection = () => {
         >
           <div className="relative w-full h-full p-2 bg-white/5 backdrop-blur-xl rounded-md shadow-2xl border border-white/10 overflow-hidden">
             <img
-              src="./src/assets/events/Event16.webp"
+              src={Event16}
               alt="Vansh"
               className="w-full h-full object-cover transition-all duration-700 rounded-sm"
               draggable="false"
