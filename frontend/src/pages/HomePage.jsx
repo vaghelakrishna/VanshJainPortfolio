@@ -210,30 +210,30 @@ const HomePage = ({ setPage }) => {
                   Featured Engagement
                 </span>
                 <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-6xl md:text-7xl italic leading-none tracking-tighter text-white">
-                  Delhi University<br />
-                  <span className="text-neutral-800 not-italic">Seminar</span>
+                  Delhi School of <br />
+                  <span className="text-neutral-800 not-italic">Economics</span>
                 </h2>
               </div>
 
               <div className="space-y-6">
                 <p className="text-neutral-400 font-light leading-relaxed italic text-lg border-l-2 border-red-600 pl-6">
-                  "An intense deep-dive into the 'Execution-First' mindset with the brightest minds of Delhi University."
+                  "Entrepreneurship doesn’t start after an MBA — it starts the moment you decide to take ownership."
                 </p>
                 <p className="text-neutral-500 text-sm font-sans font-light leading-relaxed">
-                  Conducted at the heart of India's academic hub, this seminar focused on bridging the gap between theoretical excellence and raw startup execution. Over 500+ students from Hansraj, SRCC, and Hindu College joined to discuss the future of the Indian creator economy.
+                  Kattalyx Labs conducted an immersive session at MBA IB, Department of Commerce (DSE). In collaboration with the Alumni Relations Committee, Vansh Jain and Kamal Girdhar decoded the nuances of execution, real-world building, and the intent required to scale beyond theory.
                 </p>
               </div>
 
               {/* Quick Stats for DU */}
               <div className="flex gap-10 pt-4">
                 <div>
-                  <p className="text-2xl font-serif italic text-white">500+</p>
-                  <p className="text-[9px] uppercase tracking-widest text-neutral-600 mt-1">Attendees</p>
+                  <p className="text-2xl font-serif italic text-white">MBA IB</p>
+                  <p className="text-[9px] uppercase tracking-widest text-neutral-600 mt-1">Target Cohort</p>
                 </div>
                 <div className="w-px h-10 bg-white/10"></div>
                 <div>
-                  <p className="text-2xl font-serif italic text-white">2.5 Hrs</p>
-                  <p className="text-[9px] uppercase tracking-widest text-neutral-600 mt-1">Of Raw Dialogue</p>
+                  <p className="text-2xl font-serif italic text-white">DSE</p>
+                  <p className="text-[9px] uppercase tracking-widest text-neutral-600 mt-1">University of Delhi</p>
                 </div>
               </div>
             </div>
@@ -241,23 +241,20 @@ const HomePage = ({ setPage }) => {
             {/* Right Column: Visual Showcase */}
             <div className="lg:col-span-7 relative group">
               <div className="relative aspect-4/5 md:aspect-7/5 overflow-hidden rounded-[3rem] border border-white/10 bg-neutral-900 shadow-2xl">
-                {/* Main Image - Yahan aap Event1 ya DU ki photo laga sakte hain */}
+                {/* Main Image */}
                 <img
                   src={DU1}
-                  alt="Delhi University Seminar"
-                  className="w-full h-full object-cover  transition-all duration-700 group-hover:scale-105"
+                  alt="Delhi School of Economics Seminar"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                 />
 
                 {/* Overlay Tag */}
                 <div className="absolute bottom-8 left-8 right-8 p-6 bg-black/60 backdrop-blur-xl border border-white/10 rounded-3xl translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                   <div className="flex justify-between items-center">
                     <div>
-                      <p className="text-[10px] font-mono text-red-500 uppercase tracking-widest font-bold">Venue</p>
-                      <p className="text-xl font-serif italic text-white">Conference Centre, North Campus</p>
+                      <p className="text-[10px] font-mono text-red-500 uppercase tracking-widest font-bold">Hosted By</p>
+                      <p className="text-xl font-serif italic text-white">Alumni Relations Committee, DSE</p>
                     </div>
-                    {/* <div className="h-10 w-10 rounded-full border border-white/20 flex items-center justify-center">
-                      <ArrowUpRight className="w-4 h-4 text-white" />
-                    </div> */}
                   </div>
                 </div>
               </div>
@@ -265,14 +262,13 @@ const HomePage = ({ setPage }) => {
               {/* Decorative Badge */}
               <div className="absolute -top-6 -right-6 w-28 h-28 bg-red-600 rounded-full flex items-center justify-center rotate-12 shadow-2xl border-4 border-[#050505] z-20">
                 <div className="text-center">
-                  <p className="text-[25px] font-bold uppercase tracking-tighter text-white">DU</p>
-                  {/* <p className="text-xl font-serif italic text-white">Impact</p> */}
+                  <p className="text-[25px] font-bold uppercase tracking-tighter text-white leading-tight">DSE<br /><span className="text-[10px] tracking-[0.2em]">DELHI</span></p>
                 </div>
               </div>
 
               {/* Ghost Text */}
               <div className="absolute -bottom-10 -left-10 text-[10rem] font-serif italic text-white/2 pointer-events-none select-none z-0">
-                DELHI
+                COMMERCE
               </div>
             </div>
 
