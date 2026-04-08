@@ -535,39 +535,39 @@ const AboutPage = () => {
                 <div className="h-px w-12 bg-white/10"></div>
               </div>
               <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-7xl text-white italic leading-none">
-                The Delhi University <br /> <span className="not-italic text-zinc-600">Engagement</span>
+                The Delhi University <br /> <span className="not-italic text-zinc-600">Engagements</span>
               </h3>
             </div>
 
             {/* DU Colleges Masonry-style Grid */}
             <div className="grid grid-cols-12 gap-6">
 
-              {/* Featured Big Card - SRCC or Main Event */}
+              {/* Featured Big Card - Delhi School of Economics (DSE) */}
               <motion.div
                 whileHover={{ y: -10 }}
                 className="col-span-12 lg:col-span-7 group relative overflow-hidden rounded-4xl bg-zinc-900/50 border border-white/5 h-112.5"
               >
                 <img
                   src={DU1}
-                  className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
-                  alt="DU Engagement"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-1000"
+                  alt="DSE MBA IB Engagement"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-[#0A0A0A] via-transparent to-transparent" />
 
                 <div className="absolute bottom-10 left-10 right-10">
-                  <span className="text-red-500 font-mono text-[10px] uppercase tracking-widest mb-2 block">North Campus</span>
-                  <h4 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl text-white mb-4">Strategic Mentorship @ DU</h4>
+                  <span className="text-red-500 font-mono text-[10px] uppercase tracking-widest mb-2 block">North Campus • DSE</span>
+                  <h4 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl text-white mb-4">MBA International Business @ DSE</h4>
                   <p className="text-neutral-400 text-sm max-w-md leading-relaxed">
-                    Interacting with the brightest minds of Delhi University, discussing the intersection of ecosystem building and venture architecture.
+                    Collaborating with the Alumni Relations Committee to drive 'Execution-First' mindsets among the future leaders of global trade and commerce.
                   </p>
                 </div>
               </motion.div>
 
-              {/* Side Stack */}
+              {/* Side Stack - Strategic Insights */}
               <div className="col-span-12 lg:col-span-5 flex flex-col gap-6">
                 {[
-                  { college: "Hansraj College", img: DU2, tag: "Entrepreneurship" },
-                  { college: "Ramjas College", img: DU3, tag: "Tech Talk" }
+                  { college: "Kattalyx Labs x DSE", img: DU2, tag: "Founder's Dialogue" },
+                  { college: "Execution vs Theory", img: DU3, tag: "The First Step" }
                 ].map((item, i) => (
                   <motion.div
                     key={i}
@@ -576,7 +576,7 @@ const AboutPage = () => {
                   >
                     <img
                       src={item.img}
-                      className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale group-hover:opacity-40 transition-all duration-700"
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-1000"
                       alt={item.college}
                     />
                     <div className="relative z-10">
@@ -587,16 +587,16 @@ const AboutPage = () => {
                 ))}
               </div>
 
-              {/* Bottom Small Cards */}
+              {/* Bottom Cards: Session Highlights */}
               <div className="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[
-                  { name: "Miranda House", img: DU4, topic: "Women in Tech" },
-                  { name: "Hindu College", img: DU5, topic: "Scaling Startups" },
-                  { name: "Kirori Mal College", img: DU1, topic: "Personal Branding" }
+                  { name: "Real-World Building", img: DU4, topic: "Entrepreneurial Ownership" },
+                  { name: "Hunger to Build", img: DU5, topic: "Post-MBA Ecosystems" },
+                  { name: "Actionable Clarity", img: DU1, topic: "Venture Execution" }
                 ].map((col, idx) => (
                   <div key={idx} className="group p-6 rounded-3xl bg-white/2 border border-white/5 hover:border-red-500/30 transition-all">
                     <div className="aspect-video rounded-2xl overflow-hidden mb-4 bg-zinc-800">
-                      <img src={col.img} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
+                      <img src={col.img} className="w-full h-full object-cover group-hover:scale-105 transition-all" />
                     </div>
                     <h6 className="text-white font-medium text-sm">{col.name}</h6>
                     <p className="text-zinc-600 text-[11px] font-serif italic mt-1">{col.topic}</p>
