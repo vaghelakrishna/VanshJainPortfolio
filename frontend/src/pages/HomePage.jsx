@@ -778,9 +778,6 @@ const HomePage = ({ setPage }) => {
                         <a href="https://www.linkedin.com/company/elite-verse-solutions/?viewAsMember=true" className="hover:text-white transition-colors">
                 <FiLinkedin size={20} />
             </a>
-            <a href="https://www.facebook.com/eliteversesolutions" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
-                <FiFacebook size={20} />
-            </a>
           </div>
         </div>
 
