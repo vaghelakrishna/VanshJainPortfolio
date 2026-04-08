@@ -195,9 +195,19 @@ const AboutPage = () => {
             <div className="max-w-xl space-y-6 text-[15px] leading-relaxed">
               <p>My speaking journey is fueled by a passion for demystifying technology and entrepreneurship for the next generation. I believe that real impact happens when practical knowledge meets an inspired mindset.</p>
               <p>Through keynotes and workshops, I aim to provide students and professionals with the mental frameworks needed to build, scale, and lead in an ever-changing digital landscape.</p>
+              <div className='flex flex-wrap gap-4'>
+
               <div className="pt-6 border-t border-white/5">
-                <span className="text-4xl text-white font-serif">500+</span>
-                <p className="text-[10px] uppercase tracking-widest mt-2">Students Inspired & Mentored</p>
+                <span className="text-4xl text-white font-serif">10K+</span>
+                  <p className="text-[10px] uppercase tracking-widest mt-2">Students Impacted</p>
+              </div>
+                            <div className="pt-6 border-t border-white/5">
+                <span className="text-4xl text-white font-serif">20+</span>
+                  <p className="text-[10px] uppercase tracking-widest mt-2">Institutions</p>
+              </div>              <div className="pt-6 border-t border-white/5">
+                <span className="text-4xl text-white font-serif">25+</span>
+                  <p className="text-[10px] uppercase tracking-widest mt-2">Events Delivered</p>
+              </div>
               </div>
             </div>
           </div>
