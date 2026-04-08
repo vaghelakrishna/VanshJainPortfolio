@@ -545,14 +545,14 @@ const AboutPage = () => {
               {/* Featured Big Card - SRCC or Main Event */}
               <motion.div
                 whileHover={{ y: -10 }}
-                className="col-span-12 lg:col-span-7 group relative overflow-hidden rounded-[2rem] bg-zinc-900/50 border border-white/5 h-[450px]"
+                className="col-span-12 lg:col-span-7 group relative overflow-hidden rounded-4xl bg-zinc-900/50 border border-white/5 h-112.5"
               >
                 <img
                   src={DU1}
                   className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
                   alt="DU Engagement"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#0A0A0A] via-transparent to-transparent" />
 
                 <div className="absolute bottom-10 left-10 right-10">
                   <span className="text-red-500 font-mono text-[10px] uppercase tracking-widest mb-2 block">North Campus</span>
@@ -572,7 +572,7 @@ const AboutPage = () => {
                   <motion.div
                     key={i}
                     whileHover={{ x: 10 }}
-                    className="flex-1 group relative overflow-hidden rounded-[2rem] bg-zinc-900/50 border border-white/5 p-8 flex items-end"
+                    className="flex-1 group relative overflow-hidden rounded-4xl bg-zinc-900/50 border border-white/5 p-8 flex items-end"
                   >
                     <img
                       src={item.img}
