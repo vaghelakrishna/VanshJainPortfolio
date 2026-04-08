@@ -900,6 +900,7 @@ const HomePage = ({ setPage }) => {
 
           {/* Slim Pinterest Button */}
           <div className="pt-6">
+            <Link to="/contact">
             <button className="relative group/btn px-8 py-3.5 bg-white text-black rounded-full font-bold text-[9px] uppercase tracking-[0.2em] overflow-hidden transition-all duration-500 hover:scale-105 active:scale-95 shadow-lg">
               <span className="relative z-10">Start a Conversation</span>
 
@@ -910,6 +911,7 @@ const HomePage = ({ setPage }) => {
                 Start a Conversation
               </div>
             </button>
+            </Link>
           </div>
 
           {/* Fine Print */}
