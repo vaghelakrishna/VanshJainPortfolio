@@ -30,7 +30,7 @@ const testimonialsData = [
 
 const CardPair = ({ item }) => {
   return (
-    <div className="relative w-[320px] h-[200px] m-[-15px]">
+    <div className="relative w-[320px] h-50 -m-3.75">
 
       {/* BOTTOM LAYER: The Static Message Card (Always stays there) */}
       <div className="absolute inset-0 bg-transparent border border-dashed border-white/20 rounded-2xl flex items-center justify-center p-10 text-center">
