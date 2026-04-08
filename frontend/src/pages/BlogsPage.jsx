@@ -26,7 +26,7 @@ const BlogPage = () => {
       </header>
 
       {/* Navigation & Filters */}
-      <div className="sticky top-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-xl border-b border-white/5 px-8 md:px-16 py-6 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="sticky  z-50 bg-[#0a0a0a]/90 backdrop-blur-xl border-b border-white/5 px-8 md:px-16 py-6 flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="flex items-center gap-6 overflow-x-auto no-scrollbar w-full md:w-auto">
           {categories.map(cat => (
             <button
