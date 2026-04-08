@@ -497,11 +497,13 @@ const HomePage = ({ setPage }) => {
               </div>
 
               <div className="flex flex-col gap-6">
+                <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7345422023134760961
+">
                 <button className="group relative w-full md:w-fit px-10 py-5 bg-white text-black rounded-full overflow-hidden transition-all duration-500 hover:bg-red-600 hover:text-white">
                   <span className="relative z-10 font-bold uppercase text-[11px] tracking-[0.2em]">Subscribe to 2AM Founders —&gt;</span>
                   <div className="absolute inset-0 bg-red-600 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
                 </button>
-
+                </a>
                 <div className="flex items-center gap-4 px-2">
                   <div className="h-px w-8 bg-white/10"></div>
                   <span className="text-[9px] uppercase tracking-[0.3em] text-neutral-700 font-bold">Platform: Substack / LinkedIn</span>
