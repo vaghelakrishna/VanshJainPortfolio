@@ -76,9 +76,9 @@ const TestimonialCarousel = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="min-w-[300px] md:min-w-90 max-w-[360px] snap-start relative p-7 md:p-9 bg-[#0A0A0A] border border-white/5 rounded-[2rem] group flex flex-col justify-between"
+              className="min-w-75 md:min-w-90 max-w-90 snap-start relative p-7 md:p-9 bg-[#0A0A0A] border border-white/5 rounded-4xl group flex flex-col justify-between"
             >
-              <div className="absolute inset-0 bg-linear-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2rem]" />
+              <div className="absolute inset-0 bg-linear-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-4xl" />
 
               <div>
                 <Quote size={20} className="text-neutral-800 mb-6 group-hover:text-red-500/40 transition-colors" />
@@ -93,7 +93,7 @@ const TestimonialCarousel = () => {
 
               <div className="mt-10 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="h-[1px] w-6 bg-neutral-900 group-hover:bg-red-500/20 transition-all" />
+                  <div className="h-px w-6 bg-neutral-900 group-hover:bg-red-500/20 transition-all" />
                   <span className="text-[8px] font-mono text-neutral-600 uppercase tracking-widest">Verified</span>
                 </div>
                 <Heart size={14} className="text-neutral-900 group-hover:text-red-500/30 transition-colors" />
