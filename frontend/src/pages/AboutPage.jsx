@@ -14,6 +14,11 @@ import Event11 from '../assets/events/Event11.webp';
 import Event12 from '../assets/events/Event12.webp';
 import Event15 from '../assets/events/Event15.webp';
 import Event16 from '../assets/events/Event16.webp';
+import DU1 from '../assets/events/DU1.webp';
+import DU2 from '../assets/events/DU2.webp';
+import DU3 from '../assets/events/DU3.webp';
+import DU4 from '../assets/events/DU4.webp';
+import DU5 from '../assets/events/DU5.webp';
 import { Link } from 'react-router-dom';
 const AboutPage = () => {
   const photos = [
@@ -521,6 +526,89 @@ const AboutPage = () => {
 
           </div>
         </section>
+
+        {/* SECTION: DU ACADEMIC CIRCUIT */}
+        <div className="mb-40 px-6 md:px-20 pt-20">
+          <div className="max-w-7xl mx-auto">
+
+            {/* Section Header */}
+            <div className="flex flex-col mb-16 space-y-4">
+              <div className="flex items-center gap-3">
+                <span className="text-red-500 text-[10px] uppercase tracking-[0.5em] font-bold">Academic Chapters</span>
+                <div className="h-px w-12 bg-white/10"></div>
+              </div>
+              <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-7xl text-white italic leading-none">
+                The Delhi University <br /> <span className="not-italic text-zinc-600">Engagement</span>
+              </h3>
+            </div>
+
+            {/* DU Colleges Masonry-style Grid */}
+            <div className="grid grid-cols-12 gap-6">
+
+              {/* Featured Big Card - SRCC or Main Event */}
+              <motion.div
+                whileHover={{ y: -10 }}
+                className="col-span-12 lg:col-span-7 group relative overflow-hidden rounded-[2rem] bg-zinc-900/50 border border-white/5 h-[450px]"
+              >
+                <img
+                  src={DU1}
+                  className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                  alt="DU Engagement"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent" />
+
+                <div className="absolute bottom-10 left-10 right-10">
+                  <span className="text-red-500 font-mono text-[10px] uppercase tracking-widest mb-2 block">North Campus</span>
+                  <h4 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl text-white mb-4">Strategic Mentorship @ DU</h4>
+                  <p className="text-neutral-400 text-sm max-w-md leading-relaxed">
+                    Interacting with the brightest minds of Delhi University, discussing the intersection of ecosystem building and venture architecture.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Side Stack */}
+              <div className="col-span-12 lg:col-span-5 flex flex-col gap-6">
+                {[
+                  { college: "Hansraj College", img: DU2, tag: "Entrepreneurship" },
+                  { college: "Ramjas College", img: DU3, tag: "Tech Talk" }
+                ].map((item, i) => (
+                  <motion.div
+                    key={i}
+                    whileHover={{ x: 10 }}
+                    className="flex-1 group relative overflow-hidden rounded-[2rem] bg-zinc-900/50 border border-white/5 p-8 flex items-end"
+                  >
+                    <img
+                      src={item.img}
+                      className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale group-hover:opacity-40 transition-all duration-700"
+                      alt={item.college}
+                    />
+                    <div className="relative z-10">
+                      <span className="text-[9px] text-zinc-500 uppercase tracking-widest">{item.tag}</span>
+                      <h5 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-2xl text-white italic">{item.college}</h5>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Bottom Small Cards */}
+              <div className="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                {[
+                  { name: "Miranda House", img: DU4, topic: "Women in Tech" },
+                  { name: "Hindu College", img: DU5, topic: "Scaling Startups" },
+                  { name: "Kirori Mal College", img: DU1, topic: "Personal Branding" }
+                ].map((col, idx) => (
+                  <div key={idx} className="group p-6 rounded-3xl bg-white/2 border border-white/5 hover:border-red-500/30 transition-all">
+                    <div className="aspect-video rounded-2xl overflow-hidden mb-4 bg-zinc-800">
+                      <img src={col.img} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
+                    </div>
+                    <h6 className="text-white font-medium text-sm">{col.name}</h6>
+                    <p className="text-zinc-600 text-[11px] font-serif italic mt-1">{col.topic}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
        
         {/* SECTION 6: STARTUP JOURNEY */}
         <div className="mb-40 px-6 md:px-20 pt-20">
