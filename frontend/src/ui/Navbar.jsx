@@ -1,27 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Send, Check } from 'lucide-react';
+import { X, Send, Check, ChevronDown } from 'lucide-react';
 import axios from 'axios';
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false); // Mobile Menu
-  const [isModalOpen, setIsModalOpen] = useState(false); // Subscribe Modal
-  const [isSubscribed, setIsSubscribed] = useState(false); // Persistence State
+  const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState({ loading: false, msg: '', type: '' });
+  const [companyDropdown, setCompanyDropdown] = useState(false);
+  const dropdownRef = useRef(null);
 
   const location = useLocation();
 
   useEffect(() => {
-    // 1. Check if user already subscribed in previous session
     const savedStatus = localStorage.getItem('isSubscribed');
-    if (savedStatus === 'true') {
-      setIsSubscribed(true);
-    }
-
-    // 2. Prevent body scroll when menu/modal is open
+    if (savedStatus === 'true') setIsSubscribed(true);
     document.body.style.overflow = (isOpen || isModalOpen) ? 'hidden' : 'unset';
+
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setCompanyDropdown(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen, isModalOpen]);
 
   const tabs = [
@@ -71,8 +76,8 @@ const Navigation = () => {
   return (
     <>
       {/* --- DESKTOP NAVIGATION --- */}
-      <div className="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full justify-center pointer-events-none">
-        <nav className="relative flex flex-col items-center border border-white/5 bg-[#0D0D0D]/80 backdrop-blur-md rounded-xl overflow-hidden shadow-2xl pointer-events-auto">
+      <div className="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 z-[100] w-full justify-center pointer-events-none">
+        <nav className="relative flex flex-col items-center border border-white/5 bg-[#0D0D0D]/80 backdrop-blur-md rounded-xl shadow-2xl pointer-events-auto">
 
           <div className="flex items-center px-6 py-2 gap-6">
             {tabs.map((tab) => (
@@ -91,6 +96,44 @@ const Navigation = () => {
                 )}
               </Link>
             ))}
+
+            {/* Company Work Dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setCompanyDropdown(!companyDropdown)}
+                className={`relative px-1 py-1 text-[12px] font-medium transition-colors duration-300 flex items-center gap-1 ${
+                  location.pathname.startsWith('/company') ? 'text-white' : 'text-neutral-500 hover:text-neutral-300'
+                }`}
+              >
+                Company Work
+                <ChevronDown size={12} className={`transition-transform duration-300 ${companyDropdown ? 'rotate-180' : ''}`} />
+                {location.pathname.startsWith('/company') && (
+                  <motion.div layoutId="activeDot" className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 bg-orange-500 rounded-full" transition={{ type: 'spring', stiffness: 380, damping: 30 }} />
+                )}
+              </button>
+              <AnimatePresence>
+                {companyDropdown && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full mt-3 left-1/2 -translate-x-1/2 w-52 bg-[#0d0d0d] border border-white/10 rounded-2xl overflow-hidden shadow-2xl z-[999]"
+                  >
+                    <Link to="/company/kattalyx-labs" onClick={() => setCompanyDropdown(false)}
+                      className="flex flex-col px-5 py-4 hover:bg-white/5 transition-colors border-b border-white/5">
+                      <span className="text-[11px] font-bold text-white">Kattalyx Labs</span>
+                      <span className="text-[9px] text-neutral-500 uppercase tracking-wider mt-0.5">Education Ecosystem</span>
+                    </Link>
+                    <Link to="/company/elite-verse" onClick={() => setCompanyDropdown(false)}
+                      className="flex flex-col px-5 py-4 hover:bg-white/5 transition-colors">
+                      <span className="text-[11px] font-bold text-white">Elite Verse Solutions</span>
+                      <span className="text-[9px] text-neutral-500 uppercase tracking-wider mt-0.5">Execution Partner</span>
+                    </Link>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
 
             {/* Conditional Desktop Button */}
             {isSubscribed ? (
@@ -143,6 +186,16 @@ const Navigation = () => {
                   </Link>
                 </motion.div>
               ))}
+
+              {/* Mobile Company Dropdown */}
+              <motion.div initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: tabs.length * 0.1 }}>
+                <p className="text-[10px] font-mono text-red-500 mb-3">0{tabs.length + 1}</p>
+                <p style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl italic text-neutral-600 mb-4">Company Work</p>
+                <div className="flex flex-col gap-3 pl-4">
+                  <Link to="/company/kattalyx-labs" onClick={() => setIsOpen(false)} className="text-neutral-400 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest">→ Kattalyx Labs</Link>
+                  <Link to="/company/elite-verse" onClick={() => setIsOpen(false)} className="text-neutral-400 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest">→ Elite Verse Solutions</Link>
+                </div>
+              </motion.div>
 
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="mt-4">
                 <button
