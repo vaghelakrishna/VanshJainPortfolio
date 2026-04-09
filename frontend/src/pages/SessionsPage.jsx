@@ -253,7 +253,6 @@ const SessionsPage = () => {
               { id: 4, title: "Unlocking Human OS", context: "Aug 2025 • Doon School", img: Event4, sideImg: Event3 },
               { id: 12, title: "Cyber Shield Masterclass", context: "Sept 2025 • KV Baoli", img: Event12, sideImg: Event11 },
               { id: 15, title: "Vertex AI Bootcamp", context: "Sept 2025 • KIET Group", img: Event15, sideImg: Event16 },
-              { id: 6, title: "Next-Gen Tech Summit", context: "Oct 2025 • Tech Hub", img: Event6, sideImg: Event5 },
               { id: 8, title: "Digital Branding Workshop", context: "Oct 2025 • Innovate", img: Event8, sideImg: Event7 },
               { id: 10, title: "Future of AI", context: "Nov 2025 • Global Edu", img: Event10, sideImg: Event11 },
 
@@ -449,11 +448,11 @@ const SessionsPage = () => {
                 </Link>
 
                 {/* MEDIA KIT BUTTON */}
-                <Link to="/courses">
+                {/* <Link to="/courses">
                 <button className="px-8 py-4 border border-white/10 text-white rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white/5 transition-all">
                   Get the Media Kit
                 </button>
-                </Link>
+                </Link> */}
               </div>
             </div>
 
