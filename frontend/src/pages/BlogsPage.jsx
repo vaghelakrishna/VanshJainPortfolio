@@ -55,17 +55,17 @@ const BlogPage = () => {
         {filteredPosts.map((post) => (
           <Link key={post.id} to={`/blog/${post.id}`} className="group cursor-pointer">
             <article>
-              <div className="relative aspect-4/5 overflow-hidden mb-8 bg-neutral-900">
+              <div className="relative aspect-5/5 overflow-hidden mb-8 bg-neutral-900">
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 ease-out"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
                 <div className="absolute top-6 right-6">
-                  <div className="w-12 h-12 bg-black/60 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0">
+                  {/* <div className="w-12 h-12 bg-black/60 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0">
                     <IoArrowRedoOutline size={20} />
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -76,7 +76,7 @@ const BlogPage = () => {
                   <span className="text-neutral-500 font-normal">{post.date}</span>
                 </div>
 
-                <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-3xl md:text-4xl leading-[1.1] tracking-tight group-hover:text-neutral-400 transition-colors">
+                <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-2xl md:text-3xl leading-[1.1] tracking-tight group-hover:text-neutral-400 transition-colors">
                   {post.title}
                 </h2>
 
