@@ -586,7 +586,7 @@ const HomePage = ({ setPage }) => {
       </section>
 
 
-      <section className="py-32 bg-[#050505] text-white font-sans overflow-hidden">
+      <section className="py-32 bg-[#050505] text-white font-sans overflow-hidden"  id="venture">
         <div className="max-w-7xl mx-auto px-6 md:px-20">
 
           {/* Section Header */}
@@ -599,7 +599,7 @@ const HomePage = ({ setPage }) => {
             </h2>
           </div>
 
-          <div className="space-y-40" id="venture">
+          <div className="space-y-40" >
 
             {/* VENTURE 1: KATTALYX LABS */}
             <div className="relative group">
