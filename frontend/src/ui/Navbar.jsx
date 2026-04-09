@@ -118,7 +118,7 @@ const Navigation = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full mt-3 left-1/2 -translate-x-1/2 w-52 bg-[#0d0d0d] border border-white/10 rounded-2xl overflow-hidden shadow-2xl z-[999]"
+                    className="absolute top-full mt-3 left-1/2 -translate-x-1/2 w-52 bg-[#0d0d0d] border border-white/10 rounded-2xl overflow-hidden shadow-2xl z-999"
                   >
                     <Link to="/company/kattalyx-labs" onClick={() => setCompanyDropdown(false)}
                       className="flex flex-col px-5 py-4 hover:bg-white/5 transition-colors border-b border-white/5">
