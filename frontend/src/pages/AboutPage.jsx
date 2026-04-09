@@ -244,6 +244,15 @@ const AboutPage = () => {
               {[
                 {
                   id: "01",
+                  name: "Delhi School of Economics",
+                  city: "New Delhi",
+                  topic: "Entrepreneurship Unplugged: From Idea to Execution",
+                  year: "April 2026",
+                  image: DU1,
+                  aspect: "aspect-video"
+                },
+                {
+                  id: "01",
                   name: "KIET Group of Institutions",
                   city: "Ghaziabad",
                   topic: "AI Bootcamp: Vertex AI & Google Agent Kit",
