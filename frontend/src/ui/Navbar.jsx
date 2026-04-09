@@ -76,7 +76,7 @@ const Navigation = () => {
   return (
     <>
       {/* --- DESKTOP NAVIGATION --- */}
-      <div className="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 z-[100] w-full justify-center pointer-events-none">
+      <div className="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 z-100 w-full justify-center pointer-events-none">
         <nav className="relative flex flex-col items-center border border-white/5 bg-[#0D0D0D]/80 backdrop-blur-md rounded-xl shadow-2xl pointer-events-auto">
 
           <div className="flex items-center px-6 py-2 gap-6">
