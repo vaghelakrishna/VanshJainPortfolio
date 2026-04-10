@@ -734,7 +734,7 @@ const HomePage = ({ setPage }) => {
                   <div className="border-t border-white/10 pt-10 mt-6 relative">
                     {/* The Header - More aggressive tracking and a vertical accent */}
                     <div className="flex items-start gap-4 mb-8">
-                      <div className="w-[1px] h-10 bg-linear-to-b from-red-600 to-transparent"></div>
+                      <div className="w-px h-10 bg-linear-to-b from-red-600 to-transparent"></div>
                       <div>
                         <h4 className="text-red-500 text-[10px] uppercase tracking-[0.4em] font-black italic flex items-center gap-2 mb-1">
                           <SiReactos className="animate-spin-slow" /> The Edge
