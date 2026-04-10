@@ -27,22 +27,23 @@ const HomePage = ({ setPage }) => {
     { label: "Cities", value: "10+" },
     { label: "Events Delivered", value: "25+" },
     {
-      label: "Live Hours:", value: "100+" }
+      label: "Live Hours:", value: "100+"
+    }
   ];
 
 
-    const topics = [
-      "Execution > Perfection", "Founder's Guide to Saying No", "Scaling in College",
-      "Failed Experiments", "Building in Public", "Fundraising Without Hype",
-      "First Hire Tips", "Idea to MVP: 6 Weeks", "Founder Mental Health", "Bootstrapping Costs"
-    ];
+  const topics = [
+    "Execution > Perfection", "Founder's Guide to Saying No", "Scaling in College",
+    "Failed Experiments", "Building in Public", "Fundraising Without Hype",
+    "First Hire Tips", "Idea to MVP: 6 Weeks", "Founder Mental Health", "Bootstrapping Costs"
+  ];
   return (
     <div className="bg-[#0a0a0a] text-white min-h-screen selection:bg-white selection:text-black">
       <style>
         {`@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap');`}
       </style>
 
- <HeroSection/>
+      <HeroSection />
 
       <section className="py-24 bg-[#050505] text-white font-sans overflow-hidden border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 md:px-20">
@@ -317,8 +318,11 @@ const HomePage = ({ setPage }) => {
           <div className="flex animate-marquee whitespace-nowrap items-center gap-24 px-12 hover:[animation-play-state:paused] cursor-default pt-10">
             {[1, 2].map((_, idx) => (
               <div key={idx} className="flex items-center gap-24">
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">DELHI UNIVERSITY</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KITE Institution</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">Delhi School of Economics</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KIET Group of Institutions</span>
+
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">Delhi School of Economics</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KIET Group of Institutions</span>
 
               </div>
             ))}
@@ -448,11 +452,11 @@ const HomePage = ({ setPage }) => {
 
 
       <TestimonialStack />
-      
-      <AboutSection/>
+
+      <AboutSection />
 
 
-<Gallery/>
+      <Gallery />
 
 
 
@@ -495,10 +499,10 @@ const HomePage = ({ setPage }) => {
 
               <div className="flex flex-col gap-6">
                 <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7345422023134760961" target="_blank" rel="noopener noreferrer">
-                <button className="group relative w-full md:w-fit px-10 py-5 bg-white text-black rounded-full overflow-hidden transition-all duration-500 hover:bg-red-600 hover:text-white">
-                  <span className="relative z-10 font-bold uppercase text-[11px] tracking-[0.2em]">Subscribe to 2AM Founders —&gt;</span>
-                  <div className="absolute inset-0 bg-red-600 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                </button>
+                  <button className="group relative w-full md:w-fit px-10 py-5 bg-white text-black rounded-full overflow-hidden transition-all duration-500 hover:bg-red-600 hover:text-white">
+                    <span className="relative z-10 font-bold uppercase text-[11px] tracking-[0.2em]">Subscribe to 2AM Founders —&gt;</span>
+                    <div className="absolute inset-0 bg-red-600 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                  </button>
                 </a>
                 <div className="flex items-center gap-4 px-2">
                   <div className="h-px w-8 bg-white/10"></div>
@@ -586,7 +590,7 @@ const HomePage = ({ setPage }) => {
       </section>
 
 
-      <section className="py-32 bg-[#050505] text-white font-sans overflow-hidden"  id="venture">
+      <section className="py-32 bg-[#050505] text-white font-sans overflow-hidden" id="venture">
         <div className="max-w-7xl mx-auto px-6 md:px-20">
 
           {/* Section Header */}
@@ -707,88 +711,88 @@ const HomePage = ({ setPage }) => {
             </div>
 
             {/* VENTURE 2: ELITE VERSE SOLUTIONS */}
-<div className="relative group">
-  <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div className="relative group">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
 
-    {/* Left Section: Service Grid & Why Us */}
-    <div className="lg:col-span-7 order-2 lg:order-1 bg-neutral-900/20 border border-white/5 rounded-[3rem] p-8 md:p-12 backdrop-blur-sm">
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8 text-center">
-        {[
-          'Web & App Dev',
-          'UI/UX & Brand Identity',
-          'Digital Marketing',
-          'Business Consultancy',
-          'ERP/CRM Systems',
-          'Startup Readiness'
-        ].map((item) => (
-          <div key={item} className="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center text-[8px] md:text-[9px] uppercase font-bold tracking-widest text-neutral-400 hover:text-red-400 hover:border-red-500/20 transition-all duration-300">
-            {item}
-          </div>
-        ))}
-      </div>
+                {/* Left Section: Service Grid & Why Us */}
+                <div className="lg:col-span-7 order-2 lg:order-1 bg-neutral-900/20 border border-white/5 rounded-[3rem] p-8 md:p-12 backdrop-blur-sm">
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8 text-center">
+                    {[
+                      'Web & App Dev',
+                      'UI/UX & Brand Identity',
+                      'Digital Marketing',
+                      'Business Consultancy',
+                      'ERP/CRM Systems',
+                      'Startup Readiness'
+                    ].map((item) => (
+                      <div key={item} className="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center text-[8px] md:text-[9px] uppercase font-bold tracking-widest text-neutral-400 hover:text-red-400 hover:border-red-500/20 transition-all duration-300">
+                        {item}
+                      </div>
+                    ))}
+                  </div>
 
-      <div className="border-t border-white/5 pt-8">
-        <h4 className="text-red-500 text-[10px] uppercase tracking-widest font-bold mb-4 italic flex items-center gap-2">
-          <SiReactos /> Why Us?
-        </h4>
-        <p className="text-xs text-neutral-300 font-light leading-loose">
-          Look, we’re founders too. We get the struggle of trying to scale while everything is breaking. We ship fast, we don’t over-design for the sake of aesthetics, and we definitely don’t do fluff. We focus on the only things that actually move the needle: growth, metrics, and clean execution. From pitch decks to full-scale ERPs, we build the systems that turn your "what if" into a scalable reality. No gatekeeping, just pure output.
-        </p>
-      </div>
-    </div>
+                  <div className="border-t border-white/5 pt-8">
+                    <h4 className="text-red-500 text-[10px] uppercase tracking-widest font-bold mb-4 italic flex items-center gap-2">
+                      <SiReactos /> Why Us?
+                    </h4>
+                    <p className="text-xs text-neutral-300 font-light leading-loose">
+                      Look, we’re founders too. We get the struggle of trying to scale while everything is breaking. We ship fast, we don’t over-design for the sake of aesthetics, and we definitely don’t do fluff. We focus on the only things that actually move the needle: growth, metrics, and clean execution. From pitch decks to full-scale ERPs, we build the systems that turn your "what if" into a scalable reality. No gatekeeping, just pure output.
+                    </p>
+                  </div>
+                </div>
 
-    {/* Right Section: Branding & Bio */}
-    <div className="lg:col-span-5 order-1 lg:order-2 space-y-8">
-      <div className="space-y-2">
-        <div className="flex items-center gap-3 text-[10px] font-mono text-neutral-500 uppercase tracking-widest">
-          <span>Founded April 2025</span>
-          <span className="w-1 h-1 bg-red-600 rounded-full"></span>
-          <span>Noida, Uttar Pradesh</span>
-        </div>
-        <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-6xl italic text-white group-hover:text-red-500 transition-colors duration-500">
-          Elite Verse <span className="text-xs not-italic font-sans opacity-40 ml-2">Solutions Pvt Ltd</span>
-        </h3>
-        <p className="text-red-500 text-sm font-medium uppercase tracking-tighter">Founder & Managing Director</p>
-      </div>
+                {/* Right Section: Branding & Bio */}
+                <div className="lg:col-span-5 order-1 lg:order-2 space-y-8">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-3 text-[10px] font-mono text-neutral-500 uppercase tracking-widest">
+                      <span>Founded April 2025</span>
+                      <span className="w-1 h-1 bg-red-600 rounded-full"></span>
+                      <span>Noida, Uttar Pradesh</span>
+                    </div>
+                    <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-6xl italic text-white group-hover:text-red-500 transition-colors duration-500">
+                      Elite Verse <span className="text-xs not-italic font-sans opacity-40 ml-2">Solutions Pvt Ltd</span>
+                    </h3>
+                    <p className="text-red-500 text-sm font-medium uppercase tracking-tighter">Founder & Managing Director</p>
+                  </div>
 
-      <p className="text-neutral-400 font-light leading-relaxed italic text-lg border-l border-white/10 pl-6">
-        "The execution partner for founders who are tired of agencies that don’t get it. We build systems that convert ideas into impact."
-      </p>
+                  <p className="text-neutral-400 font-light leading-relaxed italic text-lg border-l border-white/10 pl-6">
+                    "The execution partner for founders who are tired of agencies that don’t get it. We build systems that convert ideas into impact."
+                  </p>
 
-      <div className="space-y-6">
-        <div className="flex flex-col gap-5">
-          <a
-            href="https://www.eliteversesolutions.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 w-fit px-8 py-4 border border-white/20 text-white rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
-          >
-            Work With Us <FiArrowUpRight size={14} />
-          </a>
-          
-          {/* Social Media Row */}
-          <div className="flex gap-6 pl-4 text-white">
-            <a href="https://www.instagram.com/eliteverse.solutions/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
-                <FiInstagram size={20} />
-            </a>
+                  <div className="space-y-6">
+                    <div className="flex flex-col gap-5">
+                      <a
+                        href="https://www.eliteversesolutions.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 w-fit px-8 py-4 border border-white/20 text-white rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
+                      >
+                        Work With Us <FiArrowUpRight size={14} />
+                      </a>
+
+                      {/* Social Media Row */}
+                      <div className="flex gap-6 pl-4 text-white">
+                        <a href="https://www.instagram.com/eliteverse.solutions/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                          <FiInstagram size={20} />
+                        </a>
                         <a href="https://www.linkedin.com/company/elite-verse-solutions/?viewAsMember=true" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
-                <FiLinkedin size={20} />
-            </a>
-          </div>
-        </div>
+                          <FiLinkedin size={20} />
+                        </a>
+                      </div>
+                    </div>
 
-        <div className="space-y-2 pl-4">
-          <div className="flex items-center gap-2 text-[11px] text-white font-mono uppercase tracking-widest italic">
-            <FiMail className="text-red-500/50" /> official@eliteversesolutions.com
-          </div>
-          <div className="flex items-center gap-2 text-[11px] text-white font-mono uppercase tracking-widest italic">
-            <FiPhone className="text-red-500/50" /> +91 9105300307
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+                    <div className="space-y-2 pl-4">
+                      <div className="flex items-center gap-2 text-[11px] text-white font-mono uppercase tracking-widest italic">
+                        <FiMail className="text-red-500/50" /> official@eliteversesolutions.com
+                      </div>
+                      <div className="flex items-center gap-2 text-[11px] text-white font-mono uppercase tracking-widest italic">
+                        <FiPhone className="text-red-500/50" /> +91 9105300307
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* VENTURE 3: AAHAAR NIRVANA */}
             <div className="relative group">
@@ -892,16 +896,16 @@ const HomePage = ({ setPage }) => {
           {/* Slim Pinterest Button */}
           <div className="pt-6">
             <Link to="/contact">
-            <button className="relative group/btn px-8 py-3.5 bg-white text-black rounded-full font-bold text-[9px] uppercase tracking-[0.2em] overflow-hidden transition-all duration-500 hover:scale-105 active:scale-95 shadow-lg">
-              <span className="relative z-10">Start a Conversation</span>
+              <button className="relative group/btn px-8 py-3.5 bg-white text-black rounded-full font-bold text-[9px] uppercase tracking-[0.2em] overflow-hidden transition-all duration-500 hover:scale-105 active:scale-95 shadow-lg">
+                <span className="relative z-10">Start a Conversation</span>
 
-              {/* Fill Effect */}
-              <div className="absolute inset-0 bg-red-600 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500 ease-out"></div>
-              {/* Hover Text Color Shift */}
-              <div className="absolute inset-0 opacity-0 group-hover/btn:opacity-100 transition-opacity z-10 flex items-center justify-center text-white pointer-events-none">
-                Start a Conversation
-              </div>
-            </button>
+                {/* Fill Effect */}
+                <div className="absolute inset-0 bg-red-600 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500 ease-out"></div>
+                {/* Hover Text Color Shift */}
+                <div className="absolute inset-0 opacity-0 group-hover/btn:opacity-100 transition-opacity z-10 flex items-center justify-center text-white pointer-events-none">
+                  Start a Conversation
+                </div>
+              </button>
             </Link>
           </div>
 
