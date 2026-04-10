@@ -356,7 +356,9 @@ const SessionsPage = () => {
 
             {/* Right Side: Floating Asymmetric Cards */}
             <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-10 md:pt-24">
-
+              <div className="absolute top-4 right-110 transform -translate-y-1/2 z-20">
+                <div className="bg-red-600 text-white text-[9px] font-black px-4 py-1 rounded-full tracking-tighter uppercase">9.8/10 Rating</div>
+              </div>
               {/* Testimonial 1 - Focus on Educational Leadership (Shifted Up) */}
               <div className="group relative bg-neutral-900/40 backdrop-blur-sm border border-white/5 p-10 rounded-[3rem] shadow-2xl transition-all duration-700 md:-translate-y-20 hover:-translate-y-22 hover:bg-neutral-900/60">
                 <div className="mb-6 flex justify-between items-center">
