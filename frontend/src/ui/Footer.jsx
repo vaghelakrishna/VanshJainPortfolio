@@ -49,8 +49,8 @@ const Footer = () => {
             </p>
 
             <p className="text-neutral-500 leading-relaxed max-w-md text-xs">
-              @ <a href="https://kattalyxlabs.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Founder & CEO at Kattalyx Labs Pvt Ltd</a> |
-               @<a href="https://eliteversesolutions.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors ml-1">Founder & MD Elite Verse Solutions Pvt Ltd</a>
+              <a href="https://kattalyxlabs.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Founder & CEO at Kattalyx Labs Pvt Ltd</a> |
+              <a href="https://eliteversesolutions.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors ml-1">Founder & MD at Elite Verse Solutions Pvt Ltd</a>
             </p>
 
             <div className="pt-4">
