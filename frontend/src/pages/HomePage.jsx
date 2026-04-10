@@ -731,13 +731,49 @@ const HomePage = ({ setPage }) => {
                     ))}
                   </div>
 
-                  <div className="border-t border-white/5 pt-8">
-                    <h4 className="text-red-500 text-[10px] uppercase tracking-widest font-bold mb-4 italic flex items-center gap-2">
-                      <SiReactos /> Why Us?
-                    </h4>
-                    <p className="text-xs text-neutral-300 font-light leading-loose">
-                      Look, we’re founders too. We get the struggle of trying to scale while everything is breaking. We ship fast, we don’t over-design for the sake of aesthetics, and we definitely don’t do fluff. We focus on the only things that actually move the needle: growth, metrics, and clean execution. From pitch decks to full-scale ERPs, we build the systems that turn your "what if" into a scalable reality. No gatekeeping, just pure output.
-                    </p>
+                  <div className="border-t border-white/10 pt-10 mt-6 relative">
+                    {/* The Header - More aggressive tracking and a vertical accent */}
+                    <div className="flex items-start gap-4 mb-8">
+                      <div className="w-[1px] h-10 bg-linear-to-b from-red-600 to-transparent"></div>
+                      <div>
+                        <h4 className="text-red-500 text-[10px] uppercase tracking-[0.4em] font-black italic flex items-center gap-2 mb-1">
+                          <SiReactos className="animate-spin-slow" /> The Edge
+                        </h4>
+                        <p className="text-[9px] text-neutral-600 uppercase tracking-widest font-bold">
+                          Zero Fluff • Pure Output
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* The Manifesto - Broken into readable, high-impact chunks */}
+                    <div className="space-y-6">
+                      <p className="text-lg md:text-xl font-serif italic text-white leading-snug tracking-tight">
+                        "We’re founders in the trenches, not just developers behind a screen."
+                      </p>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <p className="text-[13px] text-neutral-400 font-light leading-relaxed">
+                          We skip the aesthetic vanity and focus on <span className="text-white font-medium">what moves the needle</span>. No gatekeeping, no over-engineered fluff—just the raw systems required to turn your "what if" into a scalable reality.
+                        </p>
+
+                        <div className="bg-white/5 border border-white/10 p-4 rounded-2xl backdrop-blur-sm">
+                          <ul className="text-[10px] space-y-2 uppercase tracking-tighter font-bold text-neutral-300">
+                            <li className="flex items-center gap-2">
+                              <span className="w-1 h-1 bg-red-600 rounded-full"></span> Rapid Prototyping
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <span className="w-1 h-1 bg-red-600 rounded-full"></span> Growth-First Architecture
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <span className="w-1 h-1 bg-red-600 rounded-full"></span> Battle-Tested Execution
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Background Subtle Gradient */}
+                    <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-red-600/5 blur-3xl pointer-events-none"></div>
                   </div>
                 </div>
 
