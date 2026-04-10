@@ -94,7 +94,7 @@ export const posts = [
     author: "Vansh Jain",
     readTime: "11 min",
     date: "April 07, 2026",
-    excerpt: "I've built 3 ventures. One is scaling. One is thriving. One I shut down. The patterns of failure are clear.",
+    excerpt: "The reasons startups fail aren't mysterious. After building three ventures, I've seen the patterns—and they're more predictable than you think.",
     content: `
       <p>The reasons startups fail aren't mysterious. After building three ventures, I've seen the patterns.</p>
       <h3>Top reasons for failure:</h3>
@@ -120,7 +120,7 @@ export const posts = [
     author: "Vansh Jain",
     readTime: "9 min",
     date: "April 07, 2026",
-    excerpt: "Everyone talks about the wins. Nobody talks about the nights when you can't sleep because the stress is eating you alive.",
+    excerpt: "2 AM. Staring at the ceiling. Heart pounding. This is the side of entrepreneurship people don't post on Instagram. Burnout is real, and it creeps up on you.",
     content: `
       <p>2 AM. Staring at the ceiling. Heart pounding. This is the side of entrepreneurship people don't post on Instagram. Burnout is real, and it creeps up on you.</p>
       <h3>What I learned the hard way:</h3>
@@ -313,7 +313,7 @@ export const posts = [
     author: "Vansh Jain",
     readTime: "11 min",
     date: "April 07, 2026",
-    excerpt: "Failures don't feel like 'valuable lessons' when you're in them. They're messy, they're costly, and they make you question everything.",
+    excerpt: "I've shut down a food-tech startup, been rejected by 14 investors, and hired the wrong people. These weren't 'inspiring' moments—they were painful mistakes.",
     content: `
       <p>I've shut down a food-tech startup, been rejected by 14 investors, and hired the wrong people. These weren't 'inspiring' moments—they were painful mistakes. But they taught me resilience.</p>
       <h3>Lessons from the Trenches:</h3>
@@ -337,7 +337,7 @@ export const posts = [
     author: "Vansh Jain",
     readTime: "10 min",
     date: "April 07, 2026",
-    excerpt: "The ultimate competitive advantage isn't your idea or your funding—it's your ability to execute faster than anyone else.",
+    excerpt: "Ideas are cheap. Execution is rare. The winner is usually the one who can take an idea, turn it into something real, and make hard decisions quickly.",
     content: `
       <p>Ideas are cheap. Execution is rare. The winner is usually the one who can take an idea, turn it into something real, and make hard decisions quickly.</p>
       <h3>Building an Execution Advantage:</h3>
@@ -361,7 +361,7 @@ export const posts = [
     author: "Vansh Jain",
     readTime: "10 min",
     date: "April 07, 2026",
-    excerpt: "You don't need a massive funding round to build a great team. You need a mission that resonates and a leader who ships.",
+    excerpt: "Founders often complain they can't hire without funding. While you can't buy top-tier talent, you can attract mission-driven people who believe in the vision as much as you do.",
     content: `
       <p>Founders often complain they can't hire without funding. While you can't buy top-tier talent, you can attract mission-driven people who believe in the vision as much as you do.</p>
       <h3>What attracts people when you have no money:</h3>
@@ -386,7 +386,7 @@ export const posts = [
     author: "Vansh Jain",
     readTime: "9 min",
     date: "April 07, 2026",
-    excerpt: "Speed is your edge. Learn how to make high-stakes decisions with only 30% of the information.",
+    excerpt: "In a startup, you make hundreds of decisions daily. Waiting for 100% certainty is just another form of failure called 'Analysis Paralysis'.",
     content: `
       <p>In a startup, you make hundreds of decisions daily. Waiting for 100% certainty is just another form of failure called 'Analysis Paralysis'.</p>
       <h3>The Execution Framework:</h3>
@@ -409,7 +409,7 @@ export const posts = [
     author: "Vansh Jain",
     readTime: "10 min",
     date: "April 07, 2026",
-    excerpt: "My B.Tech didn't open doors; my network did. Here is how to build real relationships, not just LinkedIn contacts.",
+    excerpt: "Credentials might get you an interview, but connections build your future. Your network determines the opportunities you hear about and the help you can access.",
     content: `
       <p>Credentials might get you an interview, but connections build your future. Your network determines the opportunities you hear about and the help you can access.</p>
       <h3>How to build real connections:</h3>
@@ -434,7 +434,7 @@ export const posts = [
     author: "Vansh Jain",
     readTime: "10 min",
     date: "April 07, 2026",
-    excerpt: "Don't spend 6 months building something nobody wants. Validate your riskiest assumptions in 2 weeks.",
+    excerpt: "Most founders jump straight to building. Validating an idea means trying to prove yourself wrong as quickly as possible.",
     content: `
       <p>Most founders jump straight to building. Validating an idea means trying to prove yourself wrong as quickly as possible.</p>
       <h3>The Validation Steps:</h3>
@@ -457,7 +457,7 @@ export const posts = [
     author: "Vansh Jain",
     readTime: "11 min",
     date: "April 07, 2026",
-    excerpt: "Revenue is vanity, profit is sanity. If your unit economics don't work, you don't have a business—you have a hobby.",
+    excerpt: "Founders love talking about vision, but businesses die because they run out of cash. You cannot create impact if your venture isn't financially sustainable.",
     content: `
       <p>Founders love talking about vision, but businesses die because they run out of cash. You cannot create impact if your venture isn't financially sustainable.</p>
       <h3>The Financial Reality Check:</h3>
@@ -481,7 +481,7 @@ export const posts = [
     author: "Vansh Jain",
     readTime: "11 min",
     date: "April 07, 2026",
-    excerpt: "Solo is faster, but a co-founder makes you resilient. Choosing a partner is like a marriage—choose for character, not just skills.",
+    excerpt: "Building alone is lonely and leads to burnout. A co-founder provides accountability, complementary skills, and mental support during the inevitable low points.",
     content: `
       <p>Building alone is lonely and leads to burnout. A co-founder provides accountability, complementary skills, and mental support during the inevitable low points.</p>
       <h3>What to look for in a partner:</h3>
@@ -505,7 +505,7 @@ export const posts = [
     author: "Vansh Jain",
     readTime: "12 min",
     date: "April 07, 2026",
-    excerpt: "20 lessons from the trenches. From why speed beats perfection to why your network is your actual net worth.",
+    excerpt: "If I could go back, I'd tell myself that the struggle isn't just part of the process—it is the process. Here are the core truths of the journey.",
     content: `
       <p>If I could go back, I’d tell myself that the struggle isn't just part of the process—it *is* the process. Here are the core truths of the journey:</p>
       <h3>The Founder's Cheat Sheet:</h3>
