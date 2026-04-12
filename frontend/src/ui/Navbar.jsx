@@ -98,7 +98,7 @@ const Navigation = () => {
             ))}
 
             {/* Company Work Dropdown */}
-            <div className="relative" ref={dropdownRef}>
+            {/* <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setCompanyDropdown(!companyDropdown)}
                 className={`relative px-1 py-1 text-[12px] font-medium transition-colors duration-300 flex items-center gap-1 ${
@@ -133,7 +133,7 @@ const Navigation = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </div> */}
 
             {/* Conditional Desktop Button */}
             {isSubscribed ? (
@@ -188,14 +188,14 @@ const Navigation = () => {
               ))}
 
               {/* Mobile Company Dropdown */}
-              <motion.div initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: tabs.length * 0.1 }}>
+              {/* <motion.div initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: tabs.length * 0.1 }}>
                 <p className="text-[10px] font-mono text-red-500 mb-3">0{tabs.length + 1}</p>
                 <p style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl italic text-neutral-600 mb-4">Company Work</p>
                 <div className="flex flex-col gap-3 pl-4">
                   <Link to="/company/kattalyx-labs" onClick={() => setIsOpen(false)} className="text-neutral-400 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest">→ Kattalyx Labs</Link>
                   <Link to="/company/elite-verse" onClick={() => setIsOpen(false)} className="text-neutral-400 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest">→ Elite Verse Solutions</Link>
                 </div>
-              </motion.div>
+              </motion.div> */}
 
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="mt-4">
                 <button
