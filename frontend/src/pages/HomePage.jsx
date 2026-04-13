@@ -1,0 +1,960 @@
+import React from 'react';
+import {
+  ArrowRight,
+  Users,
+  Mic2,
+  BookOpen,
+  PlayCircle,
+  Star,
+  ArrowUpRight
+} from 'lucide-react';
+import TestimonialStack from '../ui/section/TestimonialStack';
+import AboutSection from '../ui/section/AboutSection';
+import HeroSection from '../ui/section/HeroSection';
+import Gallery from '../ui/section/Gallery';
+import Event1 from '../assets/events/Event1.webp';
+import DU1 from '../assets/events/DU1.webp';
+import DU2 from '../assets/events/DU2.webp';
+import Event2 from '../assets/events/Event2.webp';
+import { FiArrowUpRight, FiInstagram, FiLinkedin, FiFacebook, FiMail, FiPhone, FiExternalLink } from 'react-icons/fi';
+import { SiReactos } from 'react-icons/si';
+import { Link } from 'react-router-dom';
+const HomePage = ({ setPage }) => {
+  // Mock Data for Teasers
+  const stats = [
+    { label: "Students Impacted", value: "10K+" },
+    { label: "Institutions", value: "20+" },
+    { label: "Cities", value: "10+" },
+    { label: "Events Delivered", value: "25+" },
+    {
+      label: "Live Hours:", value: "100+"
+    }
+  ];
+
+
+  const topics = [
+    "Execution > Perfection", "Founder's Guide to Saying No", "Scaling in College",
+    "Failed Experiments", "Building in Public", "Fundraising Without Hype",
+    "First Hire Tips", "Idea to MVP: 6 Weeks", "Founder Mental Health", "Bootstrapping Costs"
+  ];
+  return (
+    <div className="bg-[#0a0a0a] text-white min-h-screen selection:bg-white selection:text-black">
+      <style>
+        {`@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap');`}
+      </style>
+
+      <HeroSection />
+
+      <section className="py-24 bg-[#050505] text-white font-sans overflow-hidden border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-6 md:px-20">
+
+          {/* Section Header */}
+          <div className="mb-20 space-y-4">
+            <span className="text-red-500 font-mono text-[10px] uppercase tracking-[0.6em] font-bold block">
+              Services & Expertise
+            </span>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-6xl md:text-8xl italic leading-none tracking-tighter">
+              What I bring <br />
+              <span className="text-neutral-800 not-italic">to the table</span>
+            </h2>
+          </div>
+
+          {/* The Pillars Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            {/* PILLAR 1: SPEAKING */}
+            <div className="group relative p-10 bg-neutral-900/20 border border-white/5 rounded-[2.5rem] transition-all duration-700 hover:bg-neutral-900/40 hover:border-red-500/30">
+              <div className="flex justify-between items-start mb-12">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-red-600 group-hover:border-red-600 transition-all duration-500">
+                  <span className="text-xs font-bold text-white group-hover:scale-110 transition-transform">01</span>
+                </div>
+                <span className="text-[10px] font-mono text-neutral-600 uppercase tracking-widest pt-2">Engagement</span>
+              </div>
+
+              <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl italic mb-6">Speaking & <br /> Workshops</h3>
+              <p className="text-neutral-500 text-sm font-light leading-relaxed italic max-w-sm">
+                From AI & LinkedIn masterclasses to startup fundamentals—I deliver sessions that inspire and equip students, faculty, and founders for real-world success. High engagement, practical takeaways, every time.
+              </p>
+
+              {/* Subtle Background Ghost Text */}
+              <div className="absolute bottom-4 right-8 text-8xl font-serif italic text-white/2 pointer-events-none select-none">Stage</div>
+            </div>
+
+            {/* PILLAR 2: STARTUP BUILDING */}
+            <div className="group relative p-10 bg-neutral-900/20 border border-white/5 rounded-[2.5rem] transition-all duration-700 hover:bg-neutral-900/40 hover:border-red-500/30">
+              <div className="flex justify-between items-start mb-12">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-red-600 group-hover:border-red-600 transition-all duration-500">
+                  <span className="text-xs font-bold text-white group-hover:scale-110 transition-transform">02</span>
+                </div>
+                <span className="text-[10px] font-mono text-neutral-600 uppercase tracking-widest pt-2">Execution</span>
+              </div>
+
+              <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl italic mb-6">Startup <br /> Building</h3>
+              <p className="text-neutral-500 text-sm font-light leading-relaxed italic max-w-sm">
+                I don't talk about startups—I build them. From product strategy to full-scale execution, I've launched and scaled multiple ventures. I share battle-tested lessons, not theory.
+              </p>
+
+              <div className="absolute bottom-4 right-8 text-8xl font-serif italic text-white/2 pointer-events-none select-none">Ship</div>
+            </div>
+
+            {/* PILLAR 3: MENTORSHIP */}
+            <div className="group relative p-10 bg-neutral-900/20 border border-white/5 rounded-[2.5rem] transition-all duration-700 hover:bg-neutral-900/40 hover:border-red-500/30">
+              <div className="flex justify-between items-start mb-12">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-red-600 group-hover:border-red-600 transition-all duration-500">
+                  <span className="text-xs font-bold text-white group-hover:scale-110 transition-transform">03</span>
+                </div>
+                <span className="text-[10px] font-mono text-neutral-600 uppercase tracking-widest pt-2">Guidance</span>
+              </div>
+
+              <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl italic mb-6">Mentorship & <br /> Guidance</h3>
+              <p className="text-neutral-500 text-sm font-light leading-relaxed italic max-w-sm">
+                One-on-one and group mentorship for founders, students, and builders. I help clarify vision, build systems, and execute with speed. Direct, honest, actionable guidance.
+              </p>
+
+              <div className="absolute bottom-4 right-8 text-8xl font-serif italic text-white/2 pointer-events-none select-none">Trust</div>
+            </div>
+
+            {/* PILLAR 4: COURSES */}
+            <div className="group relative p-10 bg-neutral-900/20 border border-white/5 rounded-[2.5rem] transition-all duration-700 hover:bg-neutral-900/40 hover:border-red-500/30">
+              <div className="flex justify-between items-start mb-12">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-red-600 group-hover:border-red-600 transition-all duration-500">
+                  <span className="text-xs font-bold text-white group-hover:scale-110 transition-transform">04</span>
+                </div>
+                <span className="text-[10px] font-mono text-neutral-600 uppercase tracking-widest pt-2">Academy</span>
+              </div>
+
+              <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl italic mb-6">Courses & <br /> Modules</h3>
+              <p className="text-neutral-500 text-sm font-light leading-relaxed italic max-w-sm">
+                Structured learning programs on entrepreneurship, AI, and career clarity. Designed for schools and students who want real skills, not just grades.
+              </p>
+
+              <div className="absolute bottom-4 right-8 text-8xl font-serif italic text-white/2 pointer-events-none select-none">Learn</div>
+            </div>
+
+          </div>
+
+          {/* Bottom Footer Detail */}
+          <div className="mt-20 flex items-center gap-6 opacity-20">
+            <p className="text-[9px] uppercase tracking-[0.5em] font-medium whitespace-nowrap">Focused on Impact-Driven Execution</p>
+            <div className="h-px w-full bg-white/10"></div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      {/* --- SECTION 4: SHOWREEL TEASER (Engagement) --- */}
+      <section className="py-24 bg-white text-black px-8 md:px-16 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+
+          {/* Heading: Always on Top */}
+          <div className="mb-16">
+            <h2
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              className="text-5xl md:text-7xl leading-tight tracking-tighter"
+            >
+              Energy that <br /> <span className="italic text-neutral-500">Inspires.</span>
+            </h2>
+          </div>
+
+          {/* Content Wrapper: Image and Stats Side by Side */}
+          <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+
+            {/* LEFT: Image Container */}
+            <div className="w-full md:w-1/2 relative group cursor-pointer">
+              <div className="overflow-hidden rounded-2xl border border-black/5 shadow-2xl">
+                <img
+                  src={Event2}
+                  className="w-full aspect-video object-cover  transition-all duration-700 scale-105 group-hover:scale-100"
+                  alt="Session"
+                />
+
+              </div>
+            </div>
+
+            {/* RIGHT: Text & Stats */}
+            <div className="w-full md:w-1/2 space-y-8">
+              <p className="text-neutral-600 text-lg leading-relaxed max-w-md">
+                Watch a glimpse of the high-impact sessions conducted across various states.
+                From ideation workshops to keynote speeches, we bring execution to the forefront.
+              </p>
+
+              <div className="grid grid-cols-2 gap-10 pt-6 border-t border-neutral-100">
+                {stats.map((s, i) => (
+                  <div key={i} className="space-y-1">
+                    <p className="text-4xl font-bold tracking-tighter">{s.value}</p>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-bold">
+                      {s.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* --- NEW SECTION: DELHI UNIVERSITY SEMINAR SPOTLIGHT --- */}
+      <section className="py-32 bg-[#050505] border-t border-white/5 relative overflow-hidden">
+        {/* Background Decoration */}
+        <div className="absolute top-0 right-0 w-130 h-125 bg-red-900/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+
+        <div className="max-w-7xl mx-auto px-6 md:px-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+
+            {/* Left Column: Content */}
+            <div className="lg:col-span-5 space-y-8 relative z-10">
+              <div className="space-y-4">
+                <span className="text-red-500 font-mono text-[10px] uppercase tracking-[0.6em] font-bold block">
+                  Academic Chapters
+                </span>
+                <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-6xl md:text-7xl italic leading-none tracking-tighter text-white">
+                  The Delhi University <br />
+                  <span className="text-neutral-600 not-italic">Engagements</span>
+                </h2>
+              </div>
+
+              <div className="space-y-6">
+                <p className="text-neutral-400 font-light leading-relaxed italic text-lg border-l-2 border-red-600 pl-6">
+                  "Entrepreneurship doesn’t start after an MBA — it starts the moment you decide to take ownership."
+                </p>
+                <p className="text-neutral-500 text-sm font-sans font-light leading-relaxed">
+                  Kattalyx Labs conducted an immersive session at MBA IB, Department of Commerce (DSE). In collaboration with the Alumni Relations Committee, Vansh Jain and Kamal Girdhar decoded the nuances of execution, real-world building, and the intent required to scale beyond theory.
+                </p>
+              </div>
+
+              {/* Quick Stats for DU */}
+              <div className="flex gap-10 pt-4">
+                <div>
+                  <p className="text-2xl font-serif italic text-white">MBA IB</p>
+                  <p className="text-[9px] uppercase tracking-widest text-neutral-600 mt-1">Target Cohort</p>
+                </div>
+                <div className="w-px h-10 bg-white/10"></div>
+                <div>
+                  <p className="text-2xl font-serif italic text-white">DSE</p>
+                  <p className="text-[9px] uppercase tracking-widest text-neutral-600 mt-1">University of Delhi</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Visual Showcase */}
+            <div className="lg:col-span-7 relative group">
+              <div className="relative aspect-4/5 md:aspect-7/5 overflow-hidden rounded-[3rem] border border-white/10 bg-neutral-900 shadow-2xl">
+                {/* Main Image */}
+                <img
+                  src={DU1}
+                  alt="Delhi School of Economics Seminar"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                />
+
+                {/* Overlay Tag */}
+                <div className="absolute bottom-8 left-8 right-8 p-6 bg-black/60 backdrop-blur-xl border border-white/10 rounded-3xl translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <p className="text-[10px] font-mono text-red-500 uppercase tracking-widest font-bold">Hosted By</p>
+                      <p className="text-xl font-serif italic text-white">Alumni Relations Committee, DSE</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Decorative Badge */}
+              <div className="absolute -top-6 -right-6 w-28 h-28 bg-red-600 rounded-full flex items-center justify-center rotate-12 shadow-2xl border-4 border-[#050505] z-20">
+                <div className="text-center">
+                  <p className="text-[25px] font-bold uppercase tracking-tighter text-white leading-tight">DSE<br /><span className="text-[10px] tracking-[0.2em]">DELHI</span></p>
+                </div>
+              </div>
+
+              {/* Ghost Text */}
+              <div className="absolute -bottom-10 -left-10 text-[10rem] font-serif italic text-white/2 pointer-events-none select-none z-0">
+                COMMERCE
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      {/* --- SECTION 2: THE LOGO WALL (Authority) --- */}
+      <section className="py-20 border-y border-white/5 bg-white overflow-hidden relative group">
+        {/* Modern Label */}
+        <div className="flex flex-col items-center mb-12">
+          <p className="text-[10px] uppercase tracking-[0.6em] text-neutral-600 font-bold">
+            Trusted by Leading Institutions
+          </p>
+          <div className="h-8 w-px bg-linear-to-b from-transparent via-red-900/50 to-transparent mt-4"></div>
+        </div>
+
+        {/* The Infinite Slider Container */}
+        <div className="relative flex  flex-col overflow-hidden">
+          {/* Gradient Fades for Depth */}
+          {/* <div className="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-[#050505] to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-[#050505] to-transparent z-10 pointer-events-none"></div> */}
+
+          {/* The Sliding Track */}
+          <div className="flex animate-marquee whitespace-nowrap items-center gap-24 px-12 hover:[animation-play-state:paused] cursor-default">
+            {[1, 2].map((_, idx) => (
+              <div key={idx} className="flex items-center gap-24">
+
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KIET GHAZIABAD</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">DOON SCHOOL</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KV BAOLI</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">GROWELL SCHOOLS</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">TAKSHASHILA WORLD</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">CAMBRIDGE PUBLIC</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">MAHARAJA AGRASEN</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">LAKSHYA PUBLIC</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">SAIFIA INSTITUTE</span>
+              </div>
+            ))}
+          </div>
+
+
+          {/* The Sliding Track */}
+          <div className="flex animate-marquee whitespace-nowrap items-center gap-24 px-12 hover:[animation-play-state:paused] cursor-default pt-10">
+            {[1, 2].map((_, idx) => (
+              <div key={idx} className="flex items-center gap-24">
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">Delhi School of Economics</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KIET Group of Institutions</span>
+
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">Delhi School of Economics</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KIET Group of Institutions</span>
+
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Custom CSS for Animation */}
+        <style jsx>{`
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      animation: marquee 40s linear infinite;
+      display: flex;
+      width: max-content;
+    }
+  `}</style>
+      </section>
+
+
+      {/* --- SECTION 5: LATEST Blog (Teaser) --- */}
+      <section className="py-20 px-8 md:px-20 bg-[#0a0a0a]">
+        {/* Header: Compact Editorial Style */}
+        <div className="flex flex-col md:flex-row justify-between items-baseline mb-12 gap-4 border-b border-white/5 pb-6">
+          <div className="space-y-1">
+            <span className="text-red-500 text-[9px] uppercase tracking-[0.5em] font-bold font-sans">Insights</span>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl md:text-5xl text-white italic leading-none">
+              From the Blog
+            </h2>
+          </div>
+
+          {/* 1. "View Blogs" button ko Link banaya */}
+          <Link to="/blog" className="group flex items-center gap-3 text-[9px] uppercase tracking-[0.3em] text-neutral-500 hover:text-white transition-all">
+            View Blogs
+            <span className="w-6 h-px bg-neutral-800 group-hover:w-10 group-hover:bg-red-500 transition-all"></span>
+          </Link>
+        </div>
+
+        {/* blog */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
+
+          {/* ARTICLE 1: ID 1 ke liye Link */}
+          <Link to="/blog/1" className="group cursor-pointer">
+            <article>
+              {/* Image Container */}
+              <div className="relative aspect-16/10 overflow-hidden rounded-2xl mb-6 bg-neutral-900 border border-white/5 shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1000"
+                  alt="Startup Strategy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 ease-in-out"
+                />
+                <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
+                  <p className="text-[8px] text-white uppercase tracking-widest font-sans font-bold">March 24, 2026</p>
+                </div>
+              </div>
+
+              {/* Content Section */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-red-500 text-[8px] uppercase font-bold font-sans tracking-[0.3em]">Entrepreneurship | Startup Building</span>
+                  <div className="h-px w-8 bg-white/10"></div>
+                </div>
+
+                <h3
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                  className="text-2xl md:text-3xl text-white leading-tight font-light group-hover:text-red-100 transition-colors"
+                >
+                  Why I Started Two Ventures While Still in College <br />
+                  <span className="italic text-neutral-500 text-lg md:text-xl font-serif">(And Why You Should Too)</span>
+                </h3>
+
+                <p className="text-neutral-500 text-sm line-clamp-2 font-sans font-light leading-relaxed">
+                  When people ask me how I'm running two incorporated ventures while finishing my B.Tech, the honest answer is: I don't have a choice.
+                </p>
+
+                <div className="pt-2 flex items-center gap-2 text-[10px] uppercase tracking-widest text-white/40 group-hover:text-red-500 transition-colors font-bold">
+                  Read Story <span>→</span>
+                </div>
+              </div>
+            </article>
+          </Link>
+
+          {/* ARTICLE 2: ID 2 ke liye Link */}
+          <Link to="/blog/2" className="group cursor-pointer md:mt-24">
+            <article>
+              {/* Image Container */}
+              <div className="relative aspect-16/10 overflow-hidden rounded-2xl mb-6 bg-neutral-900 border border-white/5 shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1000"
+                  alt="Education"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 ease-in-out"
+                />
+                <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
+                  <p className="text-[8px] text-white uppercase tracking-widest font-sans font-bold">March 18, 2026</p>
+                </div>
+              </div>
+
+              {/* Content Section */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-red-500 text-[8px] uppercase font-bold font-sans tracking-[0.3em]">Education | Student Development</span>
+                  <div className="h-px w-8 bg-white/10"></div>
+                </div>
+
+                <h3
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                  className="text-2xl md:text-3xl text-white leading-tight font-light group-hover:text-red-100 transition-colors"
+                >
+                  The Real Reason Indian Students Are Unprepared for the Real World <br />
+                  <span className="italic text-neutral-500 text-lg md:text-xl font-serif">— Here's What We're Building</span>
+                </h3>
+
+                <p className="text-neutral-500 text-sm line-clamp-2 font-sans font-light leading-relaxed">
+                  I spent 15 years in the Indian education system. Scored well, got into a good college, did all the 'right things.
+                </p>
+
+                <div className="pt-2 flex items-center gap-2 text-[10px] uppercase tracking-widest text-white/40 group-hover:text-red-500 transition-colors font-bold">
+                  Read Story <span>→</span>
+                </div>
+              </div>
+            </article>
+          </Link>
+
+        </div>
+      </section>
+
+
+      <TestimonialStack />
+
+      <AboutSection />
+
+
+      <Gallery />
+
+
+
+      <section className="py-24 bg-[#050505] text-white overflow-hidden border-t border-white/5 font-sans">
+        <div className="max-w-7xl mx-auto px-6 md:px-20">
+
+          {/* Header Section */}
+          <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">
+            <div className="max-w-2xl space-y-4">
+              <span className="text-red-500 font-mono text-[10px] uppercase tracking-[0.5em] font-bold block opacity-0 animate-[fadeIn_1s_ease_forwards]">
+                Weekly Newsletter
+              </span>
+              <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-6xl md:text-8xl italic leading-[0.8] tracking-tighter transition-all duration-700 hover:tracking-normal">
+                2AM <span className="text-neutral-800 not-italic">Founders</span>
+              </h2>
+              <p className="text-xl text-neutral-400 font-light italic tracking-tight">
+                Raw Stories. Real Insights. For Builders Actually Building.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-end gap-2 border-l border-white/10 pl-6 group">
+              <span className="text-4xl font-serif italic text-white group-hover:text-red-500 transition-colors duration-500">2000+</span>
+              <span className="text-[10px] uppercase tracking-widest text-neutral-600 font-bold whitespace-nowrap">Active Subscribers</span>
+            </div>
+          </div>
+
+          {/* Main Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+            {/* Description & CTA */}
+            <div className="lg:col-span-5 space-y-10">
+              <div className="space-y-6">
+                <p className="text-neutral-400 leading-relaxed font-light text-sm md:text-base italic border-l-2 border-red-500/30 pl-6">
+                  Every Monday at <span className="text-white font-medium">2 AM</span>, I share unfiltered founder stories, startup lessons, and real insights for Gen Z builders and early-stage creators.
+                </p>
+                <p className="text-neutral-500 leading-relaxed font-light text-sm md:text-base italic pl-6">
+                  No fluff. No bs. Just honest breakdowns of building, failing, learning, and scaling from someone in the trenches.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-6">
+                <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7345422023134760961" target="_blank" rel="noopener noreferrer">
+                  <button className="group relative w-full md:w-fit px-10 py-5 bg-white text-black rounded-full overflow-hidden transition-all duration-500 hover:bg-red-600 hover:text-white">
+                    <span className="relative z-10 font-bold uppercase text-[11px] tracking-[0.2em]">Subscribe to 2AM Founders —&gt;</span>
+                    <div className="absolute inset-0 bg-red-600 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                  </button>
+                </a>
+                <div className="flex items-center gap-4 px-2">
+                  <div className="h-px w-8 bg-white/10"></div>
+                  <span className="text-[9px] uppercase tracking-[0.3em] text-neutral-700 font-bold">Platform: Substack / LinkedIn</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Stats & Topics Visualization */}
+            <div className="lg:col-span-7 bg-neutral-900/10 border border-white/5 rounded-[3rem] p-8 md:p-12 relative overflow-hidden group transition-colors duration-700">
+              <div className="flex gap-12 mb-12 relative z-10">
+                <div>
+                  <p className="text-3xl text-white font-serif italic">35%+</p>
+                  <p className="text-[9px] uppercase tracking-widest text-neutral-500 mt-1">Avg Open Rate</p>
+                </div>
+                <div className="w-px h-12 bg-white/10"></div>
+                <div>
+                  <p className="text-3xl text-white font-serif italic">Weekly</p>
+                  <p className="text-[9px] uppercase tracking-widest text-neutral-500 mt-1">Monday Delivery</p>
+                </div>
+              </div>
+
+              {/* Topics Cloud */}
+              <div className="relative z-10">
+                <p className="text-[10px] uppercase tracking-[0.4em] text-red-500 font-bold mb-8">Curated Topics</p>
+                <div className="flex flex-wrap gap-3">
+                  {[
+                    "Execution > Perfection", "Founder's Guide to No", "Scaling in College",
+                    "Failed Experiments", "Building in Public", "Idea to MVP"
+                  ].map((topic, idx) => (
+                    <span key={idx} className="px-5 py-2.5 bg-white/5 border border-white/5 rounded-full text-[11px] text-neutral-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all cursor-default backdrop-blur-sm">
+                      {topic}
+                    </span>
+                  ))}
+                  <span className="px-4 py-2 text-[11px] text-neutral-700 italic flex items-center">+ 10 more</span>
+                </div>
+              </div>
+
+              {/* Big Ghost Text Decoration */}
+              <div className="absolute -bottom-8 -right-8 text-[14rem] font-serif italic  pointer-events-none text-red-500/40 transition-all duration-1000 select-none">
+                2AM
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Marquee Topics Bar */}
+        <div className="mt-24 border-y border-white/5 py-8 overflow-hidden flex whitespace-nowrap opacity-10 hover:opacity-40 transition-opacity duration-1000">
+          <div className="flex gap-20 items-center animate-[marquee_50s_linear_infinite]">
+            {[
+              "Mental Health for Founders", "Fundraising Without Hype", "The Real Cost of Bootstrapping",
+              "Hiring Your First Team", "Building in Private", "From Idea to MVP",
+              "Saying No", "Scaling College Ventures"
+            ].map((t, i) => (
+              <React.Fragment key={i}>
+                <span style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl italic text-white">{t}</span>
+                <span className="text-red-500 text-2xl">✦</span>
+              </React.Fragment>
+            ))}
+            {/* Duplicated for seamless loop */}
+            {[
+              "Mental Health for Founders", "Fundraising Without Hype", "The Real Cost of Bootstrapping",
+              "Hiring Your First Team", "Building in Private", "From Idea to MVP",
+              "Saying No", "Scaling College Ventures"
+            ].map((t, i) => (
+              <React.Fragment key={`dup-${i}`}>
+                <span style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl italic text-white">{t}</span>
+                <span className="text-red-500 text-2xl">✦</span>
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+
+        <style dangerouslySetInnerHTML={{
+          __html: `
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  `}} />
+      </section>
+
+
+      <section className="py-32 bg-[#050505] text-white font-sans overflow-hidden" id="venture">
+        <div className="max-w-7xl mx-auto px-6 md:px-20">
+
+          {/* Section Header */}
+          <div className="mb-24 space-y-4">
+            <span className="text-red-500 font-mono text-[10px] uppercase tracking-[0.6em] font-bold block">
+              The Portfolio
+            </span>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-7xl md:text-9xl italic leading-none tracking-tighter">
+              My <span className="text-neutral-800 not-italic">Ventures</span>
+            </h2>
+          </div>
+
+          <div className="space-y-40" >
+
+            {/* VENTURE 1: KATTALYX LABS */}
+            <div className="relative group">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+                {/* Left Branding & CTA */}
+                <div className="lg:col-span-5 space-y-8">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-3 text-[10px] font-mono text-neutral-500 uppercase tracking-widest">
+                      <span>Founded Dec 2024</span>
+                      <span className="w-1 h-1 bg-red-600 rounded-full"></span>
+                      <span>Ghaziabad, Uttar Pradesh</span>
+                    </div>
+                    <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-6xl italic text-white group-hover:text-red-500 transition-colors duration-500">
+                      Kattalyx Labs <span className="text-xs not-italic font-sans opacity-40 ml-2">Pvt Ltd</span>
+                    </h3>
+                    <p className="text-red-500 text-sm font-medium uppercase tracking-tighter">Founder & CEO</p>
+                  </div>
+
+                  <p className="text-neutral-400 font-light leading-relaxed italic text-lg border-l border-white/10 pl-6">
+                    "Building an integrated ecosystem that bridges the gap between traditional schooling and real-world success. We don't just teach; we transform the educational journey."
+                  </p>
+
+                  <div className="space-y-6">
+                    <div className="flex flex-col gap-5">
+                      <a
+                        href="https://www.kattalyxlabs.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 w-fit px-8 py-4 bg-white text-black rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-red-600 hover:text-white transition-all duration-300"
+                      >
+                        Explore Kattalyx Labs <FiExternalLink size={14} />
+                      </a>
+
+                      {/* Social Media Row */}
+                      <div className="flex gap-6 pl-4 text-white">
+                        <a href="https://www.instagram.com/kattalyx.labs/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                          <FiInstagram size={20} />
+                        </a>
+                        <a href="https://www.linkedin.com/company/kattalyx-labs/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                          <FiLinkedin size={20} />
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2 pl-4">
+                      <div className="flex items-center gap-2 text-[11px] text-white font-mono uppercase tracking-widest italic">
+                        <FiMail className="text-red-500/50" /> official@kattalyxlab.com
+                      </div>
+                      <div className="flex items-center gap-2 text-[11px] text-white font-mono uppercase tracking-widest italic">
+                        <FiPhone className="text-red-500/50" /> +91 9105300307
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Content & Metrics */}
+                <div className="lg:col-span-7 bg-neutral-900/20 border border-white/5 rounded-[3rem] p-8 md:p-12 backdrop-blur-sm">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+                    {/* Deliverables List */}
+                    <div>
+                      <h4 className="text-red-500 text-[10px] uppercase tracking-widest font-bold mb-4">What We Deliver</h4>
+                      <ul className="text-xs space-y-3 text-neutral-300 font-light">
+                        <li>• 50+ Modular Curriculum (AI, Finance, Product)</li>
+                        <li>• EliteVerse ERP Transformation Product</li>
+                        <li>• Industry Speaker Networks & Live Workshops</li>
+                        <li>• Real-world Mentorship & Career Pathways</li>
+                        <li>• Portfolio Building for 10th-12th Graders</li>
+                      </ul>
+                    </div>
+
+                    {/* Dynamic Impact Metrics */}
+                    <div className="bg-white/5 p-6 rounded-3xl border border-white/5">
+                      <h4 className="text-white text-[10px] uppercase tracking-widest font-bold mb-4">The Impact</h4>
+                      <div className="space-y-4">
+                        <div className="flex justify-between items-end border-b border-white/5 pb-2">
+                          <span className="text-2xl font-serif italic text-white">10K+</span>
+                          <span className="text-[8px] text-neutral-500 uppercase tracking-tighter">Students Reached</span>
+                        </div>
+                        <div className="flex justify-between items-end border-b border-white/5 pb-2">
+                          <span className="text-2xl font-serif italic text-white">20+</span>
+                          <span className="text-[8px] text-neutral-500 uppercase tracking-tighter">Institutions</span>
+                        </div>
+                        <div className="flex justify-between items-end border-b border-white/5 pb-2">
+                          <span className="text-2xl font-serif italic text-white">25+</span>
+                          <span className="text-[8px] text-neutral-500 uppercase tracking-tighter">Events Delivered</span>
+                        </div>
+                        <div className="flex justify-between items-end border-b border-white/5 pb-2">
+                          <span className="text-2xl font-serif italic text-white">10+</span>
+                          <span className="text-[8px] text-neutral-500 uppercase tracking-tighter">Cities Covered</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Venture Thesis */}
+                  <div className="pt-8 border-t border-white/5">
+                    <p className="text-[10px] text-neutral-500 leading-relaxed italic uppercase tracking-wider text-center max-w-md mx-auto">
+                      Indian schools teach exams, not life. Kattalyx Labs fixes this by bringing real learning into classrooms through a unified ecosystem.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* VENTURE 2: ELITE VERSE SOLUTIONS */}
+            <div className="relative group">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+                {/* Left Section: Service Grid & Why Us */}
+                <div className="lg:col-span-7 order-2 lg:order-1 bg-neutral-900/20 border border-white/5 rounded-[3rem] p-8 md:p-12 backdrop-blur-sm">
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8 text-center">
+                    {[
+                      'Web & App Dev',
+                      'UI/UX & Brand Identity',
+                      'Digital Marketing',
+                      'Business Consultancy',
+                      'ERP/CRM Systems',
+                      'Startup Readiness'
+                    ].map((item) => (
+                      <div key={item} className="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center text-[8px] md:text-[9px] uppercase font-bold tracking-widest text-neutral-400 hover:text-red-400 hover:border-red-500/20 transition-all duration-300">
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="border-t border-white/10 pt-10 mt-6 relative">
+                    {/* The Header - More aggressive tracking and a vertical accent */}
+                    <div className="flex items-start gap-4 mb-8">
+                      <div className="w-px h-10 bg-linear-to-b from-red-600 to-transparent"></div>
+                      <div>
+                        <h4 className="text-red-500 text-[10px] uppercase tracking-[0.4em] font-black italic flex items-center gap-2 mb-1">
+                          <SiReactos className="animate-spin-slow" /> The Edge
+                        </h4>
+                        <p className="text-[9px] text-neutral-600 uppercase tracking-widest font-bold">
+                          Zero Fluff • Pure Output
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* The Manifesto - Broken into readable, high-impact chunks */}
+                    <div className="space-y-6">
+                      <p className="text-lg md:text-xl font-serif italic text-white leading-snug tracking-tight">
+                        "We’re founders in the trenches, not just developers behind a screen."
+                      </p>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <p className="text-[13px] text-neutral-400 font-light leading-relaxed">
+                          We skip the aesthetic vanity and focus on <span className="text-white font-medium">what moves the needle</span>. No gatekeeping, no over-engineered fluff—just the raw systems required to turn your "what if" into a scalable reality.
+                        </p>
+
+                        <div className="bg-white/5 border border-white/10 p-4 rounded-2xl backdrop-blur-sm">
+                          <ul className="text-[10px] space-y-2 uppercase tracking-tighter font-bold text-neutral-300">
+                            <li className="flex items-center gap-2">
+                              <span className="w-1 h-1 bg-red-600 rounded-full"></span> Rapid Prototyping
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <span className="w-1 h-1 bg-red-600 rounded-full"></span> Growth-First Architecture
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <span className="w-1 h-1 bg-red-600 rounded-full"></span> Battle-Tested Execution
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Background Subtle Gradient */}
+                    <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-red-600/5 blur-3xl pointer-events-none"></div>
+                  </div>
+                </div>
+
+                {/* Right Section: Branding & Bio */}
+                <div className="lg:col-span-5 order-1 lg:order-2 space-y-8">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-3 text-[10px] font-mono text-neutral-500 uppercase tracking-widest">
+                      <span>Founded April 2025</span>
+                      <span className="w-1 h-1 bg-red-600 rounded-full"></span>
+                      <span>Noida, Uttar Pradesh</span>
+                    </div>
+                    <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-6xl italic text-white group-hover:text-red-500 transition-colors duration-500">
+                      Elite Verse <span className="text-xs not-italic font-sans opacity-40 ml-2">Solutions Pvt Ltd</span>
+                    </h3>
+                    <p className="text-red-500 text-sm font-medium uppercase tracking-tighter">Founder & Managing Director</p>
+                  </div>
+
+                  <p className="text-neutral-400 font-light leading-relaxed italic text-lg border-l border-white/10 pl-6">
+                    "The execution partner for founders who are tired of agencies that don’t get it. We build systems that convert ideas into impact."
+                  </p>
+
+                  <div className="space-y-6">
+                    <div className="flex flex-col gap-5">
+                      <a
+                        href="https://www.eliteversesolutions.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 w-fit px-8 py-4 border border-white/20 text-white rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
+                      >
+                        Work With Us <FiArrowUpRight size={14} />
+                      </a>
+
+                      {/* Social Media Row */}
+                      <div className="flex gap-6 pl-4 text-white">
+                        <a href="https://www.instagram.com/eliteverse.solutions/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                          <FiInstagram size={20} />
+                        </a>
+                        <a href="https://www.linkedin.com/company/elite-verse-solutions/?viewAsMember=true" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                          <FiLinkedin size={20} />
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2 pl-4">
+                      <div className="flex items-center gap-2 text-[11px] text-white font-mono uppercase tracking-widest italic">
+                        <FiMail className="text-red-500/50" /> official@eliteversesolutions.com
+                      </div>
+                      <div className="flex items-center gap-2 text-[11px] text-white font-mono uppercase tracking-widest italic">
+                        <FiPhone className="text-red-500/50" /> +91 9105300307
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* VENTURE 3: AAHAAR NIRVANA */}
+            <div className="relative group">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+                {/* Left Side: Narrative & Strategy */}
+                <div className="lg:col-span-5 space-y-8">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-3 text-[10px] font-mono text-neutral-600 uppercase tracking-[0.4em]">
+                      <span>Founded July 2024</span>
+                      <span className="w-1 h-1 bg-neutral-800 rounded-full"></span>
+                      <span className="text-red-500/60 font-bold italic">Currently Dormant</span>
+                    </div>
+                    <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-6xl italic text-white group-hover:text-red-400 transition-colors duration-700">
+                      Aahaar Nirvana <span className="text-xs not-italic font-sans opacity-40 ml-2">Food-Tech</span>
+                    </h3>
+                    <p className="text-neutral-400 text-sm font-medium uppercase tracking-tighter">Founder</p>
+                  </div>
+
+                  <p className="text-neutral-300 font-light leading-relaxed text-lg border-l-2 border-red-500/30 pl-6">
+                    "Empowering the silent culinary experts of our homes. Aahaar Nirvana proved that the most authentic dining experiences aren't found in restaurants—they're right next door."
+                  </p>
+
+                  <div className="flex flex-wrap gap-3">
+                    {['MVP Launched', 'Market Validated', 'Ghaziabad Roots'].map((tag) => (
+                      <span key={tag} className="px-4 py-2 rounded-full border border-white/5 text-[9px] uppercase tracking-widest text-neutral-700 font-bold group-hover:border-red-500/20 group-hover:text-neutral-400 transition-all">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Right Side: Problem, Impact, & Growth */}
+                <div className="lg:col-span-7 relative overflow-hidden bg-neutral-900/10 border border-dashed border-white/10 rounded-[3rem] p-8 md:p-12 backdrop-blur-[2px] group-hover:border-white/20 transition-all duration-700">
+                  <div className="space-y-8 relative z-10">
+                    <div>
+                      <h4 className="text-red-500 text-[10px] uppercase tracking-widest font-bold mb-6">The Problem & Impact</h4>
+                      <p className="text-sm text-neutral-300 font-light leading-relaxed">
+                        Millions of homemakers possess elite culinary skills but lack the platform to monetize them. We solved this by building a hyper-local, dual-sided marketplace that connected them with urban dwellers craving "Ghar ka Khaana." We successfully validated the demand through grassroots onboarding in Ghaziabad, managing the full stack from tech to logistics.
+                      </p>
+                    </div>
+
+                    <div className="pt-6 border-t border-white/5 grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
+                        <p className="text-red-400 text-[8px] uppercase tracking-tighter mb-2 font-bold">The Shift</p>
+                        <p className="text-xs text-neutral-300 leading-relaxed">
+                          While the MVP proved the unit economics, operations were paused to apply these marketplace learnings to the education sector with Kattalyx Labs.
+                        </p>
+                      </div>
+                      <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
+                        <p className="text-red-400 text-[8px] uppercase tracking-tighter mb-2 font-bold">Learning Gained</p>
+                        <ul className="text-[10px] text-neutral-300 space-y-1 font-mono uppercase tracking-tight">
+                          <li>• Trust-Based Vendor Onboarding</li>
+                          <li>• Hyper-Local Delivery Logic</li>
+                          <li>• Community-Led Growth Hacks</li>
+                          <li>• Tech-Ops Synchronization</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Ghost Background Text */}
+                  <div className="absolute -bottom-8 -right-4 text-[8rem] md:text-[10rem] font-serif italic text-white/2 pointer-events-none select-none">
+                    Nirvana
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      {/* --- SECTION 6: FINAL CTA --- */}
+      <section className="py-20 px-8 bg-[#0a0a0a] relative overflow-hidden border-t border-white/5 flex flex-col items-center justify-center">
+
+        {/* Subtle Background Glow - Smaller & Softer */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-75 h-50 bg-red-600/5 blur-[80px] rounded-full"></div>
+        </div>
+
+        <div className="relative z-10 text-center max-w-2xl space-y-6 group">
+
+          {/* Micro Label */}
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <div className="h-px w-4 bg-white/10 group-hover:w-8 group-hover:bg-red-500 transition-all duration-700"></div>
+            <p className="text-neutral-500 text-[8px] uppercase tracking-[0.4em] font-medium">The Next Step</p>
+            <div className="h-px w-4 bg-white/10 group-hover:w-8 group-hover:bg-red-500 transition-all duration-700"></div>
+          </div>
+
+          {/* Refined Headline - Smaller & Elegant */}
+          <h2
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            className="text-4xl md:text-6xl text-white leading-tight italic font-light"
+          >
+            Let's Build Something <br />
+            <span className="text-red-500 not-italic font-sans text-xl md:text-4xl uppercase tracking-[0.2em] block mt-2 opacity-80">
+              Great Together
+            </span>
+          </h2>
+
+          {/* Slim Pinterest Button */}
+          <div className="pt-6">
+            <Link to="/contact">
+              <button className="relative group/btn px-8 py-3.5 bg-white text-black rounded-full font-bold text-[9px] uppercase tracking-[0.2em] overflow-hidden transition-all duration-500 hover:scale-105 active:scale-95 shadow-lg">
+                <span className="relative z-10">Start a Conversation</span>
+
+                {/* Fill Effect */}
+                <div className="absolute inset-0 bg-red-600 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500 ease-out"></div>
+                {/* Hover Text Color Shift */}
+                <div className="absolute inset-0 opacity-0 group-hover/btn:opacity-100 transition-opacity z-10 flex items-center justify-center text-white pointer-events-none">
+                  Start a Conversation
+                </div>
+              </button>
+            </Link>
+          </div>
+
+          {/* Fine Print */}
+          <p className="pt-4 text-neutral-600 text-[7px] uppercase tracking-[0.3em] font-sans opacity-50">
+            Available for global sessions 2026
+          </p>
+        </div>
+      </section>
+
+
+    </div>
+  );
+};
+
+export default HomePage;

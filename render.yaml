@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: vansh-portfolio-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: MONGO_URI
+        sync: false
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: GOOGLE_SCRIPT_URL
+        value: https://script.google.com/macros/s/AKfycbzfxI5ajmcmnrCWAsItCdVtcPT-6-uLEUdoUX8UkfMcV5VaMDhDcK2XwNsErhj2vOCLFw/exec
