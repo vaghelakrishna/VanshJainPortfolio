@@ -202,16 +202,16 @@ const AboutPage = () => {
               <p>Through keynotes and workshops, I aim to provide students and professionals with the mental frameworks needed to build, scale, and lead in an ever-changing digital landscape.</p>
               <div className='flex flex-wrap gap-8'>
 
-              <div className="pt-6 border-t border-white/5">
-                <span className="text-4xl text-white font-serif">10000+</span>
+                <div className="pt-6 border-t border-white/5">
+                  <span className="text-4xl text-white font-serif">10000+</span>
                   <p className="text-[10px] uppercase tracking-widest mt-2">Students Impacted</p>
-              </div>
-                            <div className="pt-6 border-t border-white/5">
-                <span className="text-4xl text-white font-serif">20+</span>
+                </div>
+                <div className="pt-6 border-t border-white/5">
+                  <span className="text-4xl text-white font-serif">20+</span>
                   <p className="text-[10px] uppercase tracking-widest mt-2">Institutions</p>
                 </div>
                 <div className="pt-6 border-t border-white/5">
-                <span className="text-4xl text-white font-serif">25+</span>
+                  <span className="text-4xl text-white font-serif">25+</span>
                   <p className="text-[10px] uppercase tracking-widest mt-2">Events Delivered</p>
                 </div>
 
@@ -219,13 +219,13 @@ const AboutPage = () => {
                   <span className="text-4xl text-white font-serif">100+</span>
                   <p className="text-[10px] uppercase tracking-widest mt-2">Live Hours</p>
                 </div>
-                
+
               </div>
             </div>
           </div>
         </div>
 
-                {/* Institutions I Have Spoken At */}
+        {/* Institutions I Have Spoken At */}
         {/* SECTION 3 & 4: SCHOOLS & COLLEGES */}
         <div className="space-y-20 mb-40 px-6 md:px-20" id="event">
           <div className="max-w-7xl mx-auto">
@@ -303,6 +303,15 @@ const AboutPage = () => {
                   topic: "Founder Fiesta: Startup Fundamentals",
                   year: "NOV 2025",
                   image: Event16,
+                  aspect: "aspect-video"
+                },
+                {
+                  id: "07",
+                  name: "ABESIT",
+                  city: "Ghaziabad",
+                  topic: "Raising Capital & Finance Management for Start-ups",
+                  year: "APR 2026",
+                  image: Event15,
                   aspect: "aspect-video"
                 }
               ].map((item, index) => (
@@ -622,7 +631,7 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-       
+
         {/* SECTION 6: STARTUP JOURNEY */}
         <div className="mb-10 px-6 md:px-20 pt-20">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
@@ -729,19 +738,19 @@ const AboutPage = () => {
 
         {/* SECTION 9: STATS / NUMBERS */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 py-20 border-y border-white/5 mb-40 text-center">
-            {[
-              { label: "Institutions", val: "20+" },
-              { label: "Team Size", val: "20+" },
-              { label: "Events Delivered", val: "25+" },
-              { label: "Cities", val: "10+" },
+          {[
+            { label: "Institutions", val: "20+" },
+            { label: "Team Size", val: "20+" },
+            { label: "Events Delivered", val: "25+" },
+            { label: "Cities", val: "10+" },
             { label: "Student Impacted", val: "10K+" },
             { label: "Live Hours", val: "100+" }
-            ].map((stat, i) => (
-              <div key={i}>
-                <div className="text-4xl text-white font-serif mb-1">{stat.val}</div>
-                <div className="text-[11px] uppercase tracking-widest text-neutral-600">{stat.label}</div>
-              </div>
-            ))}
+          ].map((stat, i) => (
+            <div key={i}>
+              <div className="text-4xl text-white font-serif mb-1">{stat.val}</div>
+              <div className="text-[11px] uppercase tracking-widest text-neutral-600">{stat.label}</div>
+            </div>
+          ))}
         </div>
 
         {/* SECTION 8: GALLERY - Manual Image Paths */}
@@ -761,7 +770,7 @@ const AboutPage = () => {
           <div className="columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
             {[
               {
-                img:Event1, // Yahan apna exact filename daalein
+                img: Event1, // Yahan apna exact filename daalein
                 aspect: "aspect-[3/4]",
                 label: "AI & LinkedIn Masterclass",
                 venue: "Growell Girls School"
@@ -803,12 +812,18 @@ const AboutPage = () => {
                 venue: "Growell Co-ed"
               },
               {
+                img: Event15,
+                aspect: "aspect-[3/4]",
+                label: "Raising Capital & Finance Management",
+                venue: "Auditorium, ABESIT"
+              },
+              {
                 img: Event12,
                 aspect: "aspect-[3/4]",
                 label: "The Cadet Code",
                 venue: "Saifia Institute"
               }
-            ].map((item, i) => (
+            ].slice().reverse().map((item, i) => (
               <div
                 key={i}
                 className={`break-inside-avoid relative overflow-hidden rounded-3xl bg-neutral-900 border border-white/5 group cursor-pointer
@@ -856,7 +871,7 @@ const AboutPage = () => {
         </div>
 
 
-<Testimonials/>
+        <Testimonials />
       </div>
     </div>
   );
