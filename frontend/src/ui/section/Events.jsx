@@ -31,47 +31,65 @@ const eventsData = [
   { id: "sch-10", title: "Project UTurn", school: "Takshashila World School", date: "Aug 25, 2025", audience: "290 Students", rating: "9.1", tag: "Purpose", imgUrl: Event10, venue: "Ambehta, Saharanpur", facilitators: "Vansh Jain", summary: "Optimizing mental skills via Habits, Emotional Intelligence, and IKIGAI.", objectives: ["Focus techniques.", "Resilience.", "Well-being strategies."] },
   { id: "sch-11", title: "Persona X: Unmute", school: "Cambridge Public School", date: "Sept 1, 2025", audience: "70 Students", rating: "9.8", tag: "Public Speaking", imgUrl: Event11, venue: "Baraut", facilitators: "Vansh Jain", summary: "Strengthening soft skills, covering leadership, confidence, and public speaking.", objectives: ["Communication.", "Confidence.", "Teamwork leadership."] },
   { id: "sch-12", title: "Cyber Shield", school: "Cambridge Public School", date: "Sept 2, 2025", audience: "70 Students", rating: "9.7", tag: "Cybersecurity", imgUrl: Event12, venue: "Baraut", facilitators: "Vansh Jain, Ishika Sharma", summary: "Comprehensive cybersecurity session covering online threats and protection strategies.", objectives: ["Cyber threats.", "Online safety.", "Live hacking demos."] },
-  { id: "sch-15", title: "The After Hours", school: "Cambridge Public School", date: "Nov 10, 2025", audience: "70 Students", rating: "9.6", tag: "Life Skills", imgUrl: Event15, venue: "Baraut", facilitators: "Vansh Jain", summary: "Explored life skills beyond academics, including time management and emotional intelligence.", objectives: ["Time management.", "Emotional intelligence.", "Work-life balance."] }, 
+  { id: "sch-15", title: "The After Hours", school: "Cambridge Public School", date: "Nov 10, 2025", audience: "70 Students", rating: "9.6", tag: "Life Skills", imgUrl: Event15, venue: "Baraut", facilitators: "Vansh Jain", summary: "Explored life skills beyond academics, including time management and emotional intelligence.", objectives: ["Time management.", "Emotional intelligence.", "Work-life balance."] },
   { id: "sch-16", title: "Founder Fiesta", school: "Lakshya Public School", date: "Nov 17, 2025", audience: "180+ Students", rating: "9.8", tag: "Startup Growth", imgUrl: Event16, venue: "Baghpat, UP", facilitators: "Vansh Jain", summary: "Comprehensive event covering startup strategies, branding, and networking for builders.", objectives: ["Business concepts.", "Soft Skills.", "Career exploration."] }
 ];
 
 const uniEventsData = [
-  { 
-    id: "uni-1", 
-    title: "Entrepreneurship Unplugged: From Idea to Execution", 
-    school: "Delhi University (DSE)", 
-    date: "April 1, 2026", 
-    audience: "MBA IB Cohort", 
-    rating: "9.8", 
-    tag: "Entrepreneurship", 
-    imgUrl: DU3, 
-    venue: "North Campus, DSE", 
-    facilitators: "Vansh Jain, Kamal Girdhar", 
-    summary: "An immersive session at MBA IB, Department of Commerce, focused on decoding the nuances of real-world building and the intent required to scale beyond academic theory.", 
+  {
+    id: "uni-1",
+    title: "Entrepreneurship Unplugged: From Idea to Execution",
+    school: "Delhi University (DSE)",
+    date: "April 1, 2026",
+    audience: "MBA IB Cohort",
+    rating: "9.8",
+    tag: "Entrepreneurship",
+    imgUrl: DU3,
+    venue: "North Campus, DSE",
+    facilitators: "Vansh Jain, Kamal Girdhar",
+    summary: "An immersive session at MBA IB, Department of Commerce, focused on decoding the nuances of real-world building and the intent required to scale beyond academic theory.",
     objectives: [
-      "Entrepreneurial Ownership.", 
-      "Execution-First Mindset.", 
+      "Entrepreneurial Ownership.",
+      "Execution-First Mindset.",
       "Venture Execution & Scaling."
-    ] 
+    ]
   },
-  
-  { 
-    id: "uni-2", 
-    title: "AI Bootcamp: Vertex AI & Google Agent Kit", 
-    school: "KITE Institution", 
-    date: "July 14, 2025", 
-    audience: "Developers & AI Enthusiasts", 
-    rating: "9.9", 
-    tag: "Generative AI", 
-    imgUrl: Event15, 
-    venue: "Innovation Hub", 
-    facilitators: "Vansh Jain", 
-    summary: "Recipient of the KITE Institution Event Speaking Award for delivering an intensive bootcamp on building autonomous agents using Vertex AI and Google Agent Kit.", 
+
+  {
+    id: "uni-2",
+    title: "AI Bootcamp: Vertex AI & Google Agent Kit",
+    school: "KITE Institution",
+    date: "July 14, 2025",
+    audience: "Developers & AI Enthusiasts",
+    rating: "9.9",
+    tag: "Generative AI",
+    imgUrl: Event15,
+    venue: "Innovation Hub",
+    facilitators: "Vansh Jain",
+    summary: "Recipient of the KITE Institution Event Speaking Award for delivering an intensive bootcamp on building autonomous agents using Vertex AI and Google Agent Kit.",
     objectives: [
-      "Vertex AI Implementation.", 
-      "Building with Google Agent Kit.", 
+      "Vertex AI Implementation.",
+      "Building with Google Agent Kit.",
       "Practical Entrepreneurship Insights."
-    ] 
+    ]
+  },
+  {
+    id: "uni-3",
+    title: "Raising Capital and Finance Management for Start-ups",
+    school: "ABESIT | IIC",
+    date: "April 13, 2026",
+    audience: "Students & Founders",
+    rating: "9.7",
+    tag: "Finance & Startups",
+    imgUrl: Event15,
+    venue: "Auditorium, ABESIT",
+    facilitators: "Vansh Jain",
+    summary: "A workshop that bridged Jobs vs Startups while teaching funding strategies, financial frameworks, and early-stage capital planning.",
+    objectives: [
+      "Raising funding for startups.",
+      "Financial management basics.",
+      "Jobs vs Startups career clarity."
+    ]
   }
 ];
 
@@ -88,58 +106,58 @@ const EventGrid = ({ title, events, onSelect }) => {
   const hasMore = sorted.length > INITIAL_COUNT;
 
   return (
-  <div className="mb-24">
-    <div className="flex flex-col lg:flex-row justify-between items-end gap-12 mb-16 border-b border-white/5 pb-10">
-      <div className="space-y-4">
-        <span className="text-red-500 font-mono text-[10px] uppercase tracking-[0.6em] font-bold block">Portfolio</span>
-        <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-6xl md:text-8xl italic leading-none tracking-tighter">
-          {title} <span className="text-neutral-800 not-italic">& Events</span>
-        </h2>
+    <div className="mb-24">
+      <div className="flex flex-col lg:flex-row justify-between items-end gap-12 mb-16 border-b border-white/5 pb-10">
+        <div className="space-y-4">
+          <span className="text-red-500 font-mono text-[10px] uppercase tracking-[0.6em] font-bold block">Portfolio</span>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-6xl md:text-8xl italic leading-none tracking-tighter">
+            {title} <span className="text-neutral-800 not-italic">& Events</span>
+          </h2>
+        </div>
       </div>
-    </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-      {visible.map((event) => (
-        <motion.div
-          key={event.id}
-          layoutId={`card-${event.id}`}
-          onClick={() => onSelect(event)}
-          className="group cursor-pointer bg-neutral-900/10 border border-white/5 p-8 rounded-[2.5rem] hover:bg-neutral-900/30 transition-all duration-500"
-        >
-          <div className="relative aspect-video rounded-[1.8rem] overflow-hidden mb-8 border border-white/10">
-            <motion.img
-              layoutId={`img-${event.id}`}
-              src={event.imgUrl}
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
-              onError={(e) => { e.target.style.display = 'none'; }}
-            />
-          </div>
-          <div className="flex justify-between items-start mb-6 font-mono text-[10px]">
-            <span className="text-red-500 uppercase tracking-widest font-bold">{event.tag}</span>
-            <span className="text-neutral-500">{event.rating}/10</span>
-          </div>
-          <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-3xl italic leading-tight group-hover:text-red-500 transition-colors">
-            {event.title}
-          </h3>
-          <p className="text-[10px] uppercase text-neutral-600 mt-4 tracking-widest font-bold">
-            {event.school} • {event.date}
-          </p>
-        </motion.div>
-      ))}
-    </div>
-
-    {hasMore && (
-      <div className="flex justify-center mt-14">
-        <button
-          onClick={() => setShowAll(!showAll)}
-          className="group flex items-center gap-3 px-10 py-4 border border-white/10 rounded-full text-[11px] uppercase tracking-widest text-neutral-400 hover:bg-white hover:text-black transition-all duration-300 font-bold"
-        >
-          {showAll ? 'Show Less' : `View More Events (${sorted.length - INITIAL_COUNT} more)`}
-          <span className={`transition-transform duration-300 ${showAll ? 'rotate-180' : ''}`}>↓</span>
-        </button>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {visible.map((event) => (
+          <motion.div
+            key={event.id}
+            layoutId={`card-${event.id}`}
+            onClick={() => onSelect(event)}
+            className="group cursor-pointer bg-neutral-900/10 border border-white/5 p-8 rounded-[2.5rem] hover:bg-neutral-900/30 transition-all duration-500"
+          >
+            <div className="relative aspect-video rounded-[1.8rem] overflow-hidden mb-8 border border-white/10">
+              <motion.img
+                layoutId={`img-${event.id}`}
+                src={event.imgUrl}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                onError={(e) => { e.target.style.display = 'none'; }}
+              />
+            </div>
+            <div className="flex justify-between items-start mb-6 font-mono text-[10px]">
+              <span className="text-red-500 uppercase tracking-widest font-bold">{event.tag}</span>
+              <span className="text-neutral-500">{event.rating}/10</span>
+            </div>
+            <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-3xl italic leading-tight group-hover:text-red-500 transition-colors">
+              {event.title}
+            </h3>
+            <p className="text-[10px] uppercase text-neutral-600 mt-4 tracking-widest font-bold">
+              {event.school} • {event.date}
+            </p>
+          </motion.div>
+        ))}
       </div>
-    )}
-  </div>
+
+      {hasMore && (
+        <div className="flex justify-center mt-14">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="group flex items-center gap-3 px-10 py-4 border border-white/10 rounded-full text-[11px] uppercase tracking-widest text-neutral-400 hover:bg-white hover:text-black transition-all duration-300 font-bold"
+          >
+            {showAll ? 'Show Less' : `View More Events (${sorted.length - INITIAL_COUNT} more)`}
+            <span className={`transition-transform duration-300 ${showAll ? 'rotate-180' : ''}`}>↓</span>
+          </button>
+        </div>
+      )}
+    </div>
   );
 };
 
