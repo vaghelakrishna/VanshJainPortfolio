@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, MapPin, Camera, Globe, Send, ArrowUpRight, MessageSquare, ChevronDown, CheckCircle2, AlertCircle } from 'lucide-react';
 import { FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
 const ContactPage = () => {
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
   const [formData, setFormData] = useState({ name: '', email: '', category: '', message: '' });
   const [status, setStatus] = useState({ type: '', msg: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,7 +22,7 @@ const ContactPage = () => {
 
     try {
       const [response] = await Promise.all([
-        axios.post('http://localhost:5000/api/contact', formData),
+        axios.post(`${API_URL}/api/contact`, formData),
         minimumDelay
       ]);
 
@@ -95,7 +96,8 @@ const ContactPage = () => {
                   { label: 'For Kattalyx Labs', value: 'official@kattalyxlab.com', icon: <Globe size={18} /> },
                   { label: 'For Elite Verse', value: 'official@eliteversesolutions.com', icon: <Globe size={18} /> },
                   {
-                    label: 'Base', value: ' Ghaziabad, Uttar Pradesh ', icon: <MapPin size={18} /> }
+                    label: 'Base', value: ' Ghaziabad, Uttar Pradesh ', icon: <MapPin size={18} />
+                  }
                 ].map((item, idx) => (
                   <motion.div variants={fadeInUp} key={idx} className="group cursor-pointer">
                     <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-500 mb-3">{item.label}</p>
