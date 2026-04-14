@@ -2,7 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
 const Enrollment = require('./Models/Enrollment');
-const Subscriber = require('./Models/Subscriber');  
+const Subscriber = require('./Models/Subscriber');
+const Contact = require('./Models/Contact');
 
 const app = express();
 
@@ -49,6 +50,24 @@ app.post('/api/subscribe', async (req, res) => {
     res.status(201).json({ success: true, message: "Subscribed Successfully!" });
   } catch (error) {
     res.status(500).json({ success: false, message: "Server Error" });
+  }
+});
+
+// 3. Contact Form Route
+app.post('/api/contact', async (req, res) => {
+  try {
+    const { name, email, category, message } = req.body;
+
+    if (!name || !email || !category || !message) {
+      return res.status(400).json({ success: false, error: "Please fill all fields." });
+    }
+
+    const newContact = new Contact({ name, email, category, message });
+    await newContact.save();
+
+    res.status(201).json({ success: true, message: "Contact request submitted successfully." });
+  } catch (error) {
+    res.status(500).json({ success: false, error: "Server Error" });
   }
 });
 
