@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, MapPin, Camera, Globe, Send, ArrowUpRight, MessageSquare, ChevronDown, CheckCircle2, AlertCircle } from 'lucide-react';
 import { FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
+import { api } from '../lib/api';
 const ContactPage = () => {
   const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
   const [formData, setFormData] = useState({ name: '', email: '', category: '', message: '' });
@@ -22,7 +22,11 @@ const ContactPage = () => {
 
     try {
       const [response] = await Promise.all([
+<<<<<<< HEAD
         axios.post(`${API_URL}/api/contact`, formData),
+=======
+        api.post('/contact', formData),
+>>>>>>> 011d5f3826b377a046e3908524f0afad5e5ff7b7
         minimumDelay
       ]);
 

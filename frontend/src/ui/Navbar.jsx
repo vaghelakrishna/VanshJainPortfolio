@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, Check, ChevronDown } from 'lucide-react';
 import axios from 'axios';
+import { api } from '../lib/api';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +46,7 @@ const Navigation = () => {
     setStatus({ loading: true, msg: '', type: '' });
 
     try {
-      const res = await axios.post('http://localhost:5000/api/subscribe', { email });
+      const res = await api.post('/subscribe', { email });
       if (res.data.success) {
         setStatus({ loading: false, msg: 'Welcome to the club! ✨', type: 'success' });
 

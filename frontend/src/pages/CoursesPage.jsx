@@ -4,8 +4,8 @@ import {
   CalendarCheck, Zap, Target, Rocket, ShieldCheck, Star, X, Send, ChevronDown
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import axios from 'axios';
 import DesignProcess from './Step';
+import { api } from '../lib/api';
 
 const CoursesPage = () => {
   // Modal & Form States
@@ -70,7 +70,7 @@ const CoursesPage = () => {
     setStatus({ loading: true, msg: '', type: '' });
 
     try {
-      const res = await axios.post('http://localhost:5000/api/enroll', {
+      const res = await api.post('/enroll', {
         ...formData,
         courseName: selectedCourse
       });

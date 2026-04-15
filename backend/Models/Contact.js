@@ -8,7 +8,7 @@ const contactSchema = new mongoose.Schema({
   category: {
     type: String,
     required: true,
-    enum: ['speaking', 'mentorship', 'internship', 'course', 'media', 'other']
+    enum: ['speaking', 'mentorship', 'internship', 'course', 'media', 'collaboration', 'other']
   },
   createdAt: { type: Date, default: Date.now }
 });
