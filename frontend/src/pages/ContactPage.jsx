@@ -22,11 +22,7 @@ const ContactPage = () => {
 
     try {
       const [response] = await Promise.all([
-<<<<<<< HEAD
-        axios.post(`${API_URL}/api/contact`, formData),
-=======
         api.post('/contact', formData),
->>>>>>> 011d5f3826b377a046e3908524f0afad5e5ff7b7
         minimumDelay
       ]);
 
