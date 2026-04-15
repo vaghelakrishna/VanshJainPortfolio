@@ -50,14 +50,11 @@ Not required when deployed on Vercel. For local development, use `npm start` or 
 Environment variables:
 `ALLOWED_ORIGINS=https://your-frontend-project.vercel.app,https://www.yourdomain.com`
 `GOOGLE_SCRIPT_URL=https://script.google.com/macros/s/AKfycbzfxI5ajmcmnrCWAsItCdVtcPT-6-uLEUdoUX8UkfMcV5VaMDhDcK2XwNsErhj2vOCLFw/exec`
-`MONGO_URI=...` optional
 
 Health check:
 `/api/health`
 
 Notes:
-- The backend can run without MongoDB because current form submissions are forwarded to Google Sheets.
-- If `MONGO_URI` is missing, the server skips the database connection and still serves the API.
 - Keep `ALLOWED_ORIGINS` in sync with every frontend domain that should be allowed to call the API.
 
 ## What the backend does
@@ -67,7 +64,7 @@ The backend is the bridge between the website forms and external services:
 - `POST /api/contact` receives the contact form and sends it to the `Contacts` Google Sheet
 - `POST /api/enroll` receives course enrollment data and sends it to the `Enrollments` Google Sheet
 - `POST /api/subscribe` receives newsletter emails and sends them to the `Subscribers` Google Sheet
-- `GET /api/health` gives you a quick status check for the API, Google Sheets integration, and Mongo config
+- `GET /api/health` gives you a quick status check for the API and Google Sheets integration
 
 The frontend should never call the Google Apps Script directly. The backend handles validation, CORS, environment variables, and secret-safe server-side forwarding.
 

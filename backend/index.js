@@ -1,13 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const connectDB = require('./config/db');
-<<<<<<< HEAD
-const Enrollment = require('./Models/Enrollment');
-const Subscriber = require('./Models/Subscriber');
-const Contact = require('./Models/Contact');
-=======
 const { GOOGLE_SCRIPT_URL, sendToGoogleSheet } = require('./services/googleSheets');
->>>>>>> 011d5f3826b377a046e3908524f0afad5e5ff7b7
 
 const app = express();
 
@@ -28,9 +21,6 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Connect Database
-connectDB();
-
 // --- ROUTES ---
 
 app.get('/api/health', (req, res) => {
@@ -38,7 +28,6 @@ app.get('/api/health', (req, res) => {
     success: true,
     message: 'API is running',
     sheetsEnabled: Boolean(GOOGLE_SCRIPT_URL),
-    mongoEnabled: Boolean(process.env.MONGO_URI),
     timestamp: new Date().toISOString(),
   });
 });
@@ -98,32 +87,9 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
-<<<<<<< HEAD
-// 3. Contact Form Route
-app.post('/api/contact', async (req, res) => {
-  try {
-    const { name, email, category, message } = req.body;
-
-    if (!name || !email || !category || !message) {
-      return res.status(400).json({ success: false, error: "Please fill all fields." });
-    }
-
-    const newContact = new Contact({ name, email, category, message });
-    await newContact.save();
-
-    res.status(201).json({ success: true, message: "Contact request submitted successfully." });
-  } catch (error) {
-    res.status(500).json({ success: false, error: "Server Error" });
-  }
-});
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-=======
 module.exports = app;
 
 if (require.main === module) {
   const PORT = process.env.PORT || 5000;
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 }
->>>>>>> 011d5f3826b377a046e3908524f0afad5e5ff7b7
