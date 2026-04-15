@@ -315,12 +315,16 @@ const HomePage = ({ setPage }) => {
 
 
           {/* The Sliding Track */}
-          <div className="flex  whitespace-nowrap items-center gap-24 px-12 pt-10 text-center justify-center">
+          <div className="flex animate-marquee  whitespace-nowrap items-center gap-24 px-12 pt-10  hover:[animation-play-state:paused] cursor-default">
               <div className="flex items-center gap-24">
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">DU</span>
+              <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">DU-Delhi school of economics</span>
                 <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KIET Group of Institutions</span>
                 <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">ABESIT</span>
 
+
+              <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">DU-Delhi school of economics</span>
+              <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KIET Group of Institutions</span>
+              <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">ABESIT</span>
               </div>
           </div>
         </div>
