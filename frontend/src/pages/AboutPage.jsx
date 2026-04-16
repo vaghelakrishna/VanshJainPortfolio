@@ -19,6 +19,7 @@ import DU2 from '../assets/events/DU2.webp';
 import DU3 from '../assets/events/DU3.webp';
 import DU4 from '../assets/events/DU4.webp';
 import DU5 from '../assets/events/DU5.webp';
+import ABESIT from '../assets/events/ABESIT.webp';
 import { Link } from 'react-router-dom';
 
 const AboutPage = () => {
@@ -311,7 +312,7 @@ const AboutPage = () => {
                   city: "Ghaziabad",
                   topic: "Raising Capital & Finance Management for Start-ups",
                   year: "APR 2026",
-                  image: Event15,
+                  image: ABESIT,
                   aspect: "aspect-video"
                 }
               ].map((item, index) => (
