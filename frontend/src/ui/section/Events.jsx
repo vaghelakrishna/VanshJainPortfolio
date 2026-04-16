@@ -18,6 +18,7 @@ import DU2 from "../../assets/events/DU2.webp";
 import DU3 from "../../assets/events/DU3.webp";
 import DU4 from "../../assets/events/DU4.webp";
 import DU5 from "../../assets/events/DU5.webp";
+import ABESIT from "../../assets/events/ABESIT.webp";
 // --- Data Arrays ---
 const eventsData = [
   { id: "sch-1", title: "AI & LinkedIn Masterclass", school: "Growell Girls School", date: "July 14, 2025", audience: "150 Students", rating: "9.5", tag: "AI & Branding", imgUrl: Event1, venue: "Baraut, Baghpat, UP", facilitators: "Vansh Jain, Pushpak Goel", summary: "Comprehensive masterclass focused on AI and Personal Branding on LinkedIn for Class 11th & 12th students.", objectives: ["Enhanced AI concepts.", "LinkedIn networking skills.", "Future career awareness."] },
@@ -81,7 +82,7 @@ const uniEventsData = [
     audience: "Students & Founders",
     rating: "9.7",
     tag: "Finance & Startups",
-    imgUrl: Event15,
+    imgUrl: ABESIT,
     venue: "Auditorium, ABESIT",
     facilitators: "Vansh Jain",
     summary: "A workshop that bridged Jobs vs Startups while teaching funding strategies, financial frameworks, and early-stage capital planning.",
